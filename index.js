@@ -1,5 +1,7 @@
 const { Client, Collection } = require('discord.js');
 const client = new Client({
+        shards: 'auto',
+        restTimeOffSet: 0,
         allowedMentions: {
                 parse: ['users', 'roles']
         },
@@ -20,9 +22,6 @@ require('./handler')(client);
 client.login(process.env['Token']);
 
 const { Manager } = require('erela.js');
-const backup = require('discord-backup');
-
-backup.setStorageFolder(__dirname + '/backups');
 
 const nodes = [
         {

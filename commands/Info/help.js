@@ -27,11 +27,6 @@ module.exports = {
                                                 value: 'music'                 
                                         },
                                         {
-                                                label: 'Security',
-                                                emoji: '🔐',
-                                                value: 'security'              
-                                        },
-                                        {
                                                 label: 'Support',
                                                 emoji: '💌',
                                                 value: 'support'                 
@@ -100,30 +95,6 @@ module.exports = {
                                         timestamp: new Date()
                                 }
                                 
-                                i.update({
-                                        embeds: [ embed ]
-                                });
-                        }
-
-                        if (i.values[0] === 'security') {
-                                const embed = {
-                                        thumbnail: {
-                                                url: client.user.avatarURL()
-                                        },
-                                        description: 'Security commands:',
-                                        fields: [
-                                                {
-                                                        name: '📋 Commands:',
-                                                        value: '`/backup create`, `/backup list`, `/backup-load`, `/backup-remove`.'
-                                                }
-                                        ],
-                                        image: {
-                                                url: 'https://media.discordapp.net/attachments/977895960170598401/979805107690557480/standard.gif'
-                                        },
-                                        color: config.embedColor,
-                                        timestamp: new Date()
-                                }
-
                                 i.update({
                                         embeds: [ embed ]
                                 });
