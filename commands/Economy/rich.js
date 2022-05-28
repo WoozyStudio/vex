@@ -20,7 +20,7 @@ module.exports = {
                         }).join('\n');
 
                         if (!map) {
-                                map = '❌ There are no users.';
+                                map = '> ❌ There are no users.';
                         }
 
                         const embed = {

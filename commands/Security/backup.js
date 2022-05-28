@@ -72,6 +72,16 @@ module.exports = {
                                         embeds: [ error ]
                                 });
                         }
+                
+                        const embed = {
+                                description: 'Loading... (This may take a few seconds).',
+                                color: config.embedColor
+                        }
+
+                
+                        interaction.followUp({
+                                embeds: [ embed ]
+                        });
 
                         await backup.create(interaction.guild, {
                                 maxMessagesPerChannel: 0,
@@ -247,7 +257,7 @@ module.exports = {
                                 } else {
                                         const error = {
                                                 description: '❌ The backup was not found.',
-                                                color: config.embedColor
+                                                color: config.embedError
                                         }
                                         
                                         interaction.followUp({
@@ -268,7 +278,7 @@ module.exports = {
                                 }).join('\n');
 
                                 if (!map) {
-                                        map = '❌ There are no backups.';
+                                        map = '> ❌ There are no backups.';
                                 }
 
                                 const embed = {

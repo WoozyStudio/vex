@@ -29,7 +29,7 @@ module.exports = {
                 }).join('\n');
 
                 if (!map) {
-                        map = '❌ There are no songs.';
+                        map = '> ❌ There are no songs.';
                 }
                 
                 var icon = interaction.guild.iconURL();
