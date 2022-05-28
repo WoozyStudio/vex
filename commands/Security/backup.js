@@ -77,7 +77,6 @@ module.exports = {
                                 description: 'Loading... (This may take a few seconds).',
                                 color: config.embedColor
                         }
-
                 
                         interaction.followUp({
                                 embeds: [ embed ]
@@ -100,7 +99,7 @@ module.exports = {
                                         fields: [
                                                 {
                                                         name: '💾 Backup data:',
-                                                        value: '> ID: `' + res.id + '`.\n> Server: `' + interaction.guild.id + '`.'
+                                                        value: '> ID: `' + res.id + '`.\n> Server: `' + interaction.guild.name + '`.'
                                                 }
                                         ],
                                         color: config.embedColor
