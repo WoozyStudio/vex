@@ -1,7 +1,5 @@
-const { MessageEmbed } = require('discord.js');
 const format = require('../../structures/formatDuration');
 const config = require('../../config/config.json');
-const emoji = require('../../config/emojis.json');
 
 module.exports = {
         name: 'now-playing',
@@ -32,8 +30,8 @@ module.exports = {
                         description: '[' + song.title + '](' + song.uri + ').',
                         fields: [
                                 {
-                                        name: 'ℹ️ Information:',
-                                        value: '> Author: `' + song.author + '`.\n> Duration: `' + format(player.position) + ' / ' + format(song.duration) + '`.'
+                                        name: 'Information:',
+                                        value: '👤 Author: `' + song.author + '`.\n⏰ Duration: `' + format(player.position) + ' / ' + format(song.duration) + '`.'
                                 }
                         ],
                         color: config.embedColor,

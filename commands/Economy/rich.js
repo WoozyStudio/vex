@@ -1,7 +1,5 @@
-const { MessageEmbed } = require('discord.js');
 const model = require('../../models/economy.js');
 const config = require('../../config/config.json');
-const emoji = require('../../config/emojis.json');
 
 module.exports = {
         name: 'rich',
@@ -16,11 +14,11 @@ module.exports = {
                         const lb = data.sort((a, b) => Number((b.Wallet + b.Bank) - (a.Wallet + a.Bank)));
                         const total = lb.slice(0, 10);
                         var map = total.map((user, index) => {
-                                return `> \`${index + 1}.\` <@${user.User}>. 💵 Wallet: :coin: \`${user.Wallet}\` - 🏦 Bank: :coin: \`${user.Bank}\`.`;
+                                return `👤 \`${index + 1}.\` <@${user.User}>. 💵 Wallet: :coin: \`${user.Wallet}\` - 🏦 Bank: :coin: \`${user.Bank}\`.`;
                         }).join('\n');
 
                         if (!map) {
-                                map = '> ❌ There are no users.';
+                                map = '❌ There are no users.';
                         }
 
                         const embed = {
@@ -30,7 +28,7 @@ module.exports = {
                                 description: 'List of richest users.',
                                 fields: [
                                         {
-                                                name: '👑 Leaderboard:',
+                                                name: 'Leaderboard:',
                                                 value: map
                                         }
                                 ],

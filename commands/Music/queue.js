@@ -1,6 +1,4 @@
-const { MessageEmbed } = require('discord.js');
 const config = require('../../config/config.json');
-const emoji = require('../../config/emojis.json');
 
 module.exports = {
         name: 'queue',
@@ -25,11 +23,11 @@ module.exports = {
                 const queue = player.queue;
                 const tracks = queue.slice(0, 10);
                 var map = tracks.map((track, i) => {
-                        return `> \`${i + 1}.\` [${track.title}](${track.uri}).`;
+                        return `📋 \`${i + 1}.\` [${track.title}](${track.uri}).`;
                 }).join('\n');
 
                 if (!map) {
-                        map = '> ❌ There are no songs.';
+                        map = '❌ There are no songs.';
                 }
                 
                 var icon = interaction.guild.iconURL();
@@ -45,7 +43,7 @@ module.exports = {
                         description: '[' + queue.current.title + '](' + queue.current.uri + ').',
                         fields: [
                                 {
-                                        name: '📋 Queue:',
+                                        name: 'Queue:',
                                         value: map
                                 }
                         ],

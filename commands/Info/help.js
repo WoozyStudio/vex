@@ -1,6 +1,5 @@
-const { MessageEmbed, MessageActionRow, MessageSelectMenu } = require('discord.js');
-const config = require('../../config/config.json');
-const emoji = require('../../config/emojis.json');
+const { MessageActionRow, MessageSelectMenu } = require('discord.js');
+const config = require('../../config/config.json')
 
 module.exports = {
         name: 'help',
@@ -25,6 +24,11 @@ module.exports = {
                                                 label: 'Music',
                                                 emoji: '🎧',
                                                 value: 'music'                 
+                                        },
+                                        {
+                                                label: 'Social',
+                                                emoji: '👤',
+                                                value: 'social'                 
                                         },
                                         {
                                                 label: 'Support',
@@ -60,7 +64,7 @@ module.exports = {
                                         description: 'Economy commands:',
                                         fields: [
                                                 {
-                                                        name: '📋 Commands:',
+                                                        name: 'Commands:',
                                                         value: '`/balance`, `/deposit`, `/rich`, `/with-draw`, `/work`.'
                                                 }
                                         ],
@@ -84,8 +88,32 @@ module.exports = {
                                         description: 'Music commands:',
                                         fields: [
                                                 {
-                                                        name: '📋 Commands:',
+                                                        name: 'Commands:',
                                                         value: '`/clear-queue`, `/leave`, `/loop`, `/now-playing`, `/pause`, `/play`, `/queue`, `/resume`, `/skip-to`, `skip`, `/volume`.'
+                                                }
+                                        ],
+                                        image: {
+                                                url: 'https://media.discordapp.net/attachments/977895960170598401/979805107690557480/standard.gif'
+                                        },
+                                        color: config.embedColor,
+                                        timestamp: new Date()
+                                }
+                                
+                                i.update({
+                                        embeds: [ embed ]
+                                });
+                        }
+                        
+                        if (i.values[0] === 'social') {
+                                const embed = {
+                                        thumbnail: {
+                                                url: client.user.avatarURL()
+                                        },
+                                        description: 'Music commands:',
+                                        fields: [
+                                                {
+                                                        name: 'Commands:',
+                                                        value: '`/profile description`, `/profile follow`, `/profile register`, `/profile view`.'
                                                 }
                                         ],
                                         image: {
@@ -108,7 +136,7 @@ module.exports = {
                                         description: 'Support commands:',
                                         fields: [
                                                 {
-                                                        name: '📋 Commands:',
+                                                        name: 'Commands:',
                                                         value: '`/vote`.'
                                                 }
                                         ],

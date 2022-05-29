@@ -1,10 +1,8 @@
-const { MessageEmbed } = require('discord.js');
 const quick = require('quick.db');
 const ms = require('ms');
 const pretty = require('pretty-ms');
 const model = require('../../models/economy.js');
 const config = require('../../config/config.json');
-const emoji = require('../../config/emojis.json');
 
 module.exports = {
         name: 'work',
