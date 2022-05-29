@@ -24,7 +24,7 @@ module.exports = {
                         }
 
                         return interaction.followUp({
-                                embeds: [ embed ]
+                                embeds: [ error ]
                         });
                 }
 
