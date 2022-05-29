@@ -46,15 +46,14 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [embed],
-                                code: 'js'
+                                embeds: [ embed ]
                         });
                 } catch (err) {
                         const error = {
                                 description: '```js\n' + err.message + '```',
                                 color: config.embedError
                         }
-                        
+
                         interaction.followUp({
                                 embeds: [ error ]
                         });
