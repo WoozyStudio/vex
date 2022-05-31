@@ -81,6 +81,7 @@ module.exports = {
                                                 Username: interaction.user.tag,
                                                 AboutMe: 'There is no description.',
                                                 Followers: [],
+                                                Badges: [],
                                                 Avatar: interaction.user.avatarURL()
                                         }).save();
 
@@ -107,13 +108,13 @@ module.exports = {
                                 if (data) {
                                         const embed = {
                                                 thumbnail: {
-                                                        url: data.Avatar
+                                                        url: user.avatarURL({ dynamic: true })
                                                 },
                                                 description: filter.clean(data.AboutMe),
                                                 fields: [
                                                         {
                                                                 name: 'Information:',
-                                                                value: '🏷️ User: <@' + user.id + '>.'
+                                                                value: '🏷️ User: <@' + user.id + '>.\n🎖️ Badges: ' + badges + '.'
                                                         },
                                                         {
                                                                 name: 'Statistics:',

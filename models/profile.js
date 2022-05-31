@@ -18,6 +18,9 @@ const schema = new mongo.Schema({
         },
         Avatar: {
                 type: mongo.SchemaTypes.String
+        },
+        Badges: {
+                type: mongo.SchemaTypes.Array
         }
 });
 
