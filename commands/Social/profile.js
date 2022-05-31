@@ -114,7 +114,7 @@ module.exports = {
                                                 fields: [
                                                         {
                                                                 name: 'Information:',
-                                                                value: '🏷️ User: <@' + user.id + '>.\n🎖️ Badges: ' + badges + '.'
+                                                                value: '🏷️ User: <@' + user.id + '>.\n🎖️ Badges: ' + data.Badges + '.'
                                                         },
                                                         {
                                                                 name: 'Statistics:',
