@@ -3,13 +3,12 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'balance',
-        description: 'Displays the user\'s balance..',
+        description: 'Displays the user\'s balance.',
         options: [
                 {
                         name: 'user',
                         description: '-',
-                        type: 'USER',
-                        required: false
+                        type: 'USER'
                 }
         ],
         type: 'CHAT_INPUT',

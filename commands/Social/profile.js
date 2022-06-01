@@ -23,8 +23,7 @@ module.exports = {
                                 {
                                         name: 'user',
                                         description: '-',
-                                        type: 'USER',
-                                        required: false
+                                        type: 'USER'
                                 }
                         ]
                 },
@@ -114,7 +113,7 @@ module.exports = {
                                                 fields: [
                                                         {
                                                                 name: 'Information:',
-                                                                value: '🏷️ User: <@' + user.id + '>.\n🎖️ Badges: ' + data.Badges + '.'
+                                                                value: '🏷️ User: <@' + user.id + '>.\n🎖️ Badges: ' + data.Badges
                                                         },
                                                         {
                                                                 name: 'Statistics:',
