@@ -4,12 +4,15 @@ const colors = require('colors');
 
 client.on('ready', () => {
         client.player.init(client.user.id);
+        
         console.log(colors.brightGreen('[Client] Bot started as ' + client.user.tag + '.'));
+        
         client.user.setPresence({
                 activities: [{
-                        name: '/help'
+                        name: '/help',
+                        type: 'WATCHING'
                 }],
-                status: 'online'
+                status: 'idle'
         });
 
         const embed = {
@@ -20,5 +23,5 @@ client.on('ready', () => {
         client.channels.cache.get('979427667898138674').send({
                 content: '<@945029734943821824>.',
                 embeds: [ embed ]
-        });
+        }).catch(() => {});
 });
