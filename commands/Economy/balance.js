@@ -13,7 +13,7 @@ module.exports = {
         ],
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
+                await interaction.deferReply().catch(() => { });
                 const user = interaction.options.getUser('user') || interaction.user;
 
                 model.findOne({
@@ -44,9 +44,9 @@ module.exports = {
                                 color: config.embedColor,
                                 timestamp: new Date()
                         }
-                        
+
                         interaction.followUp({
-                                embeds: [ embed ]
+                                embeds: [embed]
                         });
                 });
         }

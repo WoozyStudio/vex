@@ -9,7 +9,7 @@ module.exports = {
         description: 'Work to get money.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
+                await interaction.deferReply().catch(() => { });
 
                 const time = quick.fetch('workTimer_' + interaction.user.id);
 
@@ -26,12 +26,12 @@ module.exports = {
                         }
 
                         return interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
 
                 const earned = Math.floor(Math.random() * (500 - 100)) + 100;
-                
+
                 model.findOne({
                         User: interaction.user.id
                 }, async (err, data) => {
@@ -54,11 +54,11 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [ embed ]
+                                embeds: [embed]
                         });
 
                         const msTime = ms('5m');
-                        
+
                         quick.delete('workTimer_' + interaction.user.id);
                         quick.add('workTimer_' + interaction.user.id, Date.now() + msTime);
                 });

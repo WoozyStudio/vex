@@ -2,7 +2,7 @@ const client = require('../../index.js');
 
 client.on('interactionCreate', async (interaction) => {
         if (!interaction.guildId) return;
-        
+
         if (interaction.isCommand()) {
                 const cmd = client.slashcommands.get(interaction.commandName);
 

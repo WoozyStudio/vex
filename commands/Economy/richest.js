@@ -2,11 +2,11 @@ const model = require('../../models/economy.js');
 const config = require('../../config/config.json');
 
 module.exports = {
-        name: 'rich',
+        name: 'richest',
         description: 'Displays the richest users.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
+                await interaction.deferReply().catch(() => { });
 
                 model.find({}, (err, data) => {
                         if (err) throw err;
@@ -25,7 +25,6 @@ module.exports = {
                                 thumbnail: {
                                         url: client.user.avatarURL()
                                 },
-                                description: 'List of richest users.',
                                 fields: [
                                         {
                                                 name: 'Leaderboard:',
@@ -37,7 +36,7 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [ embed ]
+                                embeds: [embed]
                         });
                 });
         }

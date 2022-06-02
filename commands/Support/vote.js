@@ -5,7 +5,7 @@ module.exports = {
         description: 'Vote for the bot.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
+                await interaction.deferReply().catch(() => { });
 
                 const embed = {
                         description: 'Vote on [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote on [VCodez](https://vcodez.xyz/bot/955921440002179132).',
@@ -13,7 +13,7 @@ module.exports = {
                 }
 
                 interaction.followUp({
-                        embeds: [ embed ]
+                        embeds: [embed]
                 });
         }
 }

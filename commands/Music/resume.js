@@ -5,16 +5,16 @@ module.exports = {
         description: 'Resume the song that is playing.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
-                
+                await interaction.deferReply().catch(() => { });
+
                 if (!interaction.member.voice.channel) {
                         const error = {
                                 description: '❌ You have to be on a voice channel.',
                                 color: config.embedError
                         }
-                        
+
                         return interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
 
@@ -23,12 +23,12 @@ module.exports = {
                                 description: '❌ You have to be on the same voice channel.',
                                 color: config.embedError
                         }
-                        
+
                         return interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
-                
+
                 const player = client.player.get(interaction.guild.id);
 
                 if (!player) {
@@ -36,9 +36,9 @@ module.exports = {
                                 description: '❌ There is nothing playing now.',
                                 color: config.embedError
                         }
-                        
+
                         return interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
 
@@ -47,9 +47,9 @@ module.exports = {
                                 description: '❌ The song was already resumed.',
                                 color: config.embedError
                         }
-                        
+
                         interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 } else {
                         await player.pause(false);
@@ -58,9 +58,9 @@ module.exports = {
                                 description: 'The song was resumed.',
                                 color: config.embedColor
                         }
-                        
+
                         interaction.followUp({
-                                embeds: [ embed ]
+                                embeds: [embed]
                         });
                 }
         }

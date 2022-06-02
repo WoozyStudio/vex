@@ -5,7 +5,7 @@ module.exports = {
         description: 'Displays the queue of songs.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
+                await interaction.deferReply().catch(() => { });
 
                 const player = client.player.get(interaction.guild.id);
 
@@ -14,9 +14,9 @@ module.exports = {
                                 description: '❌ There is nothing playing now.',
                                 color: config.embedError
                         }
-                        
+
                         return interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
 
@@ -29,7 +29,7 @@ module.exports = {
                 if (!map) {
                         map = '❌ There are no songs.';
                 }
-                
+
                 var icon = interaction.guild.iconURL();
 
                 if (!icon) {
@@ -52,7 +52,7 @@ module.exports = {
                 }
 
                 interaction.followUp({
-                        embeds: [ embed ]
+                        embeds: [embed]
                 });
         }
 }

@@ -52,7 +52,25 @@ module.exports = {
                                         required: true
                                 }
                         ]
-                }
+                },
+                {
+                        name: 'followers',
+                        description: 'Displays users who follow you.',
+                        type: 'SUB_COMMAND'
+                },
+                {
+                        name: 'unfollow',
+                        description: 'Unfollow a user.',
+                        type: 'SUB_COMMAND',
+                        options: [
+                                {
+                                        name: 'user',
+                                        description: '-',
+                                        type: 'USER',
+                                        required: true
+                                }
+                        ]
+                },
         ],
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
@@ -142,56 +160,56 @@ module.exports = {
 
                 if (subCommand === 'follow') {
                         const user = interaction.options.getUser('user');
-                        
+
                         if (user.id === client.user.id || user.bot) {
                                 const error = {
                                         description: '❌ You cannot use this command with a bot.',
                                         color: config.embedError
                                 }
-                                
+
                                 return interaction.followUp({
                                         embeds: [error]
                                 });
                         }
-                        
+
                         if (user.id === interaction.user.id) {
                                 const error = {
                                         description: '❌ You cannot use this command with you.',
                                         color: config.embedError
                                 }
-                                
+
                                 return interaction.followUp({
-                                        embeds: [ error ]
+                                        embeds: [error]
                                 });
                         }
-                        
+
                         model.findOne({
                                 User: user.id
                         }, (err, data) => {
                                 if (err) throw err;
-                                
+
                                 if (data) {
                                         const followers = data.Followers;
-                                        
+
                                         if (followers.includes(interaction.user.id)) {
                                                 const error = {
                                                         description: '❌ You are already following this user.',
                                                         color: config.embedError
                                                 }
-                                                
+
                                                 return interaction.followUp({
                                                         embeds: [error]
                                                 });
                                         }
-                                        
+
                                         followers.push(interaction.user.id);
                                         data.save();
-                                        
+
                                         const embed = {
                                                 description: 'You have started to follow <@' + user.id + '>.',
                                                 color: config.embedColor
                                         }
-                                        
+
                                         interaction.followUp({
                                                 embeds: [embed]
                                         });
@@ -200,7 +218,7 @@ module.exports = {
                                                 description: '❌ This user don\'t have a profile.',
                                                 color: config.embedError
                                         }
-                                        
+
                                         return interaction.followUp({
                                                 embeds: [error]
                                         });
@@ -255,6 +273,119 @@ module.exports = {
                                 } else {
                                         const error = {
                                                 description: '❌ You don\'t have a profile.',
+                                                color: config.embedError
+                                        }
+
+                                        return interaction.followUp({
+                                                embeds: [error]
+                                        });
+                                }
+                        });
+                }
+
+                if (subCommand === 'followers') {
+                        model.findOne({
+                                User: interaction.user.id
+                        }, (err, data) => {
+                                if (err) throw err;
+
+                                if (data) {
+                                        var map = data.Followers.map((user) => {
+                                                return `👤 <@${user}>.`;
+                                        }).join('\n');
+
+                                        if (!map) {
+                                                map = '❌ There are no followers.';
+                                        }
+
+                                        const embed = {
+                                                thumbnail: {
+                                                        url: interaction.user.avatarURL({ dynamic: true })
+                                                },
+                                                fields: [
+                                                        {
+                                                                name: 'Followers:',
+                                                                value: map
+                                                        }
+                                                ],
+                                                color: config.embedColor
+                                        }
+
+                                        interaction.followUp({
+                                                embeds: [embed]
+                                        });
+                                } else {
+                                        const error = {
+                                                description: '❌ You don\'t have a profile.',
+                                                color: config.embedError
+                                        }
+
+                                        return interaction.followUp({
+                                                embeds: [error]
+                                        });
+                                }
+                        });
+                }
+
+                if (subCommand === 'unfollow') {
+                        const user = interaction.options.getUser('user');
+
+                        if (user.id === client.user.id || user.bot) {
+                                const error = {
+                                        description: '❌ You cannot use this command with a bot.',
+                                        color: config.embedError
+                                }
+
+                                return interaction.followUp({
+                                        embeds: [error]
+                                });
+                        }
+
+                        if (user.id === interaction.user.id) {
+                                const error = {
+                                        description: '❌ You cannot use this command with you.',
+                                        color: config.embedError
+                                }
+
+                                return interaction.followUp({
+                                        embeds: [error]
+                                });
+                        }
+
+                        model.findOne({
+                                User: user.id
+                        }, (err, data) => {
+                                if (err) throw err;
+
+                                if (data) {
+                                        const followers = data.Followers;
+
+                                        if (!followers.includes(interaction.user.id)) {
+                                                const error = {
+                                                        description: '❌ You are not following this user.',
+                                                        color: config.embedError
+                                                }
+
+                                                return interaction.followUp({
+                                                        embeds: [error]
+                                                });
+                                        }
+
+                                        const pos = followers.indexOf(interaction.user.id);
+                                        followers.splice(pos, 1);
+                                        data.save();
+
+                                        const embed = {
+                                                description: 'You have stopped following <@' + user.id + '>.',
+                                                color: config.embedColor
+                                        }
+
+                                        interaction.followUp({
+                                                embeds: [embed]
+                                        });
+                                } else {
+                                        const error = {
+                                                description: '❌ This user don\'t have a profile.',
                                                 color: config.embedError
                                         }
 

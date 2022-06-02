@@ -24,7 +24,7 @@ module.exports = {
                         }
 
                         return interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
 
@@ -46,7 +46,7 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [ embed ]
+                                embeds: [embed]
                         });
                 } catch (err) {
                         const error = {
@@ -55,7 +55,7 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [ error ]
+                                embeds: [error]
                         });
                 }
         }

@@ -15,7 +15,7 @@ module.exports = {
         ],
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply().catch(() => {});
+                await interaction.deferReply().catch(() => { });
                 const amount = interaction.options.getInteger('amount');
 
                 model.findOne({
@@ -29,9 +29,9 @@ module.exports = {
                                                 description: '❌ You don\'t have that money in the bank.',
                                                 color: config.embedError
                                         }
-                                        
+
                                         return interaction.followUp({
-                                                embeds: [ error ]
+                                                embeds: [error]
                                         });
                                 }
 
@@ -45,16 +45,16 @@ module.exports = {
                                 }
 
                                 interaction.followUp({
-                                        embeds: [ embed ]
+                                        embeds: [embed]
                                 });
                         } else {
-                                const error2 = {
+                                const error = {
                                         description: '❌ You don\'t have a balance.',
                                         color: config.embedError
                                 }
-                                
+
                                 return interaction.followUp({
-                                        embeds: [ error2 ]
+                                        embeds: [error]
                                 });
                         }
                 });

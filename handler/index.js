@@ -6,7 +6,7 @@ const mongo = require('mongoose');
 module.exports = async (client) => {
         const eventFiles = await globPromise(`${process.cwd()}/events/*/*.js`);
         eventFiles.map((value) => require(value));
-        
+
         const slashcommands = await globPromise(`${process.cwd()}/commands/*/*.js`);
         const commands = [];
 
@@ -20,7 +20,7 @@ module.exports = async (client) => {
                 if (['MESSAGE', 'USER'].includes(file.type)) delete file.description;
                 commands.push(file);
         });
-        
+
         client.on('ready', async () => {
                 await client.application.commands.set(commands);
         });
