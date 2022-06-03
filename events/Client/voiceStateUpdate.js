@@ -50,15 +50,9 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
         );
 
         switch (stateChange.type) {
-                /*case "JOIN":
-                        if (stateChange.members.size === 1 && player.paused) {
-                                player.pause(false);
-                        }
-                        
-                break;*/
                 case "LEAVE":
                         if (stateChange.members.size === 0) {
-                                await wait(1000);
+                                await wait(100);
                                 player.destroy();
                         }
                 break;
