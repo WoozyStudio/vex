@@ -12,6 +12,7 @@
   "dependencies": {
     "bad-words": "^3.0.4",
     "colors": "^1.4.0",
+    "dblapi.js": "^2.4.1",
     "discord.js": "^13.7.0",
     "dotenv": "^16.0.1",
     "erela.js": "^2.3.3",

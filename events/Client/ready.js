@@ -24,4 +24,8 @@ client.on('ready', () => {
                 content: '<@945029734943821824>.',
                 embeds: [embed]
         }).catch(() => { });
+
+        setInterval(async () => {
+                await client.dbl.postStats(client.guilds.cache.size);
+        }, 60000);
 });

@@ -17,11 +17,12 @@ const client = new Client({
         ]
 });
 require('dotenv').config();
-require('./handler')(client); 
+require('./handler')(client);
 
 client.login(process.env['Token']);
 
 const { Manager } = require('erela.js');
+const dbl = require('dblapi.js');
 
 const nodes = [
         {
@@ -32,6 +33,7 @@ const nodes = [
 ];
 
 client.slashcommands = new Collection();
+client.dbl = new dbl(process.env['TopGG'], client);
 client.player = new Manager({
         nodes,
         send: (id, payload) => {
