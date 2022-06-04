@@ -6,9 +6,10 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 const embed = {
-                        description: 'Vote on [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote on [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVote on [Top.gg](https://top.gg/bot/955921440002179132).',
+                        description: client.lang.__({ phrase: 'vote.embed', locale: lang }),
                         color: config.embedColor
                 }
 

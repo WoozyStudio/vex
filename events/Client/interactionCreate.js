@@ -1,7 +1,20 @@
 const client = require('../../index.js');
+const model = require('../../models/language.js');
 
 client.on('interactionCreate', async (interaction) => {
         if (!interaction.guildId) return;
+
+        const guildLang = interaction.member.guild;
+
+        model.findOne({
+                Guild: interaction.guild.id
+        }, (err, data) => {
+                if (err) throw err;
+
+                const language = data ? data.Language : 'en';
+
+                guildLang.lang = language;
+        });
 
         if (interaction.isCommand()) {
                 const cmd = client.slashcommands.get(interaction.commandName);

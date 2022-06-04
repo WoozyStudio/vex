@@ -23,6 +23,7 @@ client.login(process.env['Token']);
 
 const { Manager } = require('erela.js');
 const dbl = require('dblapi.js');
+const path = require('path');
 
 const nodes = [
         {
@@ -34,6 +35,7 @@ const nodes = [
 
 client.slashcommands = new Collection();
 client.dbl = new dbl(process.env['TopGG'], client);
+client.lang = require('i18n');
 client.player = new Manager({
         nodes,
         send: (id, payload) => {
@@ -44,6 +46,21 @@ client.player = new Manager({
                 }
         }
 });
+
+client.lang.configure({
+        locales: ['en', 'es'],
+        directory: path.join(__dirname, 'locales'),
+        defaultLocale: 'en',
+        retryInDefaultLocale: true,
+        objectNotation: true,
+        register: global,
+        mustacheConfig: {
+                tags: ['{{', '}}'],
+                disable: false
+        }
+});
+
+client.lang.setLocale('en');
 
 const express = require('express');
 const app = express();
