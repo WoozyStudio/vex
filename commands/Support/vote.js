@@ -8,7 +8,7 @@ module.exports = {
                 await interaction.deferReply().catch(() => { });
 
                 const embed = {
-                        description: 'Vote on [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote on [VCodez](https://vcodez.xyz/bot/955921440002179132).',
+                        description: 'Vote on [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote on [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVote on [Top.gg](https://top.gg/bot/955921440002179132).',
                         color: config.embedColor
                 }
 

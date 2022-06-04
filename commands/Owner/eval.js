@@ -38,7 +38,8 @@ module.exports = {
 
                         const embed = {
                                 description: '```js\n' + output + '```',
-                                color: config.embedColor
+                                color: config.embedColor,
+                                timestamp: new Date()
                         }
 
                         if (embed.description.length >= 4090) {
