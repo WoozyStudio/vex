@@ -75,6 +75,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
                 const subCommand = interaction.options.getSubcommand();
 
                 if (subCommand === 'register') {
@@ -85,7 +86,7 @@ module.exports = {
 
                                 if (data) {
                                         const error = {
-                                                description: '❌ You already have a profile.',
+                                                description: client.lang.__({ phrase: 'profile.register.error', locale: lang }),
                                                 color: config.embedError
                                         }
 
@@ -103,7 +104,7 @@ module.exports = {
                                         }).save();
 
                                         const embed = {
-                                                description: 'The profile was created.',
+                                                description: client.lang.__({ phrase: 'profile.register.embed', locale: lang }),
                                                 color: config.embedColor
                                         }
 
