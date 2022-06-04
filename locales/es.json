@@ -6,6 +6,10 @@
                 "register": {
                         "error": "❌ Ya tienes un perfil creado.",
                         "embed": "El perfil fue creado."
+                },
+                "view": {
+                        "embedField": "Información:",
+                        "embedFieldValue": "🏷️ Usuario: <@{user}>.\n🔰 Insignias: {badges}"
                 }
         }
 }

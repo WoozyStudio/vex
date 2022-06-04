@@ -131,8 +131,8 @@ module.exports = {
                                                 description: filter.clean(data.AboutMe),
                                                 fields: [
                                                         {
-                                                                name: 'Information:',
-                                                                value: '🏷️ User: <@' + user.id + '>.\n🎖️ Badges: ' + data.Badges
+                                                                name: client.lang.__({ phrase: 'profile.view.embedField', locale: lang }),
+                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { user: user.id, badges: data.Badges })
                                                         },
                                                         {
                                                                 name: 'Statistics:',
