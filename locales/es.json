@@ -1,4 +1,14 @@
 {
+        "balance": {
+                "embed": "Saldo de <@{user}>:",
+                "embedField": "Saldo:",
+                "embedFieldValue": "💵 Billetera: :coin: `{wallet}`.\n🏦 Banco: :coin: `{bank}`."
+        },
+        "deposit": {
+                "error": "❌ You don't have this money in your wallet.",
+                "embed": "You have deposited :coin: `amount` in the bank.",
+                "error2": "❌ You don't have a balance."
+        },
         "vote": {
                 "embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
         },
@@ -9,7 +19,17 @@
                 },
                 "view": {
                         "embedField": "Información:",
-                        "embedFieldValue": "🏷️ Usuario: <@{user}>.\n🔰 Insignias: {badges}"
+                        "embedFieldValue": "🏷️ Usuario: <@{user}>.\n🔰 Insignias: {badges}",
+                        "embedField2": "Estadísticas:",
+                        "embedFieldValue2": "👥 Seguidores: `{followers}`.",
+                        "error": "❌ Este usuario no tiene un perfil."
+                },
+                "follow": {
+                        "error": "❌ No puedes utilizar este comando con un bot.",
+                        "error2": "❌ No puedes utilizar este comando contigo.",
+                        "error3": "❌ Ya estás siguiendo a este usuario.",
+                        "embed": "Has empezado a seguir a este usuario.",
+                        "error4": "❌ Este usuario no tiene un perfil."
                 }
         }
 }

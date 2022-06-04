@@ -1,4 +1,14 @@
 {
+        "balance": {
+                "embed": "<@{user}>'s balance:",
+                "embedField": "Balance:",
+                "embedFieldValue": "💵 Wallet: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
+        },
+        "deposit": {
+                "error": "❌ You don't have this money in your wallet.",
+                "embed": "You have deposited :coin: `amount` in the bank.",
+                "error2": "❌ You don't have a balance."
+        },
         "vote": {
                 "embed": "Vote in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVote in [Top.gg](https://top.gg/bot/955921440002179132)."
         },
@@ -9,7 +19,20 @@
                 },
                 "view": {
                         "embedField": "Information:",
-                        "embedFieldValue": "🏷️ User: <@{user}>.\n🔰 Badges: {badges}"
+                        "embedFieldValue": "🏷️ User: <@{user}>.\n🔰 Badges: {badges}",
+                        "embedField2": "Statistics:",
+                        "embedFieldValue2": "👥 Followers: `{followers}`.",
+                        "error": "❌ This user don't have a profile."
+                },
+                "follow": {
+                        "error": "❌ You cannot use this command with a bot.",
+                        "error2": "❌ You cannot use this command with you.",
+                        "error3": "❌ You are already following this user.",
+                        "embed": "You have started following this user.",
+                        "error4": "❌ This user don't have a profile."
+                },
+                "description": {
+                        "error": "The text cannot be longer than 1000 characters."
                 }
         }
 }

@@ -135,8 +135,8 @@ module.exports = {
                                                                 value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { user: user.id, badges: data.Badges })
                                                         },
                                                         {
-                                                                name: 'Statistics:',
-                                                                value: '👥 Followers: `' + data.Followers.length + '`.'
+                                                                name: client.lang.__({ phrase: 'profile.view.embedField2', locale: lang }),
+                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue2', locale: lang }, { followers: data.Followers.length })
                                                         }
                                                 ],
                                                 color: config.embedColor,
@@ -148,7 +148,7 @@ module.exports = {
                                         });
                                 } else {
                                         const error = {
-                                                description: '❌ This user don\'t have a profile.',
+                                                description: client.lang.__({ phrase: 'profile.view.error', locale: lang }),
                                                 color: config.embedError
                                         }
 
@@ -164,7 +164,7 @@ module.exports = {
 
                         if (user.id === client.user.id || user.bot) {
                                 const error = {
-                                        description: '❌ You cannot use this command with a bot.',
+                                        description: client.lang.__({ phrase: 'profile.follow.error', locale: lang }),
                                         color: config.embedError
                                 }
 
@@ -175,7 +175,7 @@ module.exports = {
 
                         if (user.id === interaction.user.id) {
                                 const error = {
-                                        description: '❌ You cannot use this command with you.',
+                                        description: client.lang.__({ phrase: 'profile.follow.error2', locale: lang }),
                                         color: config.embedError
                                 }
 
@@ -194,7 +194,7 @@ module.exports = {
 
                                         if (followers.includes(interaction.user.id)) {
                                                 const error = {
-                                                        description: '❌ You are already following this user.',
+                                                        description: client.lang.__({ phrase: 'profile.follow.error3', locale: lang }),
                                                         color: config.embedError
                                                 }
 
@@ -207,7 +207,7 @@ module.exports = {
                                         data.save();
 
                                         const embed = {
-                                                description: 'You have started to follow <@' + user.id + '>.',
+                                                description: client.lang.__({ phrase: 'profile.follow.embed', locale: lang }),
                                                 color: config.embedColor
                                         }
 
@@ -216,7 +216,7 @@ module.exports = {
                                         });
                                 } else {
                                         const error = {
-                                                description: '❌ This user don\'t have a profile.',
+                                                description: client.lang.__({ phrase: 'profile.follow.error4', locale: lang }),
                                                 color: config.embedError
                                         }
 

@@ -14,6 +14,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
                 const user = interaction.options.getUser('user') || interaction.user;
 
                 model.findOne({
@@ -28,17 +29,11 @@ module.exports = {
                                 thumbnail: {
                                         url: user.avatarURL({ dynamic: true })
                                 },
-                                description: '<@' + user.id + '> balance:',
+                                description: client.lang.__mf({ phrase: 'balance.embed', locale: lang }, { user: user.id }),
                                 fields: [
                                         {
-                                                name: '💵 Wallet:',
-                                                value: '> :coin: `' + wallet + '`.',
-                                                inline: true
-                                        },
-                                        {
-                                                name: '🏦 Bank:',
-                                                value: '> :coin: `' + bank + '`.',
-                                                inline: true
+                                                name: client.lang.__({ phrase: 'balance.embedField', locale: lang }),
+                                                value: client.lang.__mf({ phrase: 'balance.embedFieldValue', locale: lang }, { wallet: wallet, bank: bank })
                                         }
                                 ],
                                 color: config.embedColor,
