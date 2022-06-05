@@ -50,12 +50,16 @@
 		"embed": "The song loop was disabled.",
 		"embed2": "The song loop was enabled."
 	},
+	"now-playing": {
+		"error": "❌ There is nothing playing now.",
+		"embed": "Now playing: [{title}]({uri})."
+	},
 	"play": {
 		"error": "❌ You have to be on a voice channel.",
 		"error2": "❌ You have to be on the same voice channel.",
 		"error3": "❌ The queue cannot have more than 10 songs.",
 		"embed": "Loading... (This may take a few seconds).",
-		"embed2": "The song was added to the queue: `{res}`.",
+		"embed2": "The song was added to the queue: [{title}]({uri}).",
 		"error4": "❌ An unknown error occurred."
 	},
 	"skip-to": {
@@ -107,5 +111,8 @@
 	},
 	"vote": {
 		"embed": "vote.embed"
+	},
+	"now-paying": {
+		"embed": "now-paying.embed"
 	}
 }

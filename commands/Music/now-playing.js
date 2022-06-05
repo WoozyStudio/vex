@@ -7,12 +7,13 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 const player = client.player.get(interaction.guild.id);
 
                 if (!player) {
                         const error = {
-                                description: '❌ There is nothing playing now.',
+                                description: client.lang.__({ phrase: 'now-playing.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -24,18 +25,8 @@ module.exports = {
                 const song = player.queue.current;
 
                 const embed = {
-                        thumbnail: {
-                                url: 'https://img.youtube.com/vi/' + song.identifier + '/hqdefault.jpg'
-                        },
-                        description: '[' + song.title + '](' + song.uri + ').',
-                        fields: [
-                                {
-                                        name: 'Information:',
-                                        value: '👤 Author: `' + song.author + '`.\n⏰ Duration: `' + format(player.position) + ' / ' + format(song.duration) + '`.'
-                                }
-                        ],
-                        color: config.embedColor,
-                        timestamp: new Date()
+                        description: client.lang.__mf({ phrase: 'now-playing.embed', locale: lang }, { title: song.title, uri: song.uri }),
+                        color: config.embedColor
                 }
 
                 interaction.followUp({

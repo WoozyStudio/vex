@@ -61,16 +61,12 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        description: 'Economy commands:',
                                         fields: [
                                                 {
                                                         name: 'Commands:',
-                                                        value: '`/balance`, `/deposit`, `/rich`, `/with-draw`, `/work`.'
+                                                        value: '📋`/balance`.\n📋 `/deposit`.\n📋 `/rich`.\n📋 `/with-draw`.\n📋 `/work`.'
                                                 }
                                         ],
-                                        image: {
-                                                url: 'https://media.discordapp.net/attachments/977895960170598401/979805107690557480/standard.gif'
-                                        },
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
@@ -85,16 +81,12 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        description: 'Music commands:',
                                         fields: [
                                                 {
                                                         name: 'Commands:',
-                                                        value: '`/clear-queue`, `/leave`, `/loop`, `/now-playing`, `/pause`, `/play`, `/queue`, `/resume`, `/skip-to`, `skip`, `/volume`.'
+                                                        value: '📋 `/clear-queue`.\n📋 `/leave`.\n📋 `/loop`.\n📋 `/now-playing`.\n📋 `/pause`.\n📋 `/play`.\n📋 `/queue`.\n📋 `/resume`.\n📋 `/skip-to`.\n📋 `skip`.\n📋 `/volume`.'
                                                 }
                                         ],
-                                        image: {
-                                                url: 'https://media.discordapp.net/attachments/977895960170598401/979805107690557480/standard.gif'
-                                        },
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
@@ -109,16 +101,12 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        description: 'Music commands:',
                                         fields: [
                                                 {
                                                         name: 'Commands:',
-                                                        value: '`/profile description`, `/profile follow`, `/profile register`, `/profile view`.'
+                                                        value: '📋 `/profile description`.\n📋 `/profile follow`.\n📋 `/profile register`.\n📋 `/profile view`.'
                                                 }
                                         ],
-                                        image: {
-                                                url: 'https://media.discordapp.net/attachments/977895960170598401/979805107690557480/standard.gif'
-                                        },
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
@@ -133,16 +121,12 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        description: 'Support commands:',
                                         fields: [
                                                 {
                                                         name: 'Commands:',
-                                                        value: '`/vote`.'
+                                                        value: '📋 `/vote`.'
                                                 }
                                         ],
-                                        image: {
-                                                url: 'https://media.discordapp.net/attachments/977895960170598401/979805107690557480/standard.gif'
-                                        },
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }

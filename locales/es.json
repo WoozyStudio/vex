@@ -1,108 +1,115 @@
 {
-        "balance": {
-                "embed": "Saldo de <@{user}>:",
-                "embedField": "Saldo:",
-                "embedFieldValue": "💵 Billetera: :coin: `{wallet}`.\n🏦 Banco: :coin: `{bank}`."
-        },
-        "deposit": {
-                "error": "❌ No tienes este dinero en tu billetera.",
-                "embed": "Has depositado :coin: `{amount}` en el banco.",
-                "error2": "❌ No tienes un saldo."
-        },
-        "pay": {  
-                "error": "❌ No puedes utilizar este comando con un bot.",
-                "error2": "❌ No puedes utilizar este comando contigo.",
-                "error3": "❌ No tienes este dinero en tu billetera.",
-                "embed": "Has pagado :coin: `{amount}` a <@{user}>.",
-                "error4": "❌ No tienes un saldo."
-        },
-        "richest": {
-                "embed": "👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
-                "error": "❌ No hay usuarios.",
-                "embedField": "Tabla de clasificación:"
-        },
-        "with-draw": {
-                "error": "❌ No tienes este dinero en el banco.",
-                "embed": "Has retirado :coin: `{amount}` del banco.",
-                "error2": "❌ No tienes un saldo."
-        },
-        "work": {
-                "error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
-                "embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
-        },
-        "clear-queue": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ No hay nada reproduciendo ahora.",
-                "error4": "❌ La cola no tiene más canciones.",
-                "embed": "La cola fue despejada."
-        },
-        "leave": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ No hay nada reproduciendo ahora.",
-                "embed": "He dejado el canal de voz."
-        },
-        "loop": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ No hay nada reproduciendo ahora.",
-                "embed": "El bucle de la canción fue deshabilitado.",
-                "embed2": "El bucle de la canción fue habilitado."
-        },
-        "play": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ La cola no puede tener más 10 canciones.",
-                "embed": "Cargando... (Esto puede tardar unos segundos).",
-                "embed2": "La canción fue añadida a la cola: `{res}`.",
-                "error4": "❌ Ocurrió un error desconocido."
-        },
-        "skip-to": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ No hay nada reproduciendo ahora.",
-                "error4": "❌ La cola no tiene más canciones.",
-                "error5": "❌ La canción no fue encontrada.",
-                "embed": "La canción fue saltada."
-        },
-        "skip": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ No hay nada reproduciendo ahora.",
-                "error4": "❌ La cola no tiene más canciones.",
-                "embed": "La canción fue saltada."
-        },
-        "volume": {
-                "error": "❌ Tienes que estar en un canal de voz.",
-                "error2": "❌ Tienes que estar en el mismo canal de voz.",
-                "error3": "❌ No hay nada reproduciendo ahora.",
-                "embed": "El volumen fue cambiado."
-        },
-        "vote": {
-                "embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
-        },
-        "profile": {
-                "register": {
-                        "error": "❌ Ya tienes un perfil creado.",
-                        "embed": "El perfil fue creado."
-                },
-                "view": {
-                        "embedField": "Información:",
-                        "embedFieldValue": "🏷️ Usuario: <@{user}>.\n🔰 Insignias: {badges}",
-                        "embedField2": "Estadísticas:",
-                        "embedFieldValue2": "👥 Seguidores: `{followers}`.",
-                        "error": "❌ Este usuario no tiene un perfil."
-                },
-                "follow": {
-                        "error": "❌ No puedes utilizar este comando con un bot.",
-                        "error2": "❌ No puedes utilizar este comando contigo.",
-                        "error3": "❌ Ya estás siguiendo a este usuario.",
-                        "embed": "Has empezado a seguir a este usuario.",
-                        "error4": "❌ Este usuario no tiene un perfil."
-                }
-        },
-        "set-language": {
-                "error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`."
-        }
+	"balance": {
+		"embed": "Saldo de <@{user}>:",
+		"embedField": "Saldo:",
+		"embedFieldValue": "💵 Billetera: :coin: `{wallet}`.\n🏦 Banco: :coin: `{bank}`."
+	},
+	"deposit": {
+		"error": "❌ No tienes este dinero en tu billetera.",
+		"embed": "Has depositado :coin: `{amount}` en el banco.",
+		"error2": "❌ No tienes un saldo."
+	},
+	"pay": {
+		"error": "❌ No puedes utilizar este comando con un bot.",
+		"error2": "❌ No puedes utilizar este comando contigo.",
+		"error3": "❌ No tienes este dinero en tu billetera.",
+		"embed": "Has pagado :coin: `{amount}` a <@{user}>.",
+		"error4": "❌ No tienes un saldo."
+	},
+	"richest": {
+		"embed": "👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+		"error": "❌ No hay usuarios.",
+		"embedField": "Tabla de clasificación:"
+	},
+	"with-draw": {
+		"error": "❌ No tienes este dinero en el banco.",
+		"embed": "Has retirado :coin: `{amount}` del banco.",
+		"error2": "❌ No tienes un saldo."
+	},
+	"work": {
+		"error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
+		"embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
+	},
+	"clear-queue": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+		"error4": "❌ La cola no tiene más canciones.",
+		"embed": "La cola fue despejada."
+	},
+	"leave": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+		"embed": "He dejado el canal de voz."
+	},
+	"loop": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+		"embed": "El bucle de la canción fue deshabilitado.",
+		"embed2": "El bucle de la canción fue habilitado."
+	},
+	"now-playing": {
+		"error": "❌ No hay nada reproduciendo ahora.",
+		"embed": "Reproduciendo ahora: [{title}]({uri})."
+	},
+	"play": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ La cola no puede tener más 10 canciones.",
+		"embed": "Cargando... (Esto puede tardar unos segundos).",
+		"embed2": "La canción fue añadida a la cola: [{title}]({uri}).",
+		"error4": "❌ Ocurrió un error desconocido."
+	},
+	"skip-to": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+		"error4": "❌ La cola no tiene más canciones.",
+		"error5": "❌ La canción no fue encontrada.",
+		"embed": "La canción fue saltada."
+	},
+	"skip": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+		"error4": "❌ La cola no tiene más canciones.",
+		"embed": "La canción fue saltada."
+	},
+	"volume": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+		"embed": "El volumen fue cambiado."
+	},
+	"vote": {
+		"embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
+	},
+	"profile": {
+		"register": {
+			"error": "❌ Ya tienes un perfil creado.",
+			"embed": "El perfil fue creado."
+		},
+		"view": {
+			"embedField": "Información:",
+			"embedFieldValue": "🏷️ Usuario: <@{user}>.\n🔰 Insignias: {badges}",
+			"embedField2": "Estadísticas:",
+			"embedFieldValue2": "👥 Seguidores: `{followers}`.",
+			"error": "❌ Este usuario no tiene un perfil."
+		},
+		"follow": {
+			"error": "❌ No puedes utilizar este comando con un bot.",
+			"error2": "❌ No puedes utilizar este comando contigo.",
+			"error3": "❌ Ya estás siguiendo a este usuario.",
+			"embed": "Has empezado a seguir a este usuario.",
+			"error4": "❌ Este usuario no tiene un perfil."
+		}
+	},
+	"set-language": {
+		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`."
+	},
+	"now-paying": {
+		"embed": "now-paying.embed"
+	}
 }

@@ -81,7 +81,7 @@ module.exports = {
                                         }
 
                                         const embed = {
-                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { res: res.tracks[0].title }),
+                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
                                                 color: config.embedColor
                                         }
 
@@ -98,7 +98,7 @@ module.exports = {
                                                 }
 
                                                 const embed = {
-                                                        description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { res: res.tracks[0].title }),
+                                                        description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
                                                         color: config.embedColor
                                                 }
 
