@@ -65,10 +65,10 @@ client.lang.setLocale('en');
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
         res.send('Hi!');
 });
 
 app.listen(process.env.PORT);
-
+*/
 module.exports = client;
