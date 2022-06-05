@@ -15,11 +15,12 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
                 const position = interaction.options.getInteger('position');
 
                 if (!interaction.member.voice.channel) {
                         const error = {
-                                description: '❌ You have to be on a voice channel.',
+                                description: client.lang.__({ phrase: 'skip-to.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -30,7 +31,7 @@ module.exports = {
 
                 if (interaction.guild.me.voice.channelId && interaction.member.voice.channelId !== interaction.guild.me.voice.channelId) {
                         const error = {
-                                description: '❌ You have to be on the same voice channel.',
+                                description: client.lang.__({ phrase: 'skip-to.error2', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -43,7 +44,7 @@ module.exports = {
 
                 if (!player) {
                         const error = {
-                                description: '❌ There is nothing playing now.',
+                                description: client.lang.__({ phrase: 'skip-to.error3', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -54,7 +55,7 @@ module.exports = {
 
                 if (player.queue.size < 1) {
                         const error = {
-                                description: '❌ The queue has no more songs.',
+                                description: client.lang.__({ phrase: 'skip-to.error4', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -65,7 +66,7 @@ module.exports = {
 
                 if (position > player.queue.size) {
                         const error = {
-                                description: '❌ The song was not found.',
+                                description: client.lang.__({ phrase: 'skip-to.error5', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -79,7 +80,7 @@ module.exports = {
                 await player.stop();
 
                 const embed = {
-                        description: 'The song was skipped.',
+                        description: client.lang.__({ phrase: 'skip-to.embed', locale: lang }),
                         color: config.embedColor
                 }
 

@@ -14,11 +14,12 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
                 const search = interaction.options.getString('search');
 
                 if (!interaction.member.voice.channel) {
                         const error = {
-                                description: '❌ You have to be on a voice channel.',
+                                description: client.lang.__({ phrase: 'play.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -29,7 +30,7 @@ module.exports = {
 
                 if (interaction.guild.me.voice.channelId && interaction.member.voice.channelId !== interaction.guild.me.voice.channelId) {
                         const error = {
-                                description: '❌ You have to be on the same voice channel.',
+                                description: client.lang.__({ phrase: 'play.error2', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -46,7 +47,7 @@ module.exports = {
 
                 if (player.queue.size > 9) {
                         const error = {
-                                description: '❌ The queue exceeds the song limit. (Limit: 10).',
+                                description: client.lang.__({ phrase: 'play.error3', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -62,7 +63,7 @@ module.exports = {
                 }
 
                 const embed = {
-                        description: 'Loading... (This may take a few seconds).',
+                        description: client.lang.__({ phrase: 'play.embed', locale: lang }),
                         color: config.embedColor
                 }
 
@@ -80,7 +81,7 @@ module.exports = {
                                         }
 
                                         const embed = {
-                                                description: 'The song was added to the queue: `' + res.tracks[0].title + '`.',
+                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { res: res.tracks[0].title }),
                                                 color: config.embedColor
                                         }
 
@@ -97,7 +98,7 @@ module.exports = {
                                                 }
 
                                                 const embed = {
-                                                        description: 'The song was added to the queue: `' + res.tracks[0].title + '`.',
+                                                        description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { res: res.tracks[0].title }),
                                                         color: config.embedColor
                                                 }
 
@@ -108,24 +109,15 @@ module.exports = {
                                         break;
                         }
                 }).catch((err) => {
-                        const error = {
-                                description: '❌ An unknown error occurred.',
-                                color: config.embedError
-                        }
-
-                        const error2 = {
-                                description: '❌ Something went wrong... We found this error: `' + err.message + ' - ' + err.stack + '`.\nServer: `' + interaction.guild.name + '`.',
-                                color: config.embedError
-                        }
-
                         player.destroy();
+
+                        const error = {
+                                description: client.lang.__({ phrase: 'play.error4', locale: lang }),
+                                color: config.embedError
+                        }
 
                         return interaction.followUp({
                                 embeds: [error]
-                        });
-
-                        client.channels.cache.get(config.logsChannel).send({
-                                embeds: [error2]
                         });
                 });
         }

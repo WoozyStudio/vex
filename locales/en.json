@@ -1,62 +1,111 @@
 {
-        "balance": {
-                "embed": "<@{user}>'s balance:",
-                "embedField": "Balance:",
-                "embedFieldValue": "💵 Wallet: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
-        },
-        "deposit": {
-                "error": "❌ You don't have this money in your wallet.",
-                "embed": "You have deposited :coin: `{amount}` in the bank.",
-                "error2": "❌ You don't have a balance."
-        },
-        "pay": {  
-                "error": "❌ You cannot use this command with a bot.",
-                "error2": "❌ You cannot use this command with you.",
-                "error3": "❌ You don't have this money in your wallet.",
-                "embed": "You have paid :coin: `{amount}` to <@{user}>.",
-                "error4": "❌ You don't have a balance."
-        },
-        "richest": {
-                "embed": "👤 `{index}.` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
-                "error": "❌ There are no users.",
-                "embedField": "Leaderboard:"
-        },
-        "with-draw": {
-                "error": "❌ You don't have this money in the bank.",
-                "embed": "You have withdrawn :coin: `{amount}` from the bank.",
-                "error2": "❌ You don't have a balance."
-        },
-        "work": {
-                "error": "❌ You cannot use this command now.\nCome back in `{format}`.",
-                "embed": "You went to work and got paid :coin: `{earned}`."
-        },
-        "vote": {
-                "embed": "Vote in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVote in [Top.gg](https://top.gg/bot/955921440002179132)."
-        },
-        "profile": {
-                "register": {
-                        "error": "❌ You already have a profile created.",
-                        "embed": "The profile was created."
-                },
-                "view": {
-                        "embedField": "Information:",
-                        "embedFieldValue": "🏷️ User: <@{user}>.\n🔰 Badges: {badges}",
-                        "embedField2": "Statistics:",
-                        "embedFieldValue2": "👥 Followers: `{followers}`.",
-                        "error": "❌ This user don't have a profile."
-                },
-                "follow": {
-                        "error": "❌ You cannot use this command with a bot.",
-                        "error2": "❌ You cannot use this command with you.",
-                        "error3": "❌ You are already following this user.",
-                        "embed": "You have started following this user.",
-                        "error4": "❌ This user don't have a profile."
-                },
-                "description": {
-                        "error": "The text cannot be longer than 1000 characters."
-                }
-        },
-        "set-language": {
-                "error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`."
-        }
+	"balance": {
+		"embed": "<@{user}>'s balance:",
+		"embedField": "Balance:",
+		"embedFieldValue": "💵 Wallet: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
+	},
+	"deposit": {
+		"error": "❌ You don't have this money in your wallet.",
+		"embed": "You have deposited :coin: `{amount}` in the bank.",
+		"error2": "❌ You don't have a balance."
+	},
+	"pay": {
+		"error": "❌ You cannot use this command with a bot.",
+		"error2": "❌ You cannot use this command with you.",
+		"error3": "❌ You don't have this money in your wallet.",
+		"embed": "You have paid :coin: `{amount}` to <@{user}>.",
+		"error4": "❌ You don't have a balance."
+	},
+	"richest": {
+		"embed": "👤 `{index}.` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"error": "❌ There are no users.",
+		"embedField": "Leaderboard:"
+	},
+	"with-draw": {
+		"error": "❌ You don't have this money in the bank.",
+		"embed": "You have withdrawn :coin: `{amount}` from the bank.",
+		"error2": "❌ You don't have a balance."
+	},
+	"work": {
+		"error": "❌ You cannot use this command now.\nCome back in `{format}`.",
+		"embed": "You went to work and got paid :coin: `{earned}`."
+	},
+	"clear-queue": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+		"error4": "❌ The queue has no more songs.",
+		"embed": "The queue was cleared."
+	},
+	"leave": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+		"embed": "I have left the voice channel."
+	},
+	"loop": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+		"embed": "The song loop was disabled.",
+		"embed2": "The song loop was enabled."
+	},
+	"play": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ The queue cannot have more than 10 songs.",
+		"embed": "Loading... (This may take a few seconds).",
+		"embed2": "The song was added to the queue: `{res}`.",
+		"error4": "❌ An unknown error occurred."
+	},
+	"skip-to": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+		"error4": "❌ The queue has no more songs.",
+		"error5": "❌ The song was not found.",
+		"embed": "The song was skipped."
+	},
+	"skip": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+		"error4": "❌ The queue has no more songs.",
+		"embed": "The song was skipped."
+	},
+	"volume": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+		"embed": "The volume was changed."
+	},
+	"profile": {
+		"register": {
+			"error": "❌ You already have a profile created.",
+			"embed": "The profile was created."
+		},
+		"view": {
+			"embedField": "Information:",
+			"embedFieldValue": "🏷️ User: <@{user}>.\n🔰 Badges: {badges}",
+			"embedField2": "Statistics:",
+			"embedFieldValue2": "👥 Followers: `{followers}`.",
+			"error": "❌ This user don't have a profile."
+		},
+		"follow": {
+			"error": "❌ You cannot use this command with a bot.",
+			"error2": "❌ You cannot use this command with you.",
+			"error3": "❌ You are already following this user.",
+			"embed": "You have started following this user.",
+			"error4": "❌ This user don't have a profile."
+		},
+		"description": {
+			"error": "The text cannot be longer than 1000 characters."
+		}
+	},
+	"set-language": {
+		"error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`."
+	},
+	"vote": {
+		"embed": "vote.embed"
+	}
 }

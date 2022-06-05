@@ -30,6 +30,55 @@
                 "error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
                 "embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
         },
+        "clear-queue": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ No hay nada reproduciendo ahora.",
+                "error4": "❌ La cola no tiene más canciones.",
+                "embed": "La cola fue despejada."
+        },
+        "leave": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ No hay nada reproduciendo ahora.",
+                "embed": "He dejado el canal de voz."
+        },
+        "loop": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ No hay nada reproduciendo ahora.",
+                "embed": "El bucle de la canción fue deshabilitado.",
+                "embed2": "El bucle de la canción fue habilitado."
+        },
+        "play": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ La cola no puede tener más 10 canciones.",
+                "embed": "Cargando... (Esto puede tardar unos segundos).",
+                "embed2": "La canción fue añadida a la cola: `{res}`.",
+                "error4": "❌ Ocurrió un error desconocido."
+        },
+        "skip-to": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ No hay nada reproduciendo ahora.",
+                "error4": "❌ La cola no tiene más canciones.",
+                "error5": "❌ La canción no fue encontrada.",
+                "embed": "La canción fue saltada."
+        },
+        "skip": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ No hay nada reproduciendo ahora.",
+                "error4": "❌ La cola no tiene más canciones.",
+                "embed": "La canción fue saltada."
+        },
+        "volume": {
+                "error": "❌ Tienes que estar en un canal de voz.",
+                "error2": "❌ Tienes que estar en el mismo canal de voz.",
+                "error3": "❌ No hay nada reproduciendo ahora.",
+                "embed": "El volumen fue cambiado."
+        },
         "vote": {
                 "embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
         },
