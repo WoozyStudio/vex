@@ -18,7 +18,6 @@ client.on('interactionCreate', async (interaction) => {
         });
 
         if (interaction.isCommand()) {
-                const lang = interaction.member.guild.lang;
                 const cmd = client.slashcommands.get(interaction.commandName);
 
                 if (!cmd) return;
