@@ -1,23 +1,24 @@
 const client = require('../../index.js');
 const model = require('../../models/language.js');
+const config = require('../../config/config.json');
 
 client.on('interactionCreate', async (interaction) => {
-        const Guild = interaction.member.guild;
-        
+        if (!interaction.guildId) return;
+
+        const guildLang = interaction.member.guild;
+
         model.findOne({
                 Guild: interaction.guild.id
         }, (err, data) => {
                 if (err) throw err;
-                
+
                 const language = data ? data.Language : 'en';
 
-                Guild.lang = language;
+                guildLang.lang = language;
         });
-        
-        if (!interaction.guildId) return;
-        
+
         if (interaction.isCommand()) {
-                
+                const lang = interaction.member.guild.lang;
                 const cmd = client.slashcommands.get(interaction.commandName);
 
                 if (!cmd) return;
@@ -32,6 +33,9 @@ client.on('interactionCreate', async (interaction) => {
                                 });
                         } else if (option.value) args.push(option.value);
                 }
-                cmd.run(client, interaction, args);
+
+                if (cmd) {
+                        cmd.run(client, interaction)
+                }
         }
 });

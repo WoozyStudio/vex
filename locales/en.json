@@ -26,13 +26,6 @@
                 "embed": "You have withdrawn :coin: `{amount}` from the bank.",
                 "error2": "❌ You don't have a balance."
         },
-        "clear-queue": {
-                "error": "❌ You have to be on a voice channel.",
-                "error2": "❌ You have to be on the same voice channel.",
-                "error3": "❌ There is nothing playing now.",
-                "error4": "❌ The queue has no more songs.",
-                "embed": "The queue was cleared."
-        }
         "work": {
                 "error": "❌ You cannot use this command now.\nCome back in `{format}`.",
                 "embed": "You went to work and got paid :coin: `{earned}`."

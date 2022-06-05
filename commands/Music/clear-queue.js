@@ -6,11 +6,10 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
-                const lang = interaction.member.guild.lang;
 
                 if (!interaction.member.voice.channel) {
                         const error = {
-                                description: client.lang.__({ phrase: 'clear-queue.error', locale: lang }),
+                                description: '❌ You have to be on a voice channel.',
                                 color: config.embedError
                         }
 
@@ -21,7 +20,7 @@ module.exports = {
 
                 if (interaction.guild.me.voice.channelId && interaction.member.voice.channelId !== interaction.guild.me.voice.channelId) {
                         const error = {
-                                description: client.lang.__({ phrase: 'clear-queue.error2', locale: lang }),
+                                description: '❌ You have to be on the same voice channel.',
                                 color: config.embedError
                         }
 
@@ -34,7 +33,7 @@ module.exports = {
 
                 if (!player) {
                         const error = {
-                                description: client.lang.__({ phrase: 'clear-queue.error3', locale: lang }),
+                                description: '❌ There is nothing playing now.',
                                 color: config.embedError
                         }
 
@@ -45,7 +44,7 @@ module.exports = {
 
                 if (player.queue.size < 1) {
                         const error = {
-                                description: client.lang.__({ phrase: 'clear-queue.error4', locale: lang }),
+                                description: '❌ The queue has no more songs.',
                                 color: config.embedError
                         }
 
@@ -57,7 +56,7 @@ module.exports = {
                 await player.queue.clear();
 
                 const embed = {
-                        description: client.lang.__({ phrase: 'clear-queue.embed', locale: lang }),
+                        description: 'The queue was cleared.',
                         color: config.embedColor
                 }
 
