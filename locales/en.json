@@ -9,6 +9,18 @@
                 "embed": "You have deposited :coin: `amount` in the bank.",
                 "error2": "❌ You don't have a balance."
         },
+        "pay": {  
+                "error": "❌ You cannot use this command with a bot.",
+                "error2": "❌ You cannot use this command with you.",
+                "error3": "❌ You don't have this money in your wallet.",
+                "embed": "You have paid :coin: `{amount}` to <@{user}>.",
+                "error4": "❌ You don't have a balance."
+        },
+        "richest": {
+                "embed": "👤 `{index}.` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+                "error": "❌ There are no users.",
+                "embedField": "Leaderboard:"
+        },
         "vote": {
                 "embed": "Vote in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVote in [Top.gg](https://top.gg/bot/955921440002179132)."
         },

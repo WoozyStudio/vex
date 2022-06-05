@@ -5,9 +5,21 @@
                 "embedFieldValue": "💵 Billetera: :coin: `{wallet}`.\n🏦 Banco: :coin: `{bank}`."
         },
         "deposit": {
-                "error": "❌ You don't have this money in your wallet.",
-                "embed": "You have deposited :coin: `amount` in the bank.",
-                "error2": "❌ You don't have a balance."
+                "error": "❌ No tienes este dinero en tu billetera.",
+                "embed": "Has depositado :coin: `{amount}` en el banco.",
+                "error2": "❌ No tienes un saldo."
+        },
+        "pay": {  
+                "error": "❌ No puedes utilizar este comando con un bot.",
+                "error2": "❌ No puedes utilizar este comando contigo.",
+                "error3": "❌ No tienes este dinero en tu billetera.",
+                "embed": "Has pagado :coin: `{amount}` a <@{user}>.",
+                "error4": "❌ No tienes un saldo."
+        },
+        "richest": {
+                "embed": "👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+                "error": "❌ No hay usuarios.",
+                "embedField": "Tabla de clasificación:"
         },
         "vote": {
                 "embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."

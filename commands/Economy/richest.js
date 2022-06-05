@@ -7,6 +7,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 model.find({}, (err, data) => {
                         if (err) throw err;
@@ -14,11 +15,11 @@ module.exports = {
                         const lb = data.sort((a, b) => Number((b.Wallet + b.Bank) - (a.Wallet + a.Bank)));
                         const total = lb.slice(0, 10);
                         var map = total.map((user, index) => {
-                                return `👤 \`${index + 1}.\` <@${user.User}>. 💵 Wallet: :coin: \`${user.Wallet}\` - 🏦 Bank: :coin: \`${user.Bank}\`.`;
+                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: user.User, wallet: user.Wallet, bank: user.Bank })
                         }).join('\n');
 
                         if (!map) {
-                                map = '❌ There are no users.';
+                                map = client.lang.__({ phrase: 'richest.error', locale: lang });
                         }
 
                         const embed = {
@@ -27,7 +28,7 @@ module.exports = {
                                 },
                                 fields: [
                                         {
-                                                name: 'Leaderboard:',
+                                                name: client.lang.__({ phrase: 'richest.embedField', locale: lang }),
                                                 value: map
                                         }
                                 ],

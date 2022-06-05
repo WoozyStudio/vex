@@ -22,12 +22,13 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
                 const user = interaction.options.getUser('user');
                 const amount = interaction.options.getInteger('amount');
 
                 if (user.id === client.user.id || user.bot) {
                         const error = {
-                                description: '❌ You cannot use this command with a bot.',
+                                description: client.lang.__({ phrase: 'pay.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -38,7 +39,7 @@ module.exports = {
 
                 if (user.id === interaction.user.id) {
                         const error = {
-                                description: '❌ You cannot use this command with you.',
+                                description: client.lang.__({ phrase: 'pay.error2', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -55,7 +56,7 @@ module.exports = {
                         if (data) {
                                 if (amount > data.Wallet) {
                                         const error = {
-                                                description: '❌ You don\'t have that money in your wallet.',
+                                                description: client.lang.__({ phrase: 'pay.error3', locale: lang }),
                                                 color: config.embedError
                                         }
 
@@ -84,7 +85,7 @@ module.exports = {
                                         }
 
                                         const embed = {
-                                                description: 'You have paid :coin: `' + amount + '` to <@' + user.id + '>.',
+                                                description: client.lang.__mf({ phrase: 'pay.embed', locale: lang }, { amount: amount, user: user.id }),
                                                 color: config.embedColor
                                         }
 
@@ -94,7 +95,7 @@ module.exports = {
                                 });
                         } else {
                                 const error = {
-                                        description: '❌ You don\'t have a balance',
+                                        description: client.lang.__({ phrase: 'pay.error4', locale: lang }),
                                         color: config.embedError
                                 }
 
