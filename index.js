@@ -16,6 +16,7 @@ const client = new Client({
                 'REACTION'
         ]
 });
+
 require('dotenv').config();
 require('./handler')(client);
 
@@ -62,13 +63,4 @@ client.lang.configure({
 
 client.lang.setLocale('en');
 
-const express = require('express');
-const app = express();
-
-/*app.get('/', (req, res) => {
-        res.send('Hi!');
-});
-
-app.listen(process.env.PORT);
-*/
 module.exports = client;

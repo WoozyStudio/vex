@@ -1,5 +1,5 @@
-const client = require('../index.js');
-const model = require('../models/language.js');
+const client = require('../../index.js');
+const model = require('../../models/language.js');
 
 client.on('interactionCreate', async (interaction) => {
         const Guild = interaction.member.guild;
