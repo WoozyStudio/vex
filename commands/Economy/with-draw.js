@@ -16,6 +16,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
                 const amount = interaction.options.getInteger('amount');
 
                 model.findOne({
@@ -26,7 +27,7 @@ module.exports = {
                         if (data) {
                                 if (amount > data.Bank) {
                                         const error = {
-                                                description: '❌ You don\'t have that money in the bank.',
+                                                description: client.lang.__({ phrase: 'with-draw.error', locale: lang }),
                                                 color: config.embedError
                                         }
 
@@ -40,7 +41,7 @@ module.exports = {
                                 data.save();
 
                                 const embed = {
-                                        description: 'You have withdrawn :coin: `' + amount + '` from the bank.',
+                                        description: client.lang.__mf({ phrase: 'with-draw.embed', locale: lang }, { amount: amount }),
                                         color: config.embedColor
                                 }
 
@@ -49,7 +50,7 @@ module.exports = {
                                 });
                         } else {
                                 const error = {
-                                        description: '❌ You don\'t have a balance.',
+                                        description: client.lang.__({ phrase: 'with-draw.error2', locale: lang }),
                                         color: config.embedError
                                 }
 

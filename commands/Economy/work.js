@@ -10,6 +10,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 const time = quick.fetch('workTimer_' + interaction.user.id);
 
@@ -21,7 +22,7 @@ module.exports = {
                         });
 
                         const error = {
-                                description: '❌ You cannot use this command now.\nCome back in `' + format + '`.',
+                                description: client.lang.__mf({ phrase: 'work.error', locale: lang }, { format: format }),
                                 color: config.embedError
                         }
 
@@ -49,7 +50,7 @@ module.exports = {
                         }
 
                         const embed = {
-                                description: 'You went to work and your boss paid you :coin: `' + earned + '`.',
+                                description: client.lang.__mf({ phrase: 'work.embed', locale: lang }, { earned: earned }),
                                 color: config.embedColor
                         }
 

@@ -21,6 +21,15 @@
                 "error": "❌ No hay usuarios.",
                 "embedField": "Tabla de clasificación:"
         },
+        "with-draw": {
+                "error": "❌ No tienes este dinero en el banco.",
+                "embed": "Has retirado :coin: `{amount}` del banco.",
+                "error2": "❌ No tienes un saldo."
+        },
+        "work": {
+                "error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
+                "embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
+        },
         "vote": {
                 "embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
         },

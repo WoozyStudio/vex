@@ -25,7 +25,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply({ ephemeral: false }).catch(() => { });
-                const lang = interaction.member.guild.lang
+                const lang = interaction.member.guild.lang;
                 const language = interaction.options.getString('lang');
 
                 if (!interaction.member.permissions.has('ADMINISTRATOR')) {

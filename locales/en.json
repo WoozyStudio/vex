@@ -6,7 +6,7 @@
         },
         "deposit": {
                 "error": "❌ You don't have this money in your wallet.",
-                "embed": "You have deposited :coin: `amount` in the bank.",
+                "embed": "You have deposited :coin: `{amount}` in the bank.",
                 "error2": "❌ You don't have a balance."
         },
         "pay": {  
@@ -20,6 +20,15 @@
                 "embed": "👤 `{index}.` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
                 "error": "❌ There are no users.",
                 "embedField": "Leaderboard:"
+        },
+        "with-draw": {
+                "error": "❌ You don't have this money in the bank.",
+                "embed": "You have withdrawn :coin: `{amount}` from the bank.",
+                "error2": "❌ You don't have a balance."
+        },
+        "work": {
+                "error": "❌ You cannot use this command now.\nCome back in `{format}`.",
+                "embed": "You went to work and got paid :coin: `{earned}`."
         },
         "vote": {
                 "embed": "Vote in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVote in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVote in [Top.gg](https://top.gg/bot/955921440002179132)."
