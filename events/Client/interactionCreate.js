@@ -35,17 +35,6 @@ client.on('interactionCreate', async (interaction) => {
                 }
 
                 if (cmd) {
-                        if (!interaction.member.permissions.has(cmd.permissions || [])) {
-                                const error = {
-                                        description: client.lang.__mf({ phrase: 'events.permissions', locale: lang }, { permissions: cmd.permissions.join(', ') }),
-                                        color: config.embedError
-                                }
-
-                                return interaction.reply({
-                                        embeds: [error]
-                                });
-                        }
-
                         cmd.run(client, interaction)
                 }
         }

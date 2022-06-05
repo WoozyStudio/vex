@@ -22,35 +22,35 @@ module.exports = {
                         required: true
                 }
         ],
-        permissions: ['ADMINISTRATOR'],
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply({ ephemeral: false }).catch(() => { });
-                const lang = interaction.options.getString('lang');
+                const lang = interaction.member.guild.lang
+                const language = interaction.options.getString('lang');
 
-                /*if (!interaction.member.permissions.has('ADMINISTRATOR')) {
+                if (!interaction.member.permissions.has('ADMINISTRATOR')) {
                         const error = {
-                                description: 'You do not have enough permissions.\nYou need `Administrator`.',
+                                description: client.lang.__mf({ phrase: 'set-language.error', locale: lang }),
                                 color: config.embedError
                         }
 
                         return interaction.followUp({
                                 embeds: [error]
                         });
-                }*/
-                
+                }
+
                 model.findOne({
                         Guild: interaction.guild.id
                 }, (err, data) => {
                         if (err) throw err;
 
                         if (data) {
-                                data.Language = lang;
+                                data.Language = language;
                                 data.save();
                         } else {
                                 new model({
                                         Guild: interaction.guild.id,
-                                        Language: lang
+                                        Language: language
                                 }).save();
                         }
 

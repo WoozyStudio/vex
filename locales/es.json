@@ -44,7 +44,7 @@
                         "error4": "❌ Este usuario no tiene un perfil."
                 }
         },
-        "events": {
-                "permissions": "❌ No tienes permisos.\nNecesitas `{permissions}`."
+        "set-language": {
+                "error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`."
         }
 }

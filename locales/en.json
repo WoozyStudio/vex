@@ -47,7 +47,7 @@
                         "error": "The text cannot be longer than 1000 characters."
                 }
         },
-        "events": {
-                "permissions": "❌ You don't have permissions.\nYou need `{permissions}`."
+        "set-language": {
+                "error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`."
         }
 }
