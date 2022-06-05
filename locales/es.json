@@ -43,5 +43,8 @@
                         "embed": "Has empezado a seguir a este usuario.",
                         "error4": "❌ Este usuario no tiene un perfil."
                 }
+        },
+        "events": {
+                "permissions": "❌ No tienes permisos.\nNecesitas `{permissions}`."
         }
 }

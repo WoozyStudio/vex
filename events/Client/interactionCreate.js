@@ -1,5 +1,6 @@
 const client = require('../../index.js');
 const model = require('../../models/language.js');
+const config = require('../../config/config.json');
 
 client.on('interactionCreate', async (interaction) => {
         if (!interaction.guildId) return;
@@ -17,6 +18,7 @@ client.on('interactionCreate', async (interaction) => {
         });
 
         if (interaction.isCommand()) {
+                const lang = interaction.member.guild.lang;
                 const cmd = client.slashcommands.get(interaction.commandName);
 
                 if (!cmd) return;
@@ -31,6 +33,20 @@ client.on('interactionCreate', async (interaction) => {
                                 });
                         } else if (option.value) args.push(option.value);
                 }
-                cmd.run(client, interaction, args);
+
+                if (cmd) {
+                        if (!interaction.member.permissions.has(cmd.permissions || [])) {
+                                const error = {
+                                        description: client.lang.__mf({ phrase: 'events.permissions', locale: lang }, { permissions: cmd.permissions.join(', ') }),
+                                        color: config.embedError
+                                }
+
+                                return interaction.reply({
+                                        embeds: [error]
+                                });
+                        }
+
+                        cmd.run(client, interaction)
+                }
         }
 });

@@ -10,24 +10,25 @@ module.exports = {
                         description: '-',
                         choices: [
                                 {
-                                        name: 'Spanish',
-                                        value: 'es'
+                                        name: '🇺🇲 English (EN).',
+                                        value: 'en'
                                 },
                                 {
-                                        name: 'English',
-                                        value: 'en'
+                                        name: '🇪🇦 Español (ES).',
+                                        value: 'es'
                                 }
                         ],
                         type: 'STRING',
                         required: true
                 }
         ],
+        permissions: ['ADMINISTRATOR'],
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply({ ephemeral: false }).catch(() => { });
                 const lang = interaction.options.getString('lang');
 
-                if (!interaction.member.permissions.has('ADMINISTRATOR')) {
+                /*if (!interaction.member.permissions.has('ADMINISTRATOR')) {
                         const error = {
                                 description: 'You do not have enough permissions.\nYou need `Administrator`.',
                                 color: config.embedError
@@ -36,7 +37,7 @@ module.exports = {
                         return interaction.followUp({
                                 embeds: [error]
                         });
-                }
+                }*/
                 
                 model.findOne({
                         Guild: interaction.guild.id
