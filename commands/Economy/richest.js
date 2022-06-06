@@ -14,8 +14,10 @@ module.exports = {
 
                         const lb = data.sort((a, b) => Number((b.Wallet + b.Bank) - (a.Wallet + a.Bank)));
                         const total = lb.slice(0, 10);
+
                         var map = total.map((user, index) => {
-                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: user.User, wallet: user.Wallet, bank: user.Bank })
+                                const username = client.users.cache.get(user.User);
+                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: username.tag, wallet: user.Wallet, bank: user.Bank })
                         }).join('\n');
 
                         if (!map) {
