@@ -1,15 +1,16 @@
 const config = require('../../config/config.json');
 
 module.exports = {
-        name: 'pause',
-        description: 'Pause the song that is playing.',
+        name: 'resume',
+        description: 'Resume the song that is playing.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 if (!interaction.member.voice.channel) {
                         const error = {
-                                description: '❌ You have to be on a voice channel.',
+                                description: client.lang.__({ phrase: 'resume.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -20,7 +21,7 @@ module.exports = {
 
                 if (interaction.guild.me.voice.channelId && interaction.member.voice.channelId !== interaction.guild.me.voice.channelId) {
                         const error = {
-                                description: '❌ You have to be on the same voice channel.',
+                                description: client.lang.__({ phrase: 'resume.error2', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -33,7 +34,7 @@ module.exports = {
 
                 if (!player) {
                         const error = {
-                                description: '❌ There is nothing playing now.',
+                                description: client.lang.__({ phrase: 'resume.error3', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -42,9 +43,9 @@ module.exports = {
                         });
                 }
 
-                if (player.paused) {
+                if (!player.paused) {
                         const error = {
-                                description: '❌ The song was already paused.',
+                                description: client.lang.__({ phrase: 'resume.error4', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -52,10 +53,10 @@ module.exports = {
                                 embeds: [error]
                         });
                 } else {
-                        await player.pause(true);
+                        await player.pause(false);
 
                         const embed = {
-                                description: 'The song was paused.',
+                                description: client.lang.__({ phrase: 'resume.embed', locale: lang }),
                                 color: config.embedColor
                         }
 

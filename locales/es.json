@@ -54,6 +54,13 @@
 		"error": "❌ No hay nada reproduciendo ahora.",
 		"embed": "Reproduciendo ahora: [{title}]({uri})."
 	},
+	"pause": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+                "error4": "❌ La canción ya estaba pausada.",
+                "embed": "La canción fue pausada."
+	},
 	"play": {
 		"error": "❌ Tienes que estar en un canal de voz.",
 		"error2": "❌ Tienes que estar en el mismo canal de voz.",
@@ -61,6 +68,18 @@
 		"embed": "Cargando... (Esto puede tardar unos segundos).",
 		"embed2": "La canción fue añadida a la cola: [{title}]({uri}).",
 		"error4": "❌ Ocurrió un error desconocido."
+	},
+        "queue": {
+		"error": "❌ No hay nada reproduciendo ahora.",
+		"error2": "❌ No hay canciones.",
+                "embedField": "Cola:"
+	},
+        "resume": {
+		"error": "❌ Tienes que estar en un canal de voz.",
+		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error3": "❌ No hay nada reproduciendo ahora.",
+                "error4": "❌ La canción ya estaba reanudada.",
+                "embed": "La canción fue reanudada."
 	},
 	"skip-to": {
 		"error": "❌ Tienes que estar en un canal de voz.",

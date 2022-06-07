@@ -54,6 +54,13 @@
 		"error": "❌ There is nothing playing now.",
 		"embed": "Now playing: [{title}]({uri})."
 	},
+        "pause": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+                "error4": "❌ The song was already paused.",
+                "embed": "The song was paused."
+	},
 	"play": {
 		"error": "❌ You have to be on a voice channel.",
 		"error2": "❌ You have to be on the same voice channel.",
@@ -61,6 +68,18 @@
 		"embed": "Loading... (This may take a few seconds).",
 		"embed2": "The song was added to the queue: [{title}]({uri}).",
 		"error4": "❌ An unknown error occurred."
+	},
+        "queue": {
+		"error": "❌ There is nothing playing now.",
+		"error2": "❌ There are no songs:",
+                "embedField": "Queue:"
+	},
+        "resume": {
+		"error": "❌ You have to be on a voice channel.",
+		"error2": "❌ You have to be on the same voice channel.",
+		"error3": "❌ There is nothing playing now.",
+                "error4": "❌ The song was already resumed.",
+                "embed": "The song was resumed."
 	},
 	"skip-to": {
 		"error": "❌ You have to be on a voice channel.",

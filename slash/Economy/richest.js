@@ -16,8 +16,7 @@ module.exports = {
                         const total = lb.slice(0, 10);
 
                         var map = total.map((user, index) => {
-                                const username = client.users.cache.get(user.User);
-                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: username.tag, wallet: user.Wallet, bank: user.Bank })
+                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: user.User, wallet: user.Wallet, bank: user.Bank })
                         }).join('\n');
 
                         if (!map) {

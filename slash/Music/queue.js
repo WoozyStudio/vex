@@ -6,12 +6,13 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 const player = client.player.get(interaction.guild.id);
 
                 if (!player) {
                         const error = {
-                                description: '❌ There is nothing playing now.',
+                                description: client.lang.__({ phrase: 'queue.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -22,12 +23,13 @@ module.exports = {
 
                 const queue = player.queue;
                 const tracks = queue.slice(0, 10);
+
                 var map = tracks.map((track, i) => {
                         return `📋 \`${i + 1}.\` [${track.title}](${track.uri}).`;
                 }).join('\n');
 
                 if (!map) {
-                        map = '❌ There are no songs.';
+                        map = client.lang.__({ phrase: 'queue.error2', locale: lang });
                 }
 
                 var icon = interaction.guild.iconURL();
@@ -43,7 +45,7 @@ module.exports = {
                         description: '[' + queue.current.title + '](' + queue.current.uri + ').',
                         fields: [
                                 {
-                                        name: 'Queue:',
+                                        name: client.lang.__({ phrase: 'queue.embedField', locale: lang }),
                                         value: map
                                 }
                         ],
