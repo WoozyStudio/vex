@@ -21,10 +21,12 @@ client.on('messageCreate', async (message) => {
 
         if (!message.content.toLowerCase().startsWith(prefix)) return;
 
-        const [cmd, ...args] = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
+        const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = client.commands.get(cmd.toLowerCase()) || client.commands.find(c => c.aliases?.includes(cmd.toLowerCase()));
 
+        if (!command) return;
+        
         if (command) {
-                command.run(client, message, args);
+                await command.run(client, message, args);
         }
 });

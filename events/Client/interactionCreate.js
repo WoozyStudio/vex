@@ -19,9 +19,9 @@ client.on('interactionCreate', async (interaction) => {
 
         if (interaction.isCommand()) {
                 const lang = interaction.member.guild.lang;
-                const cmd = client.slashcommands.get(interaction.commandName);
+                const command = client.slashcommands.get(interaction.commandName);
 
-                if (!cmd) return;
+                if (!command) return;
 
                 const args = [];
 
@@ -34,8 +34,8 @@ client.on('interactionCreate', async (interaction) => {
                         } else if (option.value) args.push(option.value);
                 }
 
-                if (cmd) {
-                        cmd.run(client, interaction)
+                if (command) {
+                        await command.run(client, interaction)
                 }
         }
 });
