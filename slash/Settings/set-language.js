@@ -55,7 +55,7 @@ module.exports = {
                         }
 
                         const embed = {
-                                description: 'The language was changed.',
+                                description: client.lang.__({ phrase: 'set-language.embed', locale: lang }),
                                 color: config.embedColor
                         }
 

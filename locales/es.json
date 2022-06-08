@@ -123,12 +123,28 @@
 			"error3": "❌ Ya estás siguiendo a este usuario.",
 			"embed": "Has empezado a seguir a este usuario.",
 			"error4": "❌ Este usuario no tiene un perfil."
+		},
+		"description": {
+			"error": "❌ El texto no puede tener más de 1000 letras.",
+                        "error2": "❌ El texto no puede tener un enlace válido.",
+                        "embed": "La descripción fue cambiada.",
+                        "error3": "❌ No tienes un perfil."
+                },
+                "followers": {
+                        "error": "❌ No hay seguidores.",
+                        "embedField": "Seguidores:",
+                        "error2": "❌ No tienes un perfil."
+                },
+                "unfollow": {
+			"error": "❌ No puedes utilizar este comando con un bot.",
+			"error2": "❌ No puedes utilizar este comando contigo.",
+			"error3": "❌ No estás siguiendo a este usuario.",
+			"embed": "Has dejado de seguir a este usuario.",
+			"error4": "❌ Este usuario no tiene un perfil."
 		}
 	},
 	"set-language": {
-		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`."
-	},
-	"now-paying": {
-		"embed": "now-paying.embed"
+		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`.",
+                "embed": "El languaje fue cambiado."
 	}
 }

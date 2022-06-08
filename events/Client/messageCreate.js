@@ -3,7 +3,7 @@ const model = require('../../models/language.js');
 const config = require('../../config/config.json');
 
 client.on('messageCreate', async (message) => {
-        const prefix = '!';
+        const prefix = 'v!';
 
         if (message.author.bot) return;
 

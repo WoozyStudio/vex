@@ -232,7 +232,7 @@ module.exports = {
 
                         if (description.length > 1000) {
                                 const error = {
-                                        description: '❌ The text cannot exceed 1000 characters.',
+                                        description: client.lang.__({ phrase: 'profile.description.error', locale: lang }),
                                         color: config.embedError
                                 }
 
@@ -245,7 +245,7 @@ module.exports = {
 
                         if (regExp.test(description) === true) {
                                 const error = {
-                                        description: '❌ The text cannot contain links.',
+                                        description: client.lang.__({ phrase: 'profile.description.error2', locale: lang }),
                                         color: config.embedError
                                 }
 
@@ -264,7 +264,7 @@ module.exports = {
                                         data.save();
 
                                         const embed = {
-                                                description: 'The description was changed.',
+                                                description: client.lang.__({ phrase: 'profile.description.embed', locale: lang }),
                                                 color: config.embedColor
                                         }
 
@@ -273,7 +273,7 @@ module.exports = {
                                         });
                                 } else {
                                         const error = {
-                                                description: '❌ You don\'t have a profile.',
+                                                description: client.lang.__({ phrase: 'profile.description.error3', locale: lang }),
                                                 color: config.embedError
                                         }
 
@@ -296,7 +296,7 @@ module.exports = {
                                         }).join('\n');
 
                                         if (!map) {
-                                                map = '❌ There are no followers.';
+                                                map = client.lang.__({ phrase: 'profile.followers.error', locale: lang });
                                         }
 
                                         const embed = {
@@ -305,7 +305,7 @@ module.exports = {
                                                 },
                                                 fields: [
                                                         {
-                                                                name: 'Followers:',
+                                                                name: client.lang.__({ phrase: 'profile.followers.embedField', locale: lang }),
                                                                 value: map
                                                         }
                                                 ],
@@ -317,7 +317,7 @@ module.exports = {
                                         });
                                 } else {
                                         const error = {
-                                                description: '❌ You don\'t have a profile.',
+                                                description: client.lang.__({ phrase: 'profile.followers.error2', locale: lang }),
                                                 color: config.embedError
                                         }
 
@@ -333,7 +333,7 @@ module.exports = {
 
                         if (user.id === client.user.id || user.bot) {
                                 const error = {
-                                        description: '❌ You cannot use this command with a bot.',
+                                        description: client.lang.__({ phrase: 'profile.unfollow.error', locale: lang }),
                                         color: config.embedError
                                 }
 
@@ -344,7 +344,7 @@ module.exports = {
 
                         if (user.id === interaction.user.id) {
                                 const error = {
-                                        description: '❌ You cannot use this command with you.',
+                                        description: client.lang.__({ phrase: 'profile.unfollow.error2', locale: lang }),
                                         color: config.embedError
                                 }
 
@@ -363,7 +363,7 @@ module.exports = {
 
                                         if (!followers.includes(interaction.user.id)) {
                                                 const error = {
-                                                        description: '❌ You are not following this user.',
+                                                        description: client.lang.__({ phrase: 'profile.unfollow.error3', locale: lang }),
                                                         color: config.embedError
                                                 }
 
@@ -377,7 +377,7 @@ module.exports = {
                                         data.save();
 
                                         const embed = {
-                                                description: 'You have stopped following <@' + user.id + '>.',
+                                                description: client.lang.__({ phrase: 'profile.unfollow.embed', locale: lang }),
                                                 color: config.embedColor
                                         }
 
@@ -386,7 +386,7 @@ module.exports = {
                                         });
                                 } else {
                                         const error = {
-                                                description: '❌ This user don\'t have a profile.',
+                                                description: client.lang.__({ phrase: 'profile.unfollow.error4', locale: lang }),
                                                 color: config.embedError
                                         }
 
