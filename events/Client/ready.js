@@ -9,7 +9,7 @@ client.on('ready', () => {
 
         client.user.setPresence({
                 activities: [{
-                        name: 'Multi-language system 🇺🇲/🇪🇦',
+                        name: '/help || Working on prefix commmands!',
                         type: 'WATCHING'
                 }],
                 status: 'idle'
