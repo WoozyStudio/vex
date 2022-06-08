@@ -20,7 +20,7 @@ module.exports = {
                         });
 
                         const error = {
-                                description: client.lang.__mf({ phrase: 'work.error', locale: lang }, { format: format }),
+                                description: 'Error ' + client.lang.__mf({ phrase: 'work.error', locale: lang }, { format: format }),
                                 color: config.embedError
                         }
 
@@ -48,7 +48,7 @@ module.exports = {
                         }
 
                         const embed = {
-                                description: client.lang.__mf({ phrase: 'work.embed', locale: lang }, { earned: earned }),
+                                description: 'Work ' + client.lang.__mf({ phrase: 'work.embed', locale: lang }, { earned: earned }),
                                 color: config.embedColor
                         }
 
