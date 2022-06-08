@@ -102,6 +102,9 @@
 		"error3": "❌ No hay nada reproduciendo ahora.",
 		"embed": "El volumen fue cambiado."
 	},
+	"vote": {
+		"embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
+	},
 	"profile": {
 		"register": {
 			"error": "❌ Ya tienes un perfil creado.",
@@ -120,25 +123,12 @@
 			"error3": "❌ Ya estás siguiendo a este usuario.",
 			"embed": "Has empezado a seguir a este usuario.",
 			"error4": "❌ Este usuario no tiene un perfil."
-		},
-                "followers": {
-                        "error": "❌ No hay seguidores.",
-                        "embedField": "Seguidores:",
-                        "error2": "❌ No tienes un perfil."
-                },
-                "unfollow": {
-			"error": "❌ No puedes utilizar este comando con un bot.",
-			"error2": "❌ No puedes utilizar este comando contigo.",
-			"error3": "❌ No estás siguiendo a este usuario.",
-			"embed": "Has dejado de seguir a este usuario.",
-			"error4": "❌ Este usuario no tiene un perfil."
-                }
+		}
 	},
 	"set-language": {
-		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`.",
-                "embed": "El idioma fue cambiado."
+		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`."
 	},
-	"vote": {
-		"embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
-	},
+	"now-paying": {
+		"embed": "now-paying.embed"
+	}
 }
