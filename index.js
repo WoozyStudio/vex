@@ -33,6 +33,7 @@ const nodes = [
         }
 ];
 
+client.commands = new Collection();
 client.slashcommands = new Collection();
 client.dbl = new dbl(process.env['TopGG'], client);
 client.lang = require('i18n');
