@@ -3,18 +3,6 @@ const model = require('../../models/language.js');
 const config = require('../../config/config.json');
 
 client.on('messageCreate', async (message) => {
-        const guildLang = message.member.guild;
-
-        model.findOne({
-                Guild: message.guild.id
-        }, (err, data) => {
-                if (err) throw err;
-
-                const language = data ? data.Language : 'en';
-
-                guildLang.lang = language;
-        });
-
         const prefix = '!';
 
         if (message.author.bot) return;
