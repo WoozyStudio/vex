@@ -145,6 +145,11 @@
 	},
 	"set-language": {
 		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`.",
-                "embed": "El languaje fue cambiado."
+                "embed": "El languaje fue cambiado.",
+                "message": {
+                        "embedField": "Idiomas:",
+                        "embedFieldValue": "🇺🇸 Inglés: `en`.\n🇪🇦 Español: `es`.",
+                        "error": "❌ El idioma no fue encontrado."
+                }
 	}
 }

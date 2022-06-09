@@ -145,6 +145,11 @@
 	},
 	"set-language": {
 		"error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`.",
-                "embed": "The language was changed."
+                "embed": "The language was changed.",
+                "message": {
+                        "embedField": "Languages:",
+                        "embedFieldValue": "🇺🇸 English: `en`.\n🇪🇦 Spanish: `es`.",
+                        "error": "❌ The language was not found."
+                }
 	}
 }
