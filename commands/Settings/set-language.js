@@ -39,7 +39,7 @@ module.exports = {
                 if (!langs.includes(args[0])) {
                         const error = {
                                 description: client.lang.__({ phrase: 'set-language.message.error', locale: lang }),
-                                color: config.embedColor
+                                color: config.embedError
                         }
 
                         return message.reply({
