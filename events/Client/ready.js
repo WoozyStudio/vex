@@ -7,14 +7,6 @@ client.on('ready', () => {
 
         console.log(colors.brightGreen('[Client] Bot started as ' + client.user.tag + '.'));
 
-        client.user.setPresence({
-                activities: [{
-                        name: '/help || Working on prefix commmands!',
-                        type: 'WATCHING'
-                }],
-                status: 'idle'
-        });
-
         const embed = {
                 description: 'Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.',
                 color: config.embedColor
