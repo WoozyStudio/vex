@@ -1,4 +1,4 @@
-const model = require('../../models/language.js');
+/*const model = require('../../models/language.js');
 const config = require('../../config/config.json');
 
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
 
                 if (!langs.includes(args[0])) {
                         const error = {
-                                description: client.lang.__({ phrase: 'set-language.message.error', locale: lang }),
+                                description: 'a ' + client.lang.__({ phrase: 'set-language.message.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -72,4 +72,4 @@ module.exports = {
                         });
                 });
         }
-}
+}*/

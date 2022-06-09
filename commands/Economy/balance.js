@@ -1,4 +1,4 @@
-const model = require('../../models/economy.js');
+/*const model = require('../../models/economy.js');
 const config = require('../../config/config.json');
 
 module.exports = {
@@ -36,4 +36,4 @@ module.exports = {
                         });
                 });
         }
-}
+}*/
