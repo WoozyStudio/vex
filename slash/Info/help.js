@@ -105,7 +105,7 @@ module.exports = {
                                         fields: [
                                                 {
                                                         name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
-                                                        value: '📋 `/profile description`.\n📋 `/profile follow`.\n📋 `/profile register`.\n📋 `/profile view`.'
+                                                        value: '📋 `/profile description`.\n📋 `/profile follow`.\n📋 `/profile followers`.\n📋 `/profile register`.\n📋 `/profile unfollow`.\n📋 `/profile view`.'
                                                 }
                                         ],
                                         color: config.embedColor,
