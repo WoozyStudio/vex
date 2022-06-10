@@ -7,6 +7,7 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
+                const lang = interaction.member.guild.lang;
 
                 const row = (state) => [
                         new MessageActionRow()
@@ -16,22 +17,22 @@ module.exports = {
                                                 .setDisabled(state)
                                                 .addOptions([
                                                         {
-                                                                label: 'Economy',
+                                                                label: client.lang.__({ phrase: 'help.options.economy', locale: lang }),
                                                                 emoji: '💰',
                                                                 value: 'economy'
                                                         },
                                                         {
-                                                                label: 'Music',
+                                                                label: client.lang.__({ phrase: 'help.options.music', locale: lang }),
                                                                 emoji: '🎧',
                                                                 value: 'music'
                                                         },
                                                         {
-                                                                label: 'Social',
+                                                                label: client.lang.__({ phrase: 'help.options.social', locale: lang }),
                                                                 emoji: '👤',
                                                                 value: 'social'
                                                         },
                                                         {
-                                                                label: 'Support',
+                                                                label: client.lang.__({ phrase: 'help.options.support', locale: lang }),
                                                                 emoji: '💌',
                                                                 value: 'support'
                                                         },
@@ -40,7 +41,7 @@ module.exports = {
                 ]
 
                 const embed = {
-                        description: 'Select a category.',
+                        description: client.lang.__({ phrase: 'help.embed', locale: lang }),
                         color: config.embedColor
                 }
 
@@ -63,7 +64,7 @@ module.exports = {
                                         },
                                         fields: [
                                                 {
-                                                        name: 'Commands:',
+                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
                                                         value: '📋`/balance`.\n📋 `/deposit`.\n📋 `/rich`.\n📋 `/with-draw`.\n📋 `/work`.'
                                                 }
                                         ],
@@ -83,7 +84,7 @@ module.exports = {
                                         },
                                         fields: [
                                                 {
-                                                        name: 'Commands:',
+                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
                                                         value: '📋 `/clear-queue`.\n📋 `/leave`.\n📋 `/loop`.\n📋 `/now-playing`.\n📋 `/pause`.\n📋 `/play`.\n📋 `/queue`.\n📋 `/resume`.\n📋 `/skip-to`.\n📋 `skip`.\n📋 `/volume`.'
                                                 }
                                         ],
@@ -103,7 +104,7 @@ module.exports = {
                                         },
                                         fields: [
                                                 {
-                                                        name: 'Commands:',
+                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
                                                         value: '📋 `/profile description`.\n📋 `/profile follow`.\n📋 `/profile register`.\n📋 `/profile view`.'
                                                 }
                                         ],
@@ -123,7 +124,7 @@ module.exports = {
                                         },
                                         fields: [
                                                 {
-                                                        name: 'Commands:',
+                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
                                                         value: '📋 `/vote`.'
                                                 }
                                         ],

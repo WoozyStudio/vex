@@ -30,6 +30,16 @@
 		"error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
 		"embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
 	},
+        "help": {
+                "embed": "Selecciona una categoría.",
+                "embedField": "Comandos:",
+                "options": {
+                        "economy": "Economía.",
+                        "music": "Música.",
+                        "social": "Social.",
+                        "support": "Soporte."
+                }
+        },
 	"clear-queue": {
 		"error": "❌ Tienes que estar en un canal de voz.",
 		"error2": "❌ Tienes que estar en el mismo canal de voz.",
