@@ -39,7 +39,7 @@ module.exports = {
                         });
                 }
 
-                const player = client.player.create({
+                const player = await client.player.create({
                         guild: interaction.guild.id,
                         voiceChannel: interaction.member.voice.channel.id,
                         textChannel: interaction.channel.id
@@ -77,7 +77,7 @@ module.exports = {
                                         await player.queue.add(res.tracks[0]);
 
                                         if (!player.playing) {
-                                                player.play();
+                                                await player.play();
                                         }
 
                                         const embed = {
@@ -93,7 +93,7 @@ module.exports = {
                                         await player.queue.add(res.tracks[0]);
 
                                         if (!player.playing) {
-                                                player.play();
+                                                await player.play();
                                         }
 
                                         const embed2 = {
