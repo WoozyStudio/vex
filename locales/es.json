@@ -124,7 +124,7 @@
 			"embedField": "Información:",
 			"embedFieldValue": "🏷️ Usuario: <@{user}>.\n🔰 Insignias: {badges}",
 			"embedField2": "Estadísticas:",
-			"embedFieldValue2": "👥 Seguidores: `{followers}`.",
+			"embedFieldValue2": "👥 Número de seguidores: `{followers}`.",
 			"error": "❌ Este usuario no tiene un perfil."
 		},
 		"follow": {
@@ -141,8 +141,8 @@
                         "error3": "❌ No tienes un perfil."
                 },
                 "followers": {
-                        "error": "❌ No hay seguidores.",
-                        "embedField": "Seguidores:",
+                        "error": "❌ No hay usuarios.",
+                        "embedField": "Usuarios:",
                         "error2": "❌ No tienes un perfil."
                 },
                 "unfollow": {
@@ -155,11 +155,6 @@
 	},
 	"set-language": {
 		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`.",
-                "embed": "El languaje fue cambiado.",
-                "message": {
-                        "embedField": "Idiomas:",
-                        "embedFieldValue": "🇺🇸 Inglés: `en`.\n🇪🇦 Español: `es`.",
-                        "error": "❌ El idioma no fue encontrado."
-                }
+                "embed": "El languaje fue cambiado."
 	}
 }

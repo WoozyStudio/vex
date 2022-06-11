@@ -1,0 +1,119 @@
+{
+	"balance": {
+		"embed": "<@{user}>'s gleichgewicht:",
+		"embedField": "Gleichgewicht:",
+		"embedFieldValue": "💵 Brieftasche: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
+	},
+	"deposit": {
+		"error": "❌ Sie haben dieses Geld nicht in Ihrer Brieftasche.",
+		"embed": "Sie haben :coin: {amount} bei der Bank eingezahlt.",
+		"error2": "❌ Sie haben kein Gleichgewicht."
+	},
+	"pay": {
+		"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
+		"error2": "❌ No puedes utilizar este comando contigo.",
+		"error3": "❌ No tienes este dinero en tu billetera.",
+		"embed": "Has pagado :coin: `{amount}` a <@{user}>.",
+		"error4": "❌ Sie haben kein Gleichgewicht."
+	},
+	"richest": {
+		"embed": "👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+		"error": "❌ No hay usuarios.",
+		"embedField": "Tabla de clasificación:"
+	},
+	"with-draw": {
+		"error": "❌ No tienes este dinero en el banco.",
+		"embed": "Has retirado :coin: `{amount}` del banco.",
+		"error2": "❌ Sie haben kein Gleichgewicht."
+	},
+	"work": {
+		"error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
+		"embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
+	},
+        "help": {
+                "embed": "Wählen Sie eine Kategorie.",
+                "embedField": "Befehle:",
+                "options": {
+                        "economy": "Wirtschaft.",
+                        "music": "Musik.",
+                        "social": "Soziales.",
+                        "support": "Unterstützung:"
+                }
+        },
+	"clear-queue": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+		"error4": "❌ Die Warteschlange hat keine weiteren Lieder.",
+		"embed": "Die Warteschlange wurde abgebaut."
+	},
+	"leave": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+                "embed": "Ich habe den Sprachkanal verlassen."
+        },
+        "loop": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+		"embed": "Die Songschleife wurde deaktiviert.",
+		"embed2": "Die Songschleife war ermöglicht."
+	},
+	"now-playing": {
+		"error": "❌ Jetzt wird nichts mehr gespielt.",
+		"embed": "Wird jetzt gespielt: [{title}]({uri})."
+	},
+	"pause": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+                "error4": "❌ Das Lied war bereits unterbrochen.",
+                "embed": "Das Lied wurde unterbrochen."
+	},
+	"vote": {
+		"embed": "Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nAbstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nAbstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
+	},
+	"profile": {
+		"register": {
+			"error": "❌ Sie haben bereits ein Profil erstellt.",
+			"embed": "Das Profil wurde erstellt."
+		},
+		"view": {
+			"embedField": "Informationen:",
+			"embedFieldValue": "🏷️ Benutzer: <@{user}>.\n🔰 Abzeichen: {badges}",
+			"embedField2": "Statistik:",
+			"embedFieldValue2": "👥 Anzahl der Follower: `{followers}`.",
+			"error": "❌ Dieser Benutzer hat kein Profil."
+		},
+		"follow": {
+			"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
+			"error2": "❌ Sie können diesen Befehl nicht mit Ihnen verwenden.",
+			"error3": "❌ Sie folgen diesem Benutzer bereits.",
+			"embed": "Sie haben begonnen, diesem Benutzer zu folgen.",
+			"error4": "❌ Dieser Benutzer hat kein Profil."
+		},
+		"description": {
+			"error": "❌ Der Text darf nicht länger als 1000 Buchstaben sein.",
+                        "error2": "❌ Der Text kann keinen gültigen Link enthalten.",
+                        "embed": "Die Beschreibung wurde geändert.",
+                        "error3": "❌ Sie haben kein Profil."
+                },
+                "followers": {
+                        "error": "❌ Es gibt keine Benutzer.",
+                        "embedField": "Benutzer:",
+                        "error2": "❌ Sie haben kein Profil."
+                },
+                "unfollow": {
+			"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
+			"error2": "❌ Sie können diesen Befehl nicht mit Ihnen verwenden.",
+			"error3": "❌ Sie folgen diesem Benutzer nicht.",
+			"embed": "Sie haben diesem Benutzer nicht mehr gefolgt.",
+			"error4": "❌ Dieser Benutzer hat kein Profil."
+		}
+	},
+	"set-language": {
+		"error": "❌ Sie haben keine Berechtigung. Sie benötigen: `ADMINISTRATOR`.",
+                "embed": "Die Sprache wurde geändert."
+	}
+}

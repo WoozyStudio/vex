@@ -16,6 +16,10 @@ module.exports = {
                                 {
                                         name: '🇪🇦 Español (ES).',
                                         value: 'es'
+                                },
+                                {
+                                        name: '🇩🇪 Deutsch (DE).',
+                                        value: 'de'
                                 }
                         ],
                         type: 'STRING',
@@ -55,7 +59,7 @@ module.exports = {
                         }
 
                         const embed = {
-                                description: client.lang.__({ phrase: 'set-language.embed', locale: lang }),
+                                description: client.lang.__({ phrase: 'set-language.embed', locale: language }),
                                 color: config.embedColor
                         }
 

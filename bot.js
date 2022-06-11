@@ -48,7 +48,7 @@ client.player = new Manager({
 });
 
 client.lang.configure({
-        locales: ['en', 'es'],
+        locales: ['en', 'es', 'de'],
         directory: path.join(__dirname, 'locales'),
         defaultLocale: 'en',
         retryInDefaultLocale: true,
