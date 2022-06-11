@@ -11,24 +11,24 @@
 	},
 	"pay": {
 		"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
-		"error2": "❌ No puedes utilizar este comando contigo.",
-		"error3": "❌ No tienes este dinero en tu billetera.",
-		"embed": "Has pagado :coin: `{amount}` a <@{user}>.",
+		"error2": "❌ Sie können diesen Befehl nicht mit Ihnen verwenden.",
+		"error3": "❌ Sie haben dieses Geld nicht in Ihrer Brieftasche.",
+		"embed": "Sie haben <@{user}> :coin: `{amount}` bezahlt.",
 		"error4": "❌ Sie haben kein Gleichgewicht."
 	},
 	"richest": {
-		"embed": "👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
-		"error": "❌ No hay usuarios.",
-		"embedField": "Tabla de clasificación:"
+		"embed": "👤 `{index}.` <@{user}> Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"error": "❌ Es gibt keine Benutzer.",
+		"embedField": "Rangliste:"
 	},
 	"with-draw": {
-		"error": "❌ No tienes este dinero en el banco.",
+		"error": "❌ Sie haben dieses Geld nicht auf der Bank.",
 		"embed": "Has retirado :coin: `{amount}` del banco.",
 		"error2": "❌ Sie haben kein Gleichgewicht."
 	},
 	"work": {
-		"error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
-		"embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
+		"error": "❌ Sie können diesen Befehl jetzt nicht verwenden. Kommen Sie in `{format}` zurück.",
+		"embed": "Du bist zur Arbeit gegangen und hast :coin: `{earned}` bekommen."
 	},
         "help": {
                 "embed": "Wählen Sie eine Kategorie.",
@@ -70,6 +70,26 @@
 		"error3": "❌ Jetzt wird nichts mehr gespielt.",
                 "error4": "❌ Das Lied war bereits unterbrochen.",
                 "embed": "Das Lied wurde unterbrochen."
+	},
+        "play": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+		"embed": "Laden... (Dies kann ein paar Sekunden dauern).",
+		"embed2": "Das Lied wurde in die Warteschlange aufgenommen: [{title}]({uri}).",
+		"error4": "❌ Ein unbekannter Fehler ist aufgetreten."
+	},
+        "queue": {
+		"error": "❌ Jetzt wird nichts mehr gespielt.",
+		"error2": "❌ Es gibt keine Lieder.",
+                "embedField": "Schwanz:"
+	},
+        "resume": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+                "error4": "❌ Das Lied wurde bereits wieder aufgenommen.",
+                "embed": "Das Lied wurde wieder aufgenommen."
 	},
 	"vote": {
 		"embed": "Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nAbstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nAbstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
