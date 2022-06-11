@@ -5,7 +5,7 @@ const colors = require('colors');
 client.on('ready', () => {
         client.player.init(client.user.id);
 
-        console.log(colors.brightGreen('🟢 [Discord Client] User connected: ' + client.user.tag + '.'));
+        console.log(colors.brightGreen('🟢 [Client] User ' + client.user.tag + ' connected.'));
 
         const embed = {
                 description: 'Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.',
