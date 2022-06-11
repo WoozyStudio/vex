@@ -96,13 +96,13 @@ module.exports = {
                                                 player.play();
                                         }
 
-                                        const embed = {
+                                        const embed2 = {
                                                 description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
                                                 color: config.embedColor
                                         }
 
                                         interaction.followUp({
-                                                embeds: [embed]
+                                                embeds: [embed2]
                                         });
                                 break;
                         }
