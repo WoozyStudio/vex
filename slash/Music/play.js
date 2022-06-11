@@ -75,7 +75,10 @@ module.exports = {
                         switch (res.loadType) {
                                 case 'TRACK_LOADED':
                                         await player.queue.add(res.tracks[0]);
-                                        await player.play();
+
+                                        if (!player.playing) {
+                                                player.play();
+                                        }
 
                                         const embed = {
                                                 description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
@@ -85,22 +88,25 @@ module.exports = {
                                         interaction.followUp({
                                                 embeds: [embed]
                                         });
-                                        break;
+
+                                break;
                                 case 'SEARCH_RESULT':
-                                        await client.player.search(search, interaction.user).then(async (res2) => {
-                                                await player.queue.add(res2.tracks[0]);
-                                                await player.play();
+                                        await player.queue.add(res.tracks[0]);
 
-                                                const embed = {
-                                                        description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
-                                                        color: config.embedColor
-                                                }
+                                        if (!player.playing) {
+                                                player.play();
+                                        }
 
-                                                interaction.followUp({
-                                                        embeds: [embed]
-                                                });
+                                        const embed = {
+                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
+                                                color: config.embedColor
+                                        }
+
+                                        interaction.followUp({
+                                                embeds: [embed]
                                         });
-                                        break;
+
+                                break;
                         }
                 }).catch((err) => {
                         player.destroy();
