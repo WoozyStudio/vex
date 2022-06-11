@@ -88,7 +88,6 @@ module.exports = {
                                         interaction.followUp({
                                                 embeds: [embed]
                                         });
-
                                 break;
                                 case 'SEARCH_RESULT':
                                         await player.queue.add(res.tracks[0]);
@@ -105,7 +104,6 @@ module.exports = {
                                         interaction.followUp({
                                                 embeds: [embed]
                                         });
-
                                 break;
                         }
                 }).catch((err) => {
