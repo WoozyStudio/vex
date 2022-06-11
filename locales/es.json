@@ -17,7 +17,7 @@
 		"error4": "❌ No tienes un saldo."
 	},
 	"richest": {
-		"embed": "👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+		"embed": "👤 ` {index}. ` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
 		"error": "❌ No hay usuarios.",
 		"embedField": "Tabla de clasificación:"
 	},

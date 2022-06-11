@@ -13,11 +13,11 @@
 		"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
 		"error2": "❌ Sie können diesen Befehl nicht mit Ihnen verwenden.",
 		"error3": "❌ Sie haben dieses Geld nicht in Ihrer Brieftasche.",
-		"embed": "Sie haben <@{user}> :coin: `{amount}` bezahlt.",
+		"embed": "Sie haben :coin: `{amount}` an <@{user}> bezahlt.",
 		"error4": "❌ Sie haben kein Gleichgewicht."
 	},
 	"richest": {
-		"embed": "👤 `{index}.` <@{user}> Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"embed": "👤 ` {index}. ` <@{user}> Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
 		"error": "❌ Es gibt keine Benutzer.",
 		"embedField": "Rangliste:"
 	},

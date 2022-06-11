@@ -17,7 +17,7 @@
 		"error4": "❌ You don't have a balance."
 	},
 	"richest": {
-		"embed": "👤 `{index}.` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"embed": "👤 ` {index}. ` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
 		"error": "❌ There are no users.",
 		"embedField": "Leaderboard:"
 	},
