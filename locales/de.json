@@ -91,6 +91,27 @@
                 "error4": "❌ Das Lied wurde bereits wieder aufgenommen.",
                 "embed": "Das Lied wurde wieder aufgenommen."
 	},
+        "skip-to": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+		"error4": "❌ Das Lied hat keine weiteren Lieder.",
+		"error5": "❌ Das Lied wurde nicht gefunden.",
+		"embed": "Das Lied wurde übersprungen."
+	},
+	"skip": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+		"error4": "❌ Das Lied hat keine weiteren Lieder.",
+		"embed": "Das Lied wurde übersprungen."
+	},
+	"volume": {
+		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
+		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
+		"error3": "❌ Jetzt wird nichts mehr gespielt.",
+		"embed": "Die Lautstärke wurde geändert."
+	},
 	"vote": {
 		"embed": "Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nAbstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nAbstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
 	},

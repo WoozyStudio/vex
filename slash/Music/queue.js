@@ -25,7 +25,7 @@ module.exports = {
                 const tracks = queue.slice(0, 10);
 
                 var map = tracks.map((track, i) => {
-                        return `📋 \`${i + 1}.\` [${track.title}](${track.uri}).`;
+                        return `📋 \` ${i + 1}. \` [${track.title}](${track.uri}).`;
                 }).join('\n');
 
                 if (!map) {
