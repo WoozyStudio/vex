@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 const wait = require('node:timers/promises').setTimeout;
 
 client.on('voiceStateUpdate', async (oldState, newState) => {

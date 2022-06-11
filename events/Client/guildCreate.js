@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 const { MessageActionRow, MessageButton } = require('discord.js');
 const config = require('../../config/config.json');
 

@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 
 client.player.on('queueEnd', (player) => {
         player.destroy();

@@ -42,7 +42,8 @@ module.exports = {
                 const player = await client.player.create({
                         guild: interaction.guild.id,
                         voiceChannel: interaction.member.voice.channel.id,
-                        textChannel: interaction.channel.id
+                        textChannel: interaction.channel.id,
+                        selfDeafen: true
                 });
 
                 if (player.queue.size > 9) {

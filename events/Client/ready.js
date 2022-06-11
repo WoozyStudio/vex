@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 const config = require('../../config/config.json');
 const colors = require('colors');
 

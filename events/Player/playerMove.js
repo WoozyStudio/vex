@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 
 client.player.on('playerMove', async (player, oldChannel, newChannel) => {
         const guild = client.guilds.cache.get(player.guild);

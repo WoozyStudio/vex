@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 const colors = require('colors');
 
 client.player.on('nodeConnect', (node) => {

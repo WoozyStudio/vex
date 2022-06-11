@@ -1,4 +1,4 @@
-const client = require('../../index.js');
+const client = require('../../bot.js');
 const model = require('../../models/language.js');
 const config = require('../../config/config.json');
 
