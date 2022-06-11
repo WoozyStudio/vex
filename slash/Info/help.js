@@ -85,7 +85,7 @@ module.exports = {
                                         fields: [
                                                 {
                                                         name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
-                                                        value: '📋 `/clear-queue`.\n📋 `/leave`.\n📋 `/loop`.\n📋 `/now-playing`.\n📋 `/pause`.\n📋 `/play`.\n📋 `/queue`.\n📋 `/resume`.\n📋 `/skip-to`.\n📋 `skip`.\n📋 `/volume`.'
+                                                        value: '📋 `/clear-queue`.\n📋 `/leave`.\n📋 `/loop`.\n📋 `/now-playing`.\n📋 `/pause`.\n📋 `/play`.\n📋 `/queue`.\n📋 `/resume`.\n📋 `/skip-to`.\n📋 `/skip`.\n📋 `/volume`.'
                                                 }
                                         ],
                                         color: config.embedColor,

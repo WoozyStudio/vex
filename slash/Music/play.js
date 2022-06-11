@@ -75,10 +75,7 @@ module.exports = {
                         switch (res.loadType) {
                                 case 'TRACK_LOADED':
                                         await player.queue.add(res.tracks[0]);
-
-                                        if (!player.playing) {
-                                                await player.play();
-                                        }
+                                        await player.play();
 
                                         const embed = {
                                                 description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
@@ -92,10 +89,7 @@ module.exports = {
                                 case 'SEARCH_RESULT':
                                         await client.player.search(search, interaction.user).then(async (res2) => {
                                                 await player.queue.add(res2.tracks[0]);
-
-                                                if (!player.playing) {
-                                                        await player.play();
-                                                }
+                                                await player.play();
 
                                                 const embed = {
                                                         description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
