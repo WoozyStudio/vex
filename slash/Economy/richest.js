@@ -16,13 +16,13 @@ module.exports = {
                         const total = lb.slice(0, 10);
 
                         var map = total.map((user, index) => {
-                                var user = client.users.cache.get(user.User);
+                                var username = client.users.cache.get(user.User);
 
-                                if (!user) {
-                                        user = 'Unknown User#0000';
+                                if (!username) {
+                                        username = 'Unknown User#0000';
                                 }
                                 
-                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: user.tag, wallet: user.Wallet, bank: user.Bank })
+                                return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: username.tag, wallet: user.Wallet, bank: user.Bank })
                         }).join('\n');
 
                         if (!map) {
