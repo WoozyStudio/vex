@@ -18,9 +18,7 @@ module.exports = {
                         var map = total.map((user, index) => {
                                 var username = client.users.cache.get(user.User);
 
-                                if (!username) {
-                                        username = 'Unknown User#0000';
-                                }
+                                username ? username.tag : 'Unknown User#0000';
                                 
                                 return client.lang.__mf({ phrase: 'richest.embed', locale: lang }, { index: index + 1, user: username.tag, wallet: user.Wallet, bank: user.Bank })
                         }).join('\n');
