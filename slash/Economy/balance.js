@@ -29,7 +29,7 @@ module.exports = {
                                 thumbnail: {
                                         url: user.avatarURL({ dynamic: true })
                                 },
-                                description: client.lang.__mf({ phrase: 'balance.embed', locale: lang }, { user: user.id }),
+                                description: client.lang.__mf({ phrase: 'balance.embed', locale: lang }, { user: user.tag }),
                                 fields: [
                                         {
                                                 name: client.lang.__({ phrase: 'balance.embedField', locale: lang }),

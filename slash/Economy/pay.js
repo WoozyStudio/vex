@@ -85,7 +85,7 @@ module.exports = {
                                         }
 
                                         const embed = {
-                                                description: client.lang.__mf({ phrase: 'pay.embed', locale: lang }, { amount: amount, user: user.id }),
+                                                description: client.lang.__mf({ phrase: 'pay.embed', locale: lang }, { amount: amount, user: user.tag }),
                                                 color: config.embedColor
                                         }
 

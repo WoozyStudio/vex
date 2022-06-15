@@ -1,6 +1,6 @@
 {
 	"balance": {
-		"embed": "<@{user}>'s balance:",
+		"embed": "`{user}`'s balance:",
 		"embedField": "Balance:",
 		"embedFieldValue": "💵 Wallet: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
 	},
@@ -13,7 +13,7 @@
 		"error": "❌ You cannot use this command with a bot.",
 		"error2": "❌ You cannot use this command with you.",
 		"error3": "❌ You don't have this money in your wallet.",
-		"embed": "You have paid :coin: `{amount}` to <@{user}>.",
+		"embed": "You have paid :coin: `{amount}` to `{user}`.",
 		"error4": "❌ You don't have a balance."
 	},
 	"richest": {
@@ -122,7 +122,7 @@
 		},
 		"view": {
 			"embedField": "Information:",
-			"embedFieldValue": "🏷️ User: <@{user}>.\n🔰 Badges: {badges}",
+			"embedFieldValue": "🏷️ User: `{user}`.\n🆔 Profile ID: `{id}`.\n🔰 Badges: {badges}",
 			"embedField2": "Statistics:",
 			"embedFieldValue2": "👥 Number of followers: `{followers}`.",
 			"error": "❌ This user don't have a profile."
@@ -156,5 +156,11 @@
 	"set-language": {
 		"error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`.",
                 "embed": "The language was changed."
-	}
+	},
+        "events": {
+                "modal": {
+                        "title": "Reports a user's profile.",
+                        "modalField": "Reason for report:"
+                }
+        }
 }

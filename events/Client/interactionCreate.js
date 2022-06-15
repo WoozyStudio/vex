@@ -1,3 +1,4 @@
+const { MessageActionRow, Modal, TextInputComponent } = require('discord.js');
 const client = require('../../bot.js');
 const model = require('../../models/language.js');
 const config = require('../../config/config.json');
@@ -36,6 +37,55 @@ client.on('interactionCreate', async (interaction) => {
 
                 if (cmd) {
                         cmd.run(client, interaction)
+                }
+        }
+
+        if (interaction.isButton()) {
+                if (interaction.customId === 'profile-view-button') {
+                        const modal = new Modal()
+                        .setTitle('Report a user profile.')
+                        .setCustomId('profile-view-modal')
+
+                        const reason = new TextInputComponent()
+                        .setCustomId('modal-reason')
+                        .setLabel('Why do you want to report the user?')
+                        .setStyle('PARAGRAPH')
+                        .setMaxLength(250)
+                        .setRequired(true)
+
+                        const row = new MessageActionRow()
+                        .addComponents(reason)
+
+                        modal.addComponents(row);
+
+                        await interaction.showModal(modal);
+                }
+        }
+
+        if (interaction.isModalSubmit()) {
+                if (interaction.customId === 'profile-view-modal') {
+                        const reason = interaction.fields.getTextInputValue('modal-reason');
+
+                        const embed = {
+                                description: interaction.message.embeds[0].description,
+                                fields: [
+                                        {
+                                                name: 'Profile of the reported user:',
+                                                value: interaction.message.embeds[0].fields[0].value
+                                        },
+                                        {
+                                                name: 'Reason and user:',
+                                                value: '❓ Reason: `' + reason + '`.\n👤 User: `' + interaction.user.tag + ' (' + interaction.user.id + ')`.'
+                                        }
+                                ],
+                                color: config.embedColor,
+                                timestamp: new Date()
+                        }
+                        
+                        client.channels.cache.get(config.logsChannel).send({
+                                content: '<@&986624544724897812>',
+                                embeds: [embed]
+                        });
                 }
         }
 });

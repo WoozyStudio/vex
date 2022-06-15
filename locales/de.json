@@ -1,6 +1,6 @@
 {
 	"balance": {
-		"embed": "<@{user}>'s gleichgewicht:",
+		"embed": "`{user}`'s gleichgewicht:",
 		"embedField": "Gleichgewicht:",
 		"embedFieldValue": "💵 Brieftasche: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
 	},
@@ -13,7 +13,7 @@
 		"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
 		"error2": "❌ Sie können diesen Befehl nicht mit Ihnen verwenden.",
 		"error3": "❌ Sie haben dieses Geld nicht in Ihrer Brieftasche.",
-		"embed": "Sie haben :coin: `{amount}` an <@{user}> bezahlt.",
+		"embed": "Sie haben :coin: `{amount}` an `{user}` bezahlt.",
 		"error4": "❌ Sie haben kein Gleichgewicht."
 	},
 	"richest": {
@@ -122,7 +122,7 @@
 		},
 		"view": {
 			"embedField": "Informationen:",
-			"embedFieldValue": "🏷️ Benutzer: <@{user}>.\n🔰 Abzeichen: {badges}",
+			"embedFieldValue": "🏷️ Benutzer: `{user}`.\n🆔 Profil-ID: `{id}`.\n🔰 Abzeichen: {badges}",
 			"embedField2": "Statistik:",
 			"embedFieldValue2": "👥 Anzahl der Follower: `{followers}`.",
 			"error": "❌ Dieser Benutzer hat kein Profil."
@@ -156,5 +156,11 @@
 	"set-language": {
 		"error": "❌ Sie haben keine Berechtigung. Sie benötigen: `ADMINISTRATOR`.",
                 "embed": "Die Sprache wurde geändert."
-	}
+	},
+        "events": {
+                "modal": {
+                        "title": "Meldet das Profil eines Benutzers.",
+                        "modalField": "Der Grund für den Bericht:"
+                }
+        }
 }

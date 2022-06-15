@@ -121,7 +121,7 @@ module.exports = {
 
                         model.findOne({
                                 User: user.id
-                        }, (err, data) => {
+                        }, async (err, data) => {
                                 if (err) throw err;
 
                                 if (data) {
@@ -133,7 +133,7 @@ module.exports = {
                                                 fields: [
                                                         {
                                                                 name: client.lang.__({ phrase: 'profile.view.embedField', locale: lang }),
-                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { user: user.id, badges: data.Badges })
+                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { user: user.tag, badges: data.Badges, id: data._id })
                                                         },
                                                         {
                                                                 name: client.lang.__({ phrase: 'profile.view.embedField2', locale: lang }),
@@ -152,7 +152,7 @@ module.exports = {
                                                 .setCustomId('profile-view-button')
                                         );
 
-                                        const msg = await interaction.followUp({
+                                        interaction.followUp({
                                                 embeds: [embed],
                                                 components: [row]
                                         });
