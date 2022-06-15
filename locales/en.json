@@ -16,7 +16,7 @@
 	},
 	"richest": {
 		"embed": "➤ 👤 `{index}.` {user} Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
-		"error": "❌ There are no users."
+		"error": "➤ ❌ There are no users."
 	},
 	"with-draw": {
 		"error": "❌ You don't have this money in the bank.",

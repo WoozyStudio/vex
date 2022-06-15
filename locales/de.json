@@ -16,7 +16,7 @@
 	},
 	"richest": {
 		"embed": "➤ 👤 `{index}.` {user} Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
-		"error": "❌ Es gibt keine Benutzer."
+		"error": "➤ ❌ Es gibt keine Benutzer."
 	},
 	"with-draw": {
 		"error": "❌ Sie haben dieses Geld nicht auf der Bank.",
