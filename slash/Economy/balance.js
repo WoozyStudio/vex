@@ -33,7 +33,7 @@ module.exports = {
                                         name: user.tag,
                                         icon_url: user.avatarURL({ dynamic: true })
                                 },
-                                descrition: client.lang.__mf({ phrase: 'balance.embed', locale: lang }, { wallet: wallet, bank: bank }),
+                                description: client.lang.__mf({ phrase: 'balance.embed', locale: lang }, { wallet: wallet, bank: bank }),
                                 color: config.embedColor,
                                 timestamp: new Date()
                         }
