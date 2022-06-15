@@ -125,6 +125,7 @@
 			"embedFieldValue": "🏷️ User: `{user}`.\n🆔 Profile ID: `{id}`.\n🔰 Badges: {badges}",
 			"embedField2": "Statistics:",
 			"embedFieldValue2": "👥 Number of followers: `{followers}`.",
+                        "button": "Report the profile.",
 			"error": "❌ This user don't have a profile."
 		},
 		"follow": {

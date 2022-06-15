@@ -147,8 +147,9 @@ module.exports = {
                                         const row = new MessageActionRow()
                                         .addComponents(
                                                 new MessageButton()
-                                                .setLabel('Report user.')
+                                                .setLabel(client.lang.__({ phrase: 'profile.view.button', locale: lang }))
                                                 .setStyle('DANGER')
+                                                .setEmoji('⚠️')
                                                 .setCustomId('profile-view-button')
                                         );
 

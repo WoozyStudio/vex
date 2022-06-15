@@ -19,7 +19,6 @@ client.on('interactionCreate', async (interaction) => {
         });
 
         if (interaction.isCommand()) {
-                const lang = interaction.member.guild.lang;
                 const cmd = client.slashcommands.get(interaction.commandName);
 
                 if (!cmd) return;
@@ -85,6 +84,16 @@ client.on('interactionCreate', async (interaction) => {
                         client.channels.cache.get(config.logsChannel).send({
                                 content: '<@&986624544724897812>',
                                 embeds: [embed]
+                        });
+
+                        const embed2 = {
+                                description: 'The report was sent.',
+                                color: config.embedColor
+                        }
+                        
+                        interaction.reply({
+                                embeds: [embed2],
+                                ephemeral: true
                         });
                 }
         }
