@@ -30,7 +30,7 @@ module.exports = {
                                         url: user.avatarURL({ dynamic: true })
                                 },
                                 author: {
-                                        name: user.tag,
+                                        name: user.tag + ' (' + user.id + ').',
                                         icon_url: user.avatarURL({ dynamic: true })
                                 },
                                 fields: [

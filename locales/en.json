@@ -1,8 +1,7 @@
 {
 	"balance": {
-		"embed": "`{user}`'s balance:",
 		"embedField": "Balance:",
-		"embedFieldValue": "💵 Wallet: :coin: `{wallet}`.\n🏦 Bank: :coin: `{bank}`."
+		"embedFieldValue": "▶ 💵 Wallet: :coin: `{wallet}`.\n▶ 🏦 Bank: :coin: `{bank}`."
 	},
 	"deposit": {
 		"error": "❌ You don't have this money in your wallet.",
