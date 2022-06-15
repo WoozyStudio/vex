@@ -3,7 +3,10 @@ const client = new Client({
         shards: 'auto',
         restTimeOffSet: 0,
         allowedMentions: {
-                parse: ['users', 'roles']
+                parse: [
+                        'users', 
+                        'roles'
+                ]
         },
         intents: [
                 'GUILDS',
@@ -61,14 +64,5 @@ client.lang.configure({
 });
 
 client.lang.setLocale('en');
-
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-        res.send('Hi!');
-});
-
-app.listen(process.env.PORT);
 
 module.exports = client;
