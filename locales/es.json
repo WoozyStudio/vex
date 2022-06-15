@@ -15,9 +15,8 @@
 		"error4": "❌ No tienes saldo."
 	},
 	"richest": {
-		"embed": "👤 ` {index}. ` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
-		"error": "❌ No hay usuarios.",
-		"embedField": "Tabla de clasificación:"
+		"embed": "👤 `{index}.` {user} Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+		"error": "❌ No hay usuarios."
 	},
 	"with-draw": {
 		"error": "❌ No tienes este dinero en el banco.",

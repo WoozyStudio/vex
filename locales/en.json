@@ -15,9 +15,8 @@
 		"error4": "❌ You don't have a balance."
 	},
 	"richest": {
-		"embed": "👤 ` {index}. ` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
-		"error": "❌ There are no users.",
-		"embedField": "Leaderboard:"
+		"embed": "➤ 👤 `{index}.` {user} Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"error": "❌ There are no users."
 	},
 	"with-draw": {
 		"error": "❌ You don't have this money in the bank.",
@@ -122,7 +121,7 @@
 			"embedField": "Information:",
 			"embedFieldValue": "➤ 🆔 Profile ID: `{id}`.\n➤ 🔰 Badges: {badges}",
 			"embedField2": "Statistics:",
-			"embedFieldValue2": "👥 Number of followers: `{followers}`.",
+			"embedFieldValue2": "➤ 👥 Number of followers: `{followers}`.",
                         "button": "Report the profile.",
 			"error": "❌ This user don't have a profile."
 		},

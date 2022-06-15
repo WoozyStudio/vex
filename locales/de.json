@@ -15,9 +15,8 @@
 		"error4": "❌ Sie haben kein Gleichgewicht."
 	},
 	"richest": {
-		"embed": "👤 ` {index}. ` <@{user}> Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
-		"error": "❌ Es gibt keine Benutzer.",
-		"embedField": "Rangliste:"
+		"embed": "➤ 👤 `{index}.` {user} Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"error": "❌ Es gibt keine Benutzer."
 	},
 	"with-draw": {
 		"error": "❌ Sie haben dieses Geld nicht auf der Bank.",
