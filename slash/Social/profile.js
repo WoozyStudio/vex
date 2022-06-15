@@ -129,11 +129,15 @@ module.exports = {
                                                 thumbnail: {
                                                         url: user.avatarURL({ dynamic: true })
                                                 },
+                                                author: {
+                                                        name: user.tag,
+                                                        icon_url: user.avatarURL({ dynamic: true })
+                                                },
                                                 description: filter.clean(data.AboutMe),
                                                 fields: [
                                                         {
                                                                 name: client.lang.__({ phrase: 'profile.view.embedField', locale: lang }),
-                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { user: user.tag, badges: data.Badges, id: data._id })
+                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { badges: data.Badges, id: data._id })
                                                         },
                                                         {
                                                                 name: client.lang.__({ phrase: 'profile.view.embedField2', locale: lang }),

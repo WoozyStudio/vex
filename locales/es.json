@@ -120,9 +120,9 @@
 		},
 		"view": {
 			"embedField": "Información:",
-			"embedFieldValue": "🏷️ Usuario: `{user}`.\n🆔 ID del perfil: `{id}`.\n🔰 Insignias: {badges}",
+			"embedFieldValue": "➤ 🆔 ID del perfil: `{id}`.\n➤ 🔰 Insignias: {badges}",
 			"embedField2": "Estadísticas:",
-			"embedFieldValue2": "👥 Número de seguidores: `{followers}`.",
+			"embedFieldValue2": "➤ 👥 Número de seguidores: `{followers}`.",
                         "button": "Reportar el perfil.",
 			"error": "❌ Este usuario no tiene un perfil."
 		},
