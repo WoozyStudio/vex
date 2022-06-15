@@ -15,7 +15,7 @@
 		"error4": "❌ Sie haben kein Gleichgewicht."
 	},
 	"richest": {
-		"embed": "➤ 👤 `{index}.` {user} Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
+		"embed": "➤ 👤 `{index}.` <@{user}> Brieftasche: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
 		"error": "➤ ❌ Es gibt keine Benutzer."
 	},
 	"with-draw": {
@@ -78,8 +78,7 @@
 	},
         "queue": {
 		"error": "❌ Jetzt wird nichts mehr gespielt.",
-		"error2": "❌ Es gibt keine Lieder.",
-                "embedField": "Schwanz:"
+		"error2": "➤ ❌ Es gibt keine Lieder."
 	},
         "resume": {
 		"error": "❌ Sie müssen auf einem Sprachkanal sein.",
@@ -110,7 +109,7 @@
 		"embed": "Die Lautstärke wurde geändert."
 	},
 	"vote": {
-		"embed": "Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nAbstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\nAbstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
+		"embed": "➤ ❤️ Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n➤ ❤️ Abstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\n➤ ❤️ Abstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
 	},
 	"profile": {
 		"register": {

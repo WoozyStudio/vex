@@ -15,7 +15,7 @@
 		"error4": "❌ No tienes saldo."
 	},
 	"richest": {
-		"embed": "➤ 👤 `{index}.` {user} Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+		"embed": "➤ 👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
 		"error": "➤ ❌ No hay usuarios."
 	},
 	"with-draw": {
@@ -78,8 +78,7 @@
 	},
         "queue": {
 		"error": "❌ No hay nada reproduciendo ahora.",
-		"error2": "❌ No hay canciones.",
-                "embedField": "Cola:"
+		"error2": "➤ ❌ No hay canciones."
 	},
         "resume": {
 		"error": "❌ Tienes que estar en un canal de voz.",
@@ -110,7 +109,7 @@
 		"embed": "El volumen fue cambiado."
 	},
 	"vote": {
-		"embed": "Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\nVotar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\nVotar en [Top.gg](https://top.gg/bot/955921440002179132)."
+		"embed": "➤ ❤️ Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n➤ ❤️ Votar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\n➤ ❤️ Votar en [Top.gg](https://top.gg/bot/955921440002179132)."
 	},
 	"profile": {
 		"register": {

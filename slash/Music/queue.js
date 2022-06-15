@@ -25,7 +25,7 @@ module.exports = {
                 const tracks = queue.slice(0, 10);
 
                 var map = tracks.map((track, i) => {
-                        return `📋 \` ${i + 1}. \` [${track.title}](${track.uri}).`;
+                        return `➤ 💿 \`${i + 1}.\` [${track.title}](${track.uri}).`;
                 }).join('\n');
 
                 if (!map) {
@@ -42,13 +42,12 @@ module.exports = {
                         thumbnail: {
                                 url: icon
                         },
-                        description: '[' + queue.current.title + '](' + queue.current.uri + ').',
-                        fields: [
-                                {
-                                        name: client.lang.__({ phrase: 'queue.embedField', locale: lang }),
-                                        value: map
-                                }
-                        ],
+                        author: {
+                                name: queue.current.title + '.',
+                                icon_url: client.user.avatarURL(),
+                                url: queue.current.uri
+                        },
+                        description: map,
                         color: config.embedColor,
                         timestamp: new Date()
                 }
