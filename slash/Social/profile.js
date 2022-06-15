@@ -1,3 +1,4 @@
+const { MessageActionRow, MessageButton } = require('discord.js');
 const model = require('../../models/profile.js');
 const Filter = require('bad-words');
 const filter = new Filter({
@@ -143,8 +144,17 @@ module.exports = {
                                                 timestamp: new Date()
                                         }
 
-                                        interaction.followUp({
-                                                embeds: [embed]
+                                        const row = new MessageActionRow()
+                                        .addComponents(
+                                                new MessageButton()
+                                                .setLabel('Report user.')
+                                                .setStyle('DANGER')
+                                                .setCustomId('profile-view-button')
+                                        );
+
+                                        const msg = await interaction.followUp({
+                                                embeds: [embed],
+                                                components: [row]
                                         });
                                 } else {
                                         const error = {

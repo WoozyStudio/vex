@@ -7,14 +7,14 @@
 	"deposit": {
 		"error": "❌ No tienes este dinero en tu billetera.",
 		"embed": "Has depositado :coin: `{amount}` en el banco.",
-		"error2": "❌ No tienes un saldo."
+		"error2": "❌ No tienes saldo."
 	},
 	"pay": {
 		"error": "❌ No puedes utilizar este comando con un bot.",
 		"error2": "❌ No puedes utilizar este comando contigo.",
 		"error3": "❌ No tienes este dinero en tu billetera.",
 		"embed": "Has pagado :coin: `{amount}` a <@{user}>.",
-		"error4": "❌ No tienes un saldo."
+		"error4": "❌ No tienes saldo."
 	},
 	"richest": {
 		"embed": "👤 ` {index}. ` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
@@ -24,7 +24,7 @@
 	"with-draw": {
 		"error": "❌ No tienes este dinero en el banco.",
 		"embed": "Has retirado :coin: `{amount}` del banco.",
-		"error2": "❌ No tienes un saldo."
+		"error2": "❌ No tienes saldo."
 	},
 	"work": {
 		"error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
