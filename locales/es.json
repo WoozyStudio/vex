@@ -1,7 +1,6 @@
 {
 	"balance": {
-		"embedField": "Saldo:",
-		"embedFieldValue": "➤ 💵 Billetera: :coin: `{wallet}`.\n➤ 🏦 Banco: :coin: `{bank}`."
+		"embed": "➤ 💵 Billetera: :coin: `{wallet}`.\n➤ 🏦 Banco: :coin: `{bank}`."
 	},
 	"deposit": {
 		"error": "❌ No tienes este dinero en tu billetera.",

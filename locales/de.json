@@ -1,7 +1,6 @@
 {
 	"balance": {
-		"embedField": "Gleichgewicht:",
-		"embedFieldValue": "➤ 💵 Brieftasche: :coin: `{wallet}`.\n➤ 🏦 Bank: :coin: `{bank}`."
+		"embed": "➤ 💵 Brieftasche: :coin: `{wallet}`.\n➤ 🏦 Bank: :coin: `{bank}`."
 	},
 	"deposit": {
 		"error": "❌ Sie haben dieses Geld nicht in Ihrer Brieftasche.",
