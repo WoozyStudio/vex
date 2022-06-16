@@ -8,7 +8,7 @@ client.on('messageCreate', async (message) => {
                         Guild: server.id
                 }, (err, data) => {
                         if (data) {
-                                client.channels.cache.get(data.Channel).send(message.content);
+                                client.channels.cache.get(data.Channel).send({ content: message.content }).catch(() => {});
                         }
                 });
         });
