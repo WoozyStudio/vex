@@ -6,6 +6,9 @@ const schema = new mongo.Schema({
         },
         Channel: {
                 type: mongo.SchemaTypes.String
+        },
+        Enabled: {
+                type: mongo.SchemaTypes.Boolean
         }
 });
 

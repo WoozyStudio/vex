@@ -3,13 +3,28 @@ const model = require('../../models/global-chat.js');
 const config = require('../../config/config.json');
 
 client.on('messageCreate', async (message) => {
-        client.guilds.cache.forEach((server) => {
-                model.find({
-                        Guild: server.id
-                }, (err, data) => {
-                        if (data) {
-                                client.channels.cache.get(data.Channel).send({ content: message.content }).catch(() => {});
-                        }
-                });
+        if (message.author.bot) return;
+        
+        model.findOne({
+                Channel: message.channel.id,
+                Enabled: true
+        }, (err, data) => {
+                if (err) throw err;
+                
+                if (data) {
+                        model.find({
+                                Enabled: true
+                        }, (err, data) => {
+                                data.map(({ Channel }) => {
+                                        const embed = {
+                                                description: message.content
+                                        }
+                                        
+                                        client.channels.cache.get(Channel).send({
+                                                embeds: [embed]
+                                        }).catch((err) => {});
+                                });
+                        });
+                }
         });
 });
