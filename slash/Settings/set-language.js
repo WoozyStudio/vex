@@ -6,7 +6,7 @@ module.exports = {
         description: 'Set the bot language.',
         options: [
                 {
-                        name: 'lang',
+                        name: 'language',
                         description: '-',
                         choices: [
                                 {
