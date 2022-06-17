@@ -29,7 +29,7 @@
 	},
         "help": {
                 "embed": "Selecciona una categoría.",
-                "embedField": "Comandos:",
+                "embed2": "<:emoji_1:987398741780750426> `/balance` - Muestra el saldo del usuario.\nModo de uso: `/balance (user)`.",
                 "options": {
                         "economy": "Economía.",
                         "music": "Música.",

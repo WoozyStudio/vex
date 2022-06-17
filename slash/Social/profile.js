@@ -117,8 +117,12 @@ module.exports = {
                 }
 
                 if (subCommand === 'view') {
-                        const user = interaction.options.getUser('user') || interaction.user;
+                        var user = interaction.options.getUser('user');
 
+                        if (!user) {
+                                user = interaction.user;
+                        }
+                        
                         model.findOne({
                                 User: user.id
                         }, async (err, data) => {
@@ -149,13 +153,13 @@ module.exports = {
                                         }
 
                                         const row = new MessageActionRow()
-                                        .addComponents(
-                                                new MessageButton()
-                                                .setLabel(client.lang.__({ phrase: 'profile.view.button', locale: lang }))
-                                                .setStyle('DANGER')
-                                                .setEmoji('⚠️')
-                                                .setCustomId('profile-view-button')
-                                        );
+                                                .addComponents(
+                                                        new MessageButton()
+                                                                .setLabel(client.lang.__({ phrase: 'profile.view.button', locale: lang }))
+                                                                .setStyle('DANGER')
+                                                                .setEmoji('⚠️')
+                                                                .setCustomId('profile-view-button')
+                                                );
 
                                         interaction.followUp({
                                                 embeds: [embed],

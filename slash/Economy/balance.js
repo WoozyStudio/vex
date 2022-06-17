@@ -15,7 +15,11 @@ module.exports = {
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
                 const lang = interaction.member.guild.lang;
-                const user = interaction.options.getUser('user') || interaction.user;
+                var user = interaction.options.getUser('user');
+
+                if (!user) {
+                        user = interaction.user;
+                }
 
                 model.findOne({
                         User: user.id
