@@ -15,7 +15,7 @@ client.on('messageCreate', async (message) => {
                         model.find({
                                 Enabled: true
                         }, (err, data) => {
-                                if (data.Language === 'es') {
+                                if (data.Language == 'es') {
                                         data.map(({ Channel }) => {
                                                 const embed = {
                                                         description: message.content
@@ -27,7 +27,7 @@ client.on('messageCreate', async (message) => {
                                         });
                                 }
 
-                                if (data.Language === 'en') {
+                                if (data.Language == 'en') {
                                         data.map(({ Channel }) => {
                                                 const embed = {
                                                         description: message.content
