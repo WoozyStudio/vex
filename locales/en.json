@@ -118,7 +118,7 @@
 		},
 		"view": {
 			"embedField": "Information:",
-			"embedFieldValue": "➤ 🆔 Profile ID: `{id}`.\n➤ 🔰 Badges: {badges}",
+			"embedFieldValue": "➤ 🆔 Profile ID: `{id}`.\n➤ 🔰 Vex badges: {badges}",
 			"embedField2": "Statistics:",
 			"embedFieldValue2": "➤ 👥 Number of followers: `{followers}`.",
                         "button": "Report the profile.",

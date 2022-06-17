@@ -1,9 +1,16 @@
 const client = require('../../bot.js');
 const model = require('../../models/global-chat.js');
 const model2 = require('../../models/profile.js');
+const Filter = require('bad-words');
+const filter = new Filter({
+        replaceRegex: /[A-Za-z0-9가-힣_]/g,
+        placeHolder: '#'
+});
 const config = require('../../config/config.json');
 
 client.on('messageCreate', async (message) => {
+        const lang = message.member.guild.lang;
+        
         if (message.author.bot) return;
 
         model.findOne({
@@ -25,6 +32,13 @@ client.on('messageCreate', async (message) => {
                                         
                                         if (data2) {
                                                 data.map(({ Channel }) => {
+                                                        message.delete().catch((err) => {});
+
+                                                        const regExp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+
+                                                        const filteredText = filter.clean(message.content);
+                                                        const response = filteredText.replace(regExp, '*The message was marked as spam.*');
+                                                        
                                                         const embed = {
                                                                 thumbnail: {
                                                                         url: message.author.avatarURL({ dynamic: true })
@@ -33,14 +47,24 @@ client.on('messageCreate', async (message) => {
                                                                         name: message.author.tag,
                                                                         icon_url: message.author.avatarURL({ dynamic: true })
                                                                 },
-                                                                description: message.content,
+                                                                description: response,
                                                                 fields: [
                                                                         {
-                                                                                name: 'Information',
-                                                                                value: '➤ Badges: ' + data.Badges
+                                                                                name: 'Information:',
+                                                                                value: '➤ 🏠 Server: `' + message.guild.name + '`.\n➤ 🆔 Profile ID: `' + data2._id+ '`.\n➤ 🔰 Vex badges: ' + data2.Badges
                                                                         }
                                                                 ],
-                                                                color: config.embedColor
+                                                                timestamp: new Date()
+                                                        }
+
+                                                        if (regExp.test(message.content) === true) {
+                                                                embed.color = config.embedError;
+                                                        } else {
+                                                                embed.color = config.embedColor;
+                                                        }
+
+                                                        if (embed.description.length > 4000) {
+                                                                embed.description = embed.description.substr(0, 3997) + '...'
                                                         }
 
                                                         client.channels.cache.get(Channel).send({

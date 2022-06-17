@@ -118,7 +118,7 @@
 		},
 		"view": {
 			"embedField": "Información:",
-			"embedFieldValue": "➤ 🆔 ID del perfil: `{id}`.\n➤ 🔰 Insignias: {badges}",
+			"embedFieldValue": "➤ 🆔 ID del perfil: `{id}`.\n➤ 🔰 Insignias de Vex: {badges}",
 			"embedField2": "Estadísticas:",
 			"embedFieldValue2": "➤ 👥 Número de seguidores: `{followers}`.",
                         "button": "Reportar el perfil.",
