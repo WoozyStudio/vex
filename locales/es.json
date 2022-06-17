@@ -15,8 +15,8 @@
 		"error4": "❌ No tienes saldo."
 	},
 	"richest": {
-		"embed": "➤ 👤 `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
-		"error": "➤ ❌ No hay usuarios."
+		"embed": "<:emoji_1:987398741780750426> `{index}.` <@{user}> Billetera: :coin: `{wallet}` - Banco: :coin: `{bank}`.",
+		"error": "<:emoji_1:987398741780750426> ❌ No hay usuarios."
 	},
 	"with-draw": {
 		"error": "❌ No tienes este dinero en el banco.",
@@ -78,7 +78,7 @@
 	},
         "queue": {
 		"error": "❌ No hay nada reproduciendo ahora.",
-		"error2": "➤ ❌ No hay canciones."
+		"error2": "<:emoji_1:987398741780750426> ❌ No hay canciones."
 	},
         "resume": {
 		"error": "❌ Tienes que estar en un canal de voz.",
@@ -109,7 +109,7 @@
 		"embed": "El volumen fue cambiado."
 	},
 	"vote": {
-		"embed": "➤ ❤️ Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n➤ ❤️ Votar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\n➤ ❤️ Votar en [Top.gg](https://top.gg/bot/955921440002179132)."
+		"embed": "<:emoji_1:987398741780750426> Votar en [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n<:emoji_1:987398741780750426> Votar en [VCodez](https://vcodez.xyz/bot/955921440002179132).\n<:emoji_1:987398741780750426> Votar en [Top.gg](https://top.gg/bot/955921440002179132)."
 	},
 	"profile": {
 		"register": {
@@ -118,9 +118,9 @@
 		},
 		"view": {
 			"embedField": "Información:",
-			"embedFieldValue": "➤ 🆔 ID del perfil: `{id}`.\n➤ 🔰 Insignias de Vex: {badges}",
+			"embedFieldValue": "<:emoji_1:987398741780750426> ID del perfil: `{id}`.\n<:emoji_1:987398741780750426> Insignias de Vex: {badges}",
 			"embedField2": "Estadísticas:",
-			"embedFieldValue2": "➤ 👥 Número de seguidores: `{followers}`.",
+			"embedFieldValue2": "<:emoji_1:987398741780750426> Número de seguidores: `{followers}`.",
                         "button": "Reportar el perfil.",
 			"error": "❌ Este usuario no tiene un perfil."
 		},
@@ -139,7 +139,7 @@
                 },
                 "followers": {
                         "error": "❌ No hay usuarios.",
-                        "error2": "➤ ❌ No tienes un perfil."
+                        "error2": "<:emoji_1:987398741780750426> ❌ No tienes un perfil."
                 },
                 "unfollow": {
 			"error": "❌ No puedes utilizar este comando con un bot.",
@@ -152,11 +152,5 @@
 	"set-language": {
 		"error": "❌ No tienes permisos.\nNecesitas `ADMINISTRADOR`.",
                 "embed": "El languaje fue cambiado."
-	},
-        "events": {
-                "modal": {
-                        "title": "Reporta el perfil de un usuario.",
-                        "modalField": "Razón del reporte:"
-                }
         }
 }

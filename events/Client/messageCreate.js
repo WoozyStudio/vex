@@ -51,7 +51,7 @@ client.on('messageCreate', async (message) => {
                                                                 fields: [
                                                                         {
                                                                                 name: 'Information:',
-                                                                                value: '➤ 🏠 Server: `' + message.guild.name + '`.\n➤ 🆔 Profile ID: `' + data2._id+ '`.\n➤ 🔰 Vex badges: ' + data2.Badges
+                                                                                value: '<:emoji_1:987398741780750426> Server: `' + message.guild.name + '`.\n<:emoji_1:987398741780750426> Profile ID: `' + data2._id+ '`.\n<:emoji_1:987398741780750426> Vex badges: ' + data2.Badges
                                                                         }
                                                                 ],
                                                                 timestamp: new Date()

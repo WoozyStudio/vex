@@ -25,7 +25,7 @@ module.exports = {
                 const tracks = queue.slice(0, 10);
 
                 var map = tracks.map((track, i) => {
-                        return `➤ 💿 \`${i + 1}.\` [${track.title}](${track.uri}).`;
+                        return `<:emoji_1:987398741780750426> \`${i + 1}.\` [${track.title}](${track.uri}).`;
                 }).join('\n');
 
                 if (!map) {
