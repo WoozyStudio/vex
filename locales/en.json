@@ -1,6 +1,6 @@
 {
 	"balance": {
-		"embed": "➤ 💵 Wallet: :coin: `{wallet}`.\n➤ 🏦 Bank: :coin: `{bank}`."
+		"embed": "<:emoji_1:987398741780750426> Wallet: :coin: `{wallet}`.\n<:emoji_1:987398741780750426> Bank: :coin: `{bank}`."
 	},
 	"deposit": {
 		"error": "❌ You don't have this money in your wallet.",

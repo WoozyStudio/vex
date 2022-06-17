@@ -1,6 +1,6 @@
 {
 	"balance": {
-		"embed": "➤ 💵 Brieftasche: :coin: `{wallet}`.\n➤ 🏦 Bank: :coin: `{bank}`."
+		"embed": "<:emoji_1:987398741780750426> Brieftasche: :coin: `{wallet}`.\n<:emoji_1:987398741780750426> Bank: :coin: `{bank}`."
 	},
 	"deposit": {
 		"error": "❌ Sie haben dieses Geld nicht in Ihrer Brieftasche.",
