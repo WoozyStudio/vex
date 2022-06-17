@@ -307,7 +307,7 @@ module.exports = {
 
                                 if (data) {
                                         var map = data.Followers.map((user) => {
-                                                return `➤ 👤 <@${user}>.`;
+                                                return `<:emoji_1:987398741780750426> <@${user}>.`;
                                         }).join('\n');
 
                                         if (!map) {
