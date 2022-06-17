@@ -29,7 +29,7 @@
 	},
         "help": {
                 "embed": "Select a category.",
-                "embed2": "<:emoji_1:987398741780750426> `/balance` - Displays the user's balance.\nMode of use: `/balance (user)`.",
+                "embed2": "<:emoji_1:987398741780750426> `/balance` - Displays the user's balance.\n<:emoji_1:987398741780750426> `/deposit` - Deposit money in the bank.\n<:emoji_1:987398741780750426> `/pay` - Pay money to a user.\n<:emoji_1:987398741780750426> `/richest` - Displays the richest users.\n<:emoji_1:987398741780750426> `/with-draw` - Withdraws money from the bank.\n<:emoji_1:987398741780750426> `/work` - Work and get money.",
                 "options": {
                         "economy": "Economy.",
                         "music": "Music.",

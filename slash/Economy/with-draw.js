@@ -3,7 +3,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'with-draw',
-        description: 'Withdraw money from the bank.',
+        description: 'Withdraws money from the bank.',
         options: [
                 {
                         name: 'amount',

@@ -6,7 +6,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'work',
-        description: 'Work to get money.',
+        description: 'Work and get money.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
