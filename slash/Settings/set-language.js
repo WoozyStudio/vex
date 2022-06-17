@@ -30,11 +30,11 @@ module.exports = {
         run: async (client, interaction) => {
                 await interaction.deferReply({ ephemeral: false }).catch(() => { });
                 const lang = interaction.member.guild.lang;
-                const language = interaction.options.getString('lang');
+                const language = interaction.options.getString('language');
 
                 if (!interaction.member.permissions.has('ADMINISTRATOR')) {
                         const error = {
-                                description: client.lang.__mf({ phrase: 'set-language.error', locale: lang }),
+                                description: client.lang.__({ phrase: 'set-language.error', locale: lang }),
                                 color: config.embedError
                         }
 

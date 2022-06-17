@@ -138,8 +138,7 @@
                         "error3": "❌ You don't have a profile."
 		},
                 "followers": {
-                        "error": "❌ There are no users.",
-                        "embedField": "Users:",
+                        "error": "➤ ❌ There are no users.",
                         "error2": "❌ You don't have a profile."
                 },
                 "unfollow": {

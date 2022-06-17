@@ -307,7 +307,7 @@ module.exports = {
 
                                 if (data) {
                                         var map = data.Followers.map((user) => {
-                                                return `👤 <@${user}>.`;
+                                                return `➤ 👤 <@${user}>.`;
                                         }).join('\n');
 
                                         if (!map) {
@@ -318,13 +318,13 @@ module.exports = {
                                                 thumbnail: {
                                                         url: interaction.user.avatarURL({ dynamic: true })
                                                 },
-                                                fields: [
-                                                        {
-                                                                name: client.lang.__({ phrase: 'profile.followers.embedField', locale: lang }),
-                                                                value: map
-                                                        }
-                                                ],
-                                                color: config.embedColor
+                                                author: {
+                                                        name: interaction.user.tag,
+                                                        icon_url: interaction.user.avatarURL({ dynamic: true })
+                                                },
+                                                description: map,
+                                                color: config.embedColor,
+                                                timestamp: new Date()
                                         }
 
                                         interaction.followUp({

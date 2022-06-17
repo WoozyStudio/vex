@@ -139,8 +139,7 @@
                 },
                 "followers": {
                         "error": "❌ No hay usuarios.",
-                        "embedField": "Usuarios:",
-                        "error2": "❌ No tienes un perfil."
+                        "error2": "➤ ❌ No tienes un perfil."
                 },
                 "unfollow": {
 			"error": "❌ No puedes utilizar este comando con un bot.",
