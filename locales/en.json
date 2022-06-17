@@ -29,9 +29,11 @@
 	},
         "help": {
                 "embed": "Select a category.",
-                "embed2": "<:emoji_1:987398741780750426> `/balance` - Displays the user's balance.\n<:emoji_1:987398741780750426> `/deposit` - Deposit money in the bank.\n<:emoji_1:987398741780750426> `/pay` - Pay money to a user.\n<:emoji_1:987398741780750426> `/richest` - Displays the richest users.\n<:emoji_1:987398741780750426> `/with-draw` - Withdraws money from the bank.\n<:emoji_1:987398741780750426> `/work` - Work and get money.",
+                "embed2": "<:emoji_1:987398741780750426> `/balance` - Displays a user's balance.\n<:emoji_1:987398741780750426> `/deposit` - Deposit money in the bank.\n<:emoji_1:987398741780750426> `/pay` - Pay money to a user.\n<:emoji_1:987398741780750426> `/richest` - Displays the richest users.\n<:emoji_1:987398741780750426> `/with-draw` - Withdraws money from the bank.\n<:emoji_1:987398741780750426> `/work` - Work and get money.",
+                "embed3": "<:emoji_1:987398741780750426> `/help` - Displays the bot commands.",
                 "options": {
                         "economy": "Economy.",
+                        "info": "Information.",
                         "music": "Music.",
                         "social": "Social.",
                         "support": "Support."

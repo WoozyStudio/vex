@@ -29,9 +29,11 @@
 	},
         "help": {
                 "embed": "Wählen Sie eine Kategorie.",
-                "embed2": "<:emoji_1:987398741780750426> `/balance` - Zeigt den Kontostand des Benutzers an.\nVerwendungsart: `/balance (user)`.",
+                "embed2": "<:emoji_1:987398741780750426> `/balance` - Zeigt den Kontostand eines Benutzers an.\n<:emoji_1:987398741780750426> `/deposit` - Geld bei der Bank einzahlen.\n<:emoji_1:987398741780750426> `/pay` - Geld an einen Benutzer zahlen.\n<:emoji_1:987398741780750426> `/richest` - Zeigt die reichsten Benutzer an.\n<:emoji_1:987398741780750426> `/with-draw` - Heben Sie Geld bei der Bank ab.\n<:emoji_1:987398741780750426> `/work` - Arbeiten und Geld verdienen.",
+                "embed3": "<:emoji_1:987398741780750426> `/help` - Zeigt Bot-Befehle an.",
                 "options": {
                         "economy": "Wirtschaft.",
+                        "info": "Informationen.",
                         "music": "Musik.",
                         "social": "Soziales.",
                         "support": "Unterstützung:"

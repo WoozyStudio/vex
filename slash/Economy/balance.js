@@ -3,7 +3,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'balance',
-        description: 'Displays the user\'s balance.',
+        description: 'Displays a user\'s balance.',
         options: [
                 {
                         name: 'user',

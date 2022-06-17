@@ -3,7 +3,7 @@ const config = require('../../config/config.json')
 
 module.exports = {
         name: 'help',
-        description: 'See the list of commands.',
+        description: 'Displays the bot commands.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });

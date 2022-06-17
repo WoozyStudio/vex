@@ -29,9 +29,11 @@
 	},
         "help": {
                 "embed": "Selecciona una categoría.",
-                "embed2": "<:emoji_1:987398741780750426> `/balance` - Muestra el saldo del usuario.\n<:emoji_1:987398741780750426> `/deposit` - Deposita dinero en el banco.\n<:emoji_1:987398741780750426> `/pay` - Paga dinero a un usuario.\n<:emoji_1:987398741780750426> `/richest` - Muestra los usuarios más ricos.\n<:emoji_1:987398741780750426> `/with-draw` - Retira dinero del banco.\n<:emoji_1:987398741780750426> `/work` - Trabaja y consigue dinero.",
+                "embed2": "<:emoji_1:987398741780750426> `/balance` - Muestra el saldo de un usuario.\n<:emoji_1:987398741780750426> `/deposit` - Deposita dinero en el banco.\n<:emoji_1:987398741780750426> `/pay` - Paga dinero a un usuario.\n<:emoji_1:987398741780750426> `/richest` - Muestra los usuarios más ricos.\n<:emoji_1:987398741780750426> `/with-draw` - Retira dinero del banco.\n<:emoji_1:987398741780750426> `/work` - Trabaja y consigue dinero.",
+                "embed3": "<:emoji_1:987398741780750426> `/help` - Muestra los comandos del bot.",
                 "options": {
                         "economy": "Economía.",
+                        "info": "Información.",
                         "music": "Música.",
                         "social": "Social.",
                         "support": "Soporte."
