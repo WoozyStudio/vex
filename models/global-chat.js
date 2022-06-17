@@ -9,6 +9,9 @@ const schema = new mongo.Schema({
         },
         Enabled: {
                 type: mongo.SchemaTypes.Boolean
+        },
+        Language: {
+                type: mongo.SchemaTypes.String
         }
 });
 
