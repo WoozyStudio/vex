@@ -32,6 +32,11 @@ module.exports = {
                                                                 value: 'music'
                                                         },
                                                         {
+                                                                label: client.lang.__({ phrase: 'help.options.settings', locale: lang }),
+                                                                emoji: '⚙️',
+                                                                value: 'settings'
+                                                        },
+                                                        {
                                                                 label: client.lang.__({ phrase: 'help.options.social', locale: lang }),
                                                                 emoji: '👤',
                                                                 value: 'social'
@@ -110,6 +115,25 @@ module.exports = {
                                                 icon_url: client.user.avatarURL()
                                         },
                                         description: client.lang.__({ phrase: 'help.embed4', locale: lang }),
+                                        color: config.embedColor,
+                                        timestamp: new Date()
+                                }
+
+                                i.update({
+                                        embeds: [embed]
+                                });
+                        }
+                        
+                        if (i.values[0] === 'settings') {
+                                const embed = {
+                                        thumbnail: {
+                                                url: client.user.avatarURL()
+                                        },
+                                        author: {
+                                                name: client.user.tag,
+                                                icon_url: client.user.avatarURL()
+                                        },
+                                        description: client.lang.__({ phrase: 'help.embed5', locale: lang }),
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }

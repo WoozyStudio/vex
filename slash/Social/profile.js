@@ -55,11 +55,6 @@ module.exports = {
                         ]
                 },
                 {
-                        name: 'followers',
-                        description: 'Displays users who follow you.',
-                        type: 'SUB_COMMAND'
-                },
-                {
                         name: 'unfollow',
                         description: 'Unfollow a user.',
                         type: 'SUB_COMMAND',
@@ -293,50 +288,6 @@ module.exports = {
                                 } else {
                                         const error = {
                                                 description: client.lang.__({ phrase: 'profile.description.error3', locale: lang }),
-                                                color: config.embedError
-                                        }
-
-                                        return interaction.followUp({
-                                                embeds: [error]
-                                        });
-                                }
-                        });
-                }
-
-                if (subCommand === 'followers') {
-                        model.findOne({
-                                User: interaction.user.id
-                        }, (err, data) => {
-                                if (err) throw err;
-
-                                if (data) {
-                                        var map = data.Followers.map((user) => {
-                                                return `<:emoji_1:987398741780750426> <@${user}>.`;
-                                        }).join('\n');
-
-                                        if (!map) {
-                                                map = client.lang.__({ phrase: 'profile.followers.error', locale: lang });
-                                        }
-
-                                        const embed = {
-                                                thumbnail: {
-                                                        url: interaction.user.avatarURL({ dynamic: true })
-                                                },
-                                                author: {
-                                                        name: interaction.user.tag,
-                                                        icon_url: interaction.user.avatarURL({ dynamic: true })
-                                                },
-                                                description: map,
-                                                color: config.embedColor,
-                                                timestamp: new Date()
-                                        }
-
-                                        interaction.followUp({
-                                                embeds: [embed]
-                                        });
-                                } else {
-                                        const error = {
-                                                description: client.lang.__({ phrase: 'profile.followers.error2', locale: lang }),
                                                 color: config.embedError
                                         }
 
