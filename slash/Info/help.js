@@ -105,12 +105,11 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        fields: [
-                                                {
-                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
-                                                        value: '📋 `/clear-queue`.\n📋 `/leave`.\n📋 `/loop`.\n📋 `/now-playing`.\n📋 `/pause`.\n📋 `/play`.\n📋 `/queue`.\n📋 `/resume`.\n📋 `/skip-to`.\n📋 `/skip`.\n📋 `/volume`.'
-                                                }
-                                        ],
+                                        author: {
+                                                name: client.user.tag,
+                                                icon_url: client.user.avatarURL()
+                                        },
+                                        description: client.lang.__({ phrase: 'help.embed4', locale: lang }),
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
