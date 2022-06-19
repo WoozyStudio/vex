@@ -43,7 +43,7 @@ module.exports = {
                 },
                 {
                         name: 'description',
-                        description: 'Sets the description.',
+                        description: 'Sets the profile description.',
                         type: 'SUB_COMMAND',
                         options: [
                                 {
@@ -56,7 +56,7 @@ module.exports = {
                 },
                 {
                         name: 'unfollow',
-                        description: 'Unfollow a user.',
+                        description: 'Stop following a user.',
                         type: 'SUB_COMMAND',
                         options: [
                                 {

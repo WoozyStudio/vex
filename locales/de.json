@@ -33,6 +33,8 @@
                 "embed3": "<:emoji_1:987398741780750426> `/help` - Zeigt Bot-Befehle an.",
                 "embed4": "<:emoji_1:987398741780750426> `/clear-queue` - Löschen Sie die Warteschlange der Lieder.\n<:emoji_1:987398741780750426> `/leave` - Verlassen Sie den Sprachkanal.\n<:emoji_1:987398741780750426> `/loop` - Aktiviert/Deaktiviert die Songschleife.\n<:emoji_1:987398741780750426> `/now-playing` - Zeigt den aktuell gespielten Titel an.\n<:emoji_1:987398741780750426> `/pause` - Halten Sie das Lied an.\n<:emoji_1:987398741780750426> `/play` - Spielen Sie ein Lied.\n<:emoji_1:987398741780750426> `/queue` - Zeigt die Warteschlange der Titel an.\n<:emoji_1:987398741780750426> `/resume` - Setzen Sie das Lied fort.\n<:emoji_1:987398741780750426> `/skip-to` - Überspringen Sie den Song bis zur angegebenen Position.\n<:emoji_1:987398741780750426> `/skip` - Überspringen Sie das Lied.\n<:emoji_1:987398741780750426> `/volume` - Legt die Lautstärke des Liedes ein.",
                 "embed5": "<:emoji_1:987398741780750426> `/set-language` - Legt die Bot-Sprache fest.",
+		"embed6": "<:emoji_1:987398741780750426> `/profile description` - Legt die Profilbeschreibung fest.\n<:emoji_1:987398741780750426> `/profile follow` - Folgen Sie einem Benutzer.\n<:emoji_1:987398741780750426> `/profile register` - Erstellen Sie ein Profil.\n<:emoji_1:987398741780750426> `/profile unfollow` - Beenden Sie die Verfolgung eines Benutzers.\n<:emoji_1:987398741780750426> `profile view` - Zeigt das Profil eines Benutzers an.",
+		"embed7": "<:emoji_1:987398741780750426> `/vote` - Stimmen Sie für den Bot.",
                 "options": {
                         "economy": "Wirtschaft.",
                         "info": "Informationen.",
@@ -113,9 +115,13 @@
 		"error3": "❌ Jetzt wird nichts mehr gespielt.",
 		"embed": "Die Lautstärke wurde geändert."
 	},
-	"vote": {
-		"embed": "<:emoji_1:987398741780750426> Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n<:emoji_1:987398741780750426> Abstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\n<:emoji_1:987398741780750426> Abstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
+	"eval": {
+		"error": "❌ Sie können diesen Befehl nicht verwenden."
 	},
+	"set-language": {
+		"error": "❌ Sie haben keine Berechtigung. Sie benötigen: `ADMINISTRATOR`.",
+                "embed": "Die Sprache wurde geändert."
+	}
 	"profile": {
 		"register": {
 			"error": "❌ Sie haben bereits ein Profil erstellt.",
@@ -150,8 +156,7 @@
 			"error4": "❌ Dieser Benutzer hat kein Profil."
 		}
 	},
-	"set-language": {
-		"error": "❌ Sie haben keine Berechtigung. Sie benötigen: `ADMINISTRATOR`.",
-                "embed": "Die Sprache wurde geändert."
-        }
+	"vote": {
+		"embed": "<:emoji_1:987398741780750426> Abstimmen in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n<:emoji_1:987398741780750426> Abstimmen in [VCodez](https://vcodez.xyz/bot/955921440002179132).\n<:emoji_1:987398741780750426> Abstimmen in [Top.gg](https://top.gg/bot/955921440002179132)."
+	}
 }

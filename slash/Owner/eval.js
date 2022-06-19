@@ -15,11 +15,12 @@ module.exports = {
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply({ ephemeral: false }).catch(() => { });
+		const lang = interaction.member.guild.lang;
                 const text = interaction.options.getString('text');
 
                 if (interaction.user.id !== '945029734943821824') {
                         const error = {
-                                description: '❌ You cannot use this command.',
+                                description: client.lang.__({ phrase: 'eval.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -37,6 +38,13 @@ module.exports = {
                         }
 
                         const embed = {
+				thumbnail: {
+					url: client.user.avatarURL()
+				},
+				author: {
+					name: client.user.tag,
+					icon_url: client.user.avatarURL()
+				},
                                 description: '```js\n' + output + '```',
                                 color: config.embedColor,
                                 timestamp: new Date()
@@ -51,9 +59,17 @@ module.exports = {
                         });
                 } catch (err) {
                         const error = {
+				thumbnail: {
+					url: client.user.avatarURL()
+				},
+				author: {
+					name: client.user.tag,
+					icon_url: client.user.avatarURL()
+				},
                                 description: '```js\n' + err.message + '```',
-                                color: config.embedError
-                        }
+                                color: config.embedColor,
+                                timestamp: new Date()
+			}
 
                         interaction.followUp({
                                 embeds: [error]

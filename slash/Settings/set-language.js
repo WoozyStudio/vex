@@ -10,15 +10,15 @@ module.exports = {
                         description: '-',
                         choices: [
                                 {
-                                        name: '🇺🇲 English (EN).',
+                                        name: '🇺🇲 English.',
                                         value: 'en'
                                 },
                                 {
-                                        name: '🇪🇦 Español (ES).',
+                                        name: '🇪🇦 Español.',
                                         value: 'es'
                                 },
                                 {
-                                        name: '🇩🇪 Deutsch (DE).',
+                                        name: '🇩🇪 Deutsch.',
                                         value: 'de'
                                 }
                         ],

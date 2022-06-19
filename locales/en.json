@@ -5,14 +5,14 @@
 	"deposit": {
 		"error": "❌ You don't have this money in your wallet.",
 		"embed": "You have deposited :coin: `{amount}` in the bank.",
-		"error2": "❌ You don't have a balance."
+		"error2": "❌ You have no balance."
 	},
 	"pay": {
 		"error": "❌ You cannot use this command with a bot.",
 		"error2": "❌ You cannot use this command with you.",
 		"error3": "❌ You don't have this money in your wallet.",
 		"embed": "You have paid :coin: `{amount}` to `{user}`.",
-		"error4": "❌ You don't have a balance."
+		"error4": "❌ You have no balance."
 	},
 	"richest": {
 		"embed": "<:emoji_1:987398741780750426> `{index}.` <@{user}> Wallet: :coin: `{wallet}` - Bank: :coin: `{bank}`.",
@@ -21,7 +21,7 @@
 	"with-draw": {
 		"error": "❌ You don't have this money in the bank.",
 		"embed": "You have withdrawn :coin: `{amount}` from the bank.",
-		"error2": "❌ You don't have a balance."
+		"error2": "❌ You have no balance."
 	},
 	"work": {
 		"error": "❌ You cannot use this command now.\nCome back in `{format}`.",
@@ -33,6 +33,8 @@
                 "embed3": "<:emoji_1:987398741780750426> `/help` - Displays the bot commands.",
                 "embed4": "<:emoji_1:987398741780750426> `/clear-queue` - Clears the song queue.\n<:emoji_1:987398741780750426> `/leave` - Leave the voice channel.\n<:emoji_1:987398741780750426> `/loop` - Enables/Disables the song loop.\n<:emoji_1:987398741780750426> `/now-playing` - Displays the currently playing song.\n<:emoji_1:987398741780750426> `/pause` - Pause the song.\n<:emoji_1:987398741780750426> `/play` - Plays a song.\n<:emoji_1:987398741780750426> `/queue` - Displays the song queue.\n<:emoji_1:987398741780750426> `/resume` - Resume the song.\n<:emoji_1:987398741780750426> `/skip-to` - Skips the song to the indicated position.\n<:emoji_1:987398741780750426> `/skip` - Skip the song.\n<:emoji_1:987398741780750426> `/volume` - Sets the volume of the song.",
                 "embed5": "<:emoji_1:987398741780750426> `/set-language` - Sets the bot language.",
+		"embed6": "<:emoji_1:987398741780750426> `/profile description` - Sets the profile description.\n<:emoji_1:987398741780750426> `/profile follow` - Follow a user.\n<:emoji_1:987398741780750426> `/profile register` - Create a profile.\n<:emoji_1:987398741780750426> `/profile unfollow` - Stop following a user.\n<:emoji_1:987398741780 `/profile view` - Displays a user's profile.",
+		"embed7": "<:emoji_1:987398741780750426> `/vote` - Vote for the bot.",
                 "options": {
                         "economy": "Economy.",
                         "info": "Information.",
@@ -113,8 +115,12 @@
 		"error3": "❌ There is nothing playing now.",
 		"embed": "The volume was changed."
 	},
-	"vote": {
-		"embed": "<:emoji_1:987398741780750426> Voting in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n<:emoji_1:987398741780750426> Voting in [VCodez](https://vcodez.xyz/bot/955921440002179132).\n<:emoji_1:987398741780750426> Voting in [Top.gg](https://top.gg/bot/955921440002179132)."
+	"eval": {
+		"error": "❌ You cannot use this command."
+	},
+	"set-language": {
+		"error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`.",
+                "embed": "The language was changed."
 	},
 	"profile": {
 		"register": {
@@ -150,8 +156,7 @@
 			"error4": "❌ This user don't have a profile."
 		}
 	},
-	"set-language": {
-		"error": "❌ You don't have permissions.\nYou need `ADMINISTRATOR`.",
-                "embed": "The language was changed."
-        }
+	"vote": {
+		"embed": "<:emoji_1:987398741780750426> Voting in [FlowBots](https://www.flowbots.net/bot/955921440002179132).\n<:emoji_1:987398741780750426> Voting in [VCodez](https://vcodez.xyz/bot/955921440002179132).\n<:emoji_1:987398741780750426> Voting in [Top.gg](https://top.gg/bot/955921440002179132)."
+	}
 }

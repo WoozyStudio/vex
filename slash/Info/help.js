@@ -148,12 +148,11 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        fields: [
-                                                {
-                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
-                                                        value: '📋 `/profile description`.\n📋 `/profile follow`.\n📋 `/profile followers`.\n📋 `/profile register`.\n📋 `/profile unfollow`.\n📋 `/profile view`.'
-                                                }
-                                        ],
+                                        author: {
+                                                name: client.user.tag,
+                                                icon_url: client.user.avatarURL()
+                                        },
+                                        description: client.lang.__({ phrase: 'help.embed6', locale: lang }),
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
