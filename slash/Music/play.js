@@ -2,7 +2,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'play',
-        description: 'Plays a song on the voice channel.',
+        description: 'Plays a song.',
         options: [
                 {
                         name: 'search',

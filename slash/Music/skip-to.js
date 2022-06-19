@@ -2,7 +2,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'skip-to',
-        description: 'Skips a song to the selected song.',
+        description: 'Skips the song to the indicated position.',
         options: [
                 {
                         name: 'position',

@@ -2,7 +2,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'queue',
-        description: 'Displays the queue of songs.',
+        description: 'Displays the song queue.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });

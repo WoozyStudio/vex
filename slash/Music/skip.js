@@ -2,7 +2,7 @@ const config = require('../../config/config.json');
 
 module.exports = {
         name: 'skip',
-        description: 'Skip a song and play the next one.',
+        description: 'Skip the song.',
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
                 await interaction.deferReply().catch(() => { });
