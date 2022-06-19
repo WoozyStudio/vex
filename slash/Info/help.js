@@ -22,6 +22,11 @@ module.exports = {
                                                                 value: 'economy'
                                                         },
                                                         {
+                                                                label: client.lang.__({ phrase: 'help.options.info', locale: lang }),
+                                                                emoji: 'ℹ️',
+                                                                value: 'info'
+                                                        },
+                                                        {
                                                                 label: client.lang.__({ phrase: 'help.options.music', locale: lang }),
                                                                 emoji: '🎧',
                                                                 value: 'music'
@@ -67,6 +72,25 @@ module.exports = {
                                                 icon_url: client.user.avatarURL()
                                         },
                                         description: client.lang.__({ phrase: 'help.embed2', locale: lang }),
+                                        color: config.embedColor,
+                                        timestamp: new Date()
+                                }
+
+                                i.update({
+                                        embeds: [embed]
+                                });
+                        }
+                        
+                        if (i.values[0] === 'info') {
+                                const embed = {
+                                        thumbnail: {
+                                                url: client.user.avatarURL()
+                                        },
+                                        author: {
+                                                name: client.user.tag,
+                                                icon_url: client.user.avatarURL()
+                                        },
+                                        description: client.lang.__({ phrase: 'help.embed3', locale: lang }),
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
