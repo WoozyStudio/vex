@@ -37,7 +37,7 @@
                         "economy": "Economy.",
                         "info": "Information.",
                         "music": "Music.",
-                        "settings": "Settings."
+                        "settings": "Settings.",
                         "social": "Social.",
                         "support": "Support."
                 }
@@ -142,10 +142,6 @@
                         "embed": "The description was changed.",
                         "error3": "❌ You don't have a profile."
 		},
-                "followers": {
-                        "error": "<:emoji_1:987398741780750426> ❌ There are no users.",
-                        "error2": "❌ You don't have a profile."
-                },
                 "unfollow": {
 			"error": "❌ You cannot use this command with a bot.",
 			"error2": "❌ You cannot use this command with you.",

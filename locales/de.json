@@ -142,10 +142,6 @@
                         "embed": "Die Beschreibung wurde geändert.",
                         "error3": "❌ Sie haben kein Profil."
                 },
-                "followers": {
-                        "error": "<:emoji_1:987398741780750426> ❌ Es gibt keine Benutzer.",
-                        "error2": "❌ Sie haben kein Profil."
-                },
                 "unfollow": {
 			"error": "❌ Sie können diesen Befehl nicht mit einem Bot verwenden.",
 			"error2": "❌ Sie können diesen Befehl nicht mit Ihnen verwenden.",

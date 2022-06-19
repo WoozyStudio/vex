@@ -9,8 +9,6 @@ const filter = new Filter({
 const config = require('../../config/config.json');
 
 client.on('messageCreate', async (message) => {
-        const lang = message.member.guild.lang;
-        
         if (message.author.bot) return;
 
         model.findOne({
