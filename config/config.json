@@ -1,7 +1,9 @@
 {
         "embedColor": "0xFF0067",
         "embedError": "0xEB4C48",
-        "ownerId": "945029734943821824",
+        "ownerId": [
+                "945029734943821824"
+        ],
         "support": "https://discord.gg/RBXT58aGgx",
         "logsChannel": "979427667898138674"
 }
