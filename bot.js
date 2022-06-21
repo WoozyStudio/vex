@@ -39,6 +39,17 @@ const nodes = [
 		password: 'www.freelavalink.ga',
 		port: 443,
 		secure: true
+	},
+	{
+		host: 'www.exlink.ml',
+		password: 'exlava',
+		port: 443,
+		secure: true
+	},
+	{
+		host: 'https://vex-lavalink-server.lonelydeathvgx.repl.co',
+		password: 'vex-lavalink-server',
+		port: 443
 	}
 ];
 

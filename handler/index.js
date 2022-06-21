@@ -27,6 +27,6 @@ module.exports = async (client) => {
         });
 
         mongo.connect(process.env['Mongo']).then(() => {
-                console.log(colors.brightGreen('🟢 [Mongoose] Database connected.'));
+                console.log(colors.brightGreen('Database connected.'));
         });
 };

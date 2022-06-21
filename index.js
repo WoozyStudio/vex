@@ -5,7 +5,7 @@ const manager = new ShardingManager('./bot.js', {
 const colors = require('colors');
 
 manager.on('shardCreate', (shard) => {
-        console.log(colors.brightGreen('🟢 [Shard] Shard ' + shard.id + ' created.'));
+        console.log(colors.brightGreen('Shard ' + shard.id + ' created.'));
 });
 
 manager.spawn();
