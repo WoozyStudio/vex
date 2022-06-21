@@ -24,7 +24,7 @@
 		"error2": "❌ No tienes saldo."
 	},
 	"work": {
-		"error": "❌ No puedes utilizar este comando ahora.\nVuelve en `{format}`.",
+		"error": "❌ No puedes utilizar este comando ahora.",
 		"embed": "Has ido a trabajar y te pagaron :coin: `{earned}`."
 	},
         "help": {

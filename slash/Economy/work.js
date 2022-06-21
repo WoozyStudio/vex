@@ -1,6 +1,4 @@
-const quick = require('quick.db');
-const ms = require('ms');
-const pretty = require('pretty-ms');
+const cooldown = new Set();
 const model = require('../../models/economy.js');
 const config = require('../../config/config.json');
 
@@ -12,17 +10,9 @@ module.exports = {
                 await interaction.deferReply().catch(() => { });
                 const lang = interaction.member.guild.lang;
 
-                const time = quick.fetch('workTimer_' + interaction.user.id);
-
-                if (Date.now() < time) {
-                        const rest = time - Date.now();
-                        const format = pretty(rest, {
-                                verbose: true,
-                                compact: true
-                        });
-
+                if (cooldown.has(interaction.user.id)) {
                         const error = {
-                                description: client.lang.__mf({ phrase: 'work.error', locale: lang }, { format: format }),
+                                description: client.lang.__({ phrase: 'work.error', locale: lang }),
                                 color: config.embedError
                         }
 
@@ -31,6 +21,8 @@ module.exports = {
                         });
                 }
 
+		cooldown.add(interaction.user.id);
+		
                 const earned = Math.floor(Math.random() * (500 - 100)) + 100;
 
                 model.findOne({
@@ -57,11 +49,10 @@ module.exports = {
                         interaction.followUp({
                                 embeds: [embed]
                         });
-
-                        const msTime = ms('5m');
-
-                        quick.delete('workTimer_' + interaction.user.id);
-                        quick.add('workTimer_' + interaction.user.id, Date.now() + msTime);
                 });
+
+		setTimeout(() => {
+			cooldown.delete(interaction.user.id)
+		}, 300000);
         }
 }

@@ -24,7 +24,7 @@
 		"error2": "❌ Sie haben kein Gleichgewicht."
 	},
 	"work": {
-		"error": "❌ Sie können diesen Befehl jetzt nicht verwenden. Kommen Sie in `{format}` zurück.",
+		"error": "❌ Sie können diesen Befehl jetzt nicht verwenden.",
 		"embed": "Du bist zur Arbeit gegangen und hast :coin: `{earned}` bekommen."
 	},
         "help": {

@@ -24,7 +24,7 @@
 		"error2": "❌ You have no balance."
 	},
 	"work": {
-		"error": "❌ You cannot use this command now.\nCome back in `{format}`.",
+		"error": "❌ You cannot use this command now.",
 		"embed": "You went to work and got paid :coin: `{earned}`."
 	},
         "help": {
