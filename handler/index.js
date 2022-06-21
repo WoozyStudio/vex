@@ -2,7 +2,6 @@ const { glob } = require('glob');
 const { promisify } = require('util');
 const globPromise = promisify(glob);
 const mongo = require('mongoose');
-const colors = require('colors');
 
 module.exports = async (client) => {
         const eventFiles = await globPromise(`${process.cwd()}/events/*/*.js`);
@@ -27,6 +26,6 @@ module.exports = async (client) => {
         });
 
         mongo.connect(process.env['Mongo']).then(() => {
-                console.log(colors.brightGreen('Database connected.'));
+                console.log('Database connected.');
         });
 };

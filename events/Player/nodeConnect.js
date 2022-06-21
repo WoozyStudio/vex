@@ -1,6 +1,5 @@
 const client = require('../../bot.js');
-const colors = require('colors');
 
 client.player.on('nodeConnect', (node) => {
-        console.log(colors.brightGreen('Node ' + node.options.identifier + ' connected.'));
+        console.log('Node ' + node.options.identifier + ' connected.');
 });
