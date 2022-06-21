@@ -1,18 +1,15 @@
 const client = require('../../bot.js');
-const mongoose = require('../../mongoose.js');
+const mongoose = require('mongoose');
 const config = require('../../config/config.json');
+
 
 client.on('ready', async () => {
         client.player.init(client.user.id);
 
         console.log('User ' + client.user.tag + ' connected.');
 
-	await mongoose().then((db) => {
-		try {
-			console.log('Database connected.');
-		} finally {
-			db.connection.close();
-		}
+	await mongoose.connect(process.env.Mongo).then(() => {
+		console.log('Database connected.');
 	});
 	
         const embed = {
