@@ -14,7 +14,7 @@ module.exports = {
         ],
         type: 'CHAT_INPUT',
         run: async (client, interaction) => {
-                await interaction.deferReply({ ephemeral: false }).catch(() => { });
+                await interaction.deferReply().catch(() => { });
 		const lang = interaction.member.guild.lang;
                 const text = interaction.options.getString('text');
 
