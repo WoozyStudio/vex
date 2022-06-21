@@ -167,16 +167,15 @@ module.exports = {
                                         thumbnail: {
                                                 url: client.user.avatarURL()
                                         },
-                                        fields: [
-                                                {
-                                                        name: client.lang.__({ phrase: 'help.embedField', locale: lang }),
-                                                        value: '📋 `/vote`.'
-                                                }
-                                        ],
+                                        author: {
+                                                name: client.user.tag,
+                                                icon_url: client.user.avatarURL()
+                                        },
+                                        description: client.lang.__({ phrase: 'help.embed7', locale: lang }),
                                         color: config.embedColor,
                                         timestamp: new Date()
                                 }
-
+				
                                 i.update({
                                         embeds: [embed]
                                 });
