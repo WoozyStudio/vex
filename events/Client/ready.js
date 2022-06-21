@@ -1,11 +1,20 @@
 const client = require('../../bot.js');
+const mongoose = require('../../mongoose.js');
 const config = require('../../config/config.json');
 
-client.on('ready', () => {
+client.on('ready', async () => {
         client.player.init(client.user.id);
 
         console.log('User ' + client.user.tag + ' connected.');
 
+	await mongoose().then(() => {
+		try {
+			console.log('Database connected.');
+		} finally {
+			mongoose.connection.close();
+		}
+	});
+	
         const embed = {
                 description: 'Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.',
                 color: config.embedColor

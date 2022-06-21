@@ -1,7 +1,6 @@
 const { glob } = require('glob');
 const { promisify } = require('util');
 const globPromise = promisify(glob);
-const mongo = require('mongoose');
 
 module.exports = async (client) => {
         const eventFiles = await globPromise(`${process.cwd()}/events/*/*.js`);
@@ -23,9 +22,5 @@ module.exports = async (client) => {
 
         client.on('ready', async () => {
                 await client.application.commands.set(commands);
-        });
-
-        mongo.connect(process.env.Mongo).then(() => {
-                console.log('Database connected.');
         });
 };

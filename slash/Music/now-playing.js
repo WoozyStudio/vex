@@ -1,4 +1,3 @@
-const format = require('../../structures/formatDuration');
 const config = require('../../config/config.json');
 
 module.exports = {
