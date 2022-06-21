@@ -35,12 +35,6 @@ const nodes = [
                 port: 80
         },
 	{
-		host: 'lavalink.oops.wtf',
-		password: 'www.freelavalink.ga',
-		port: 443,
-		secure: true
-	},
-	{
 		host: 'www.exlink.ml',
 		password: 'exlava',
 		port: 443,
