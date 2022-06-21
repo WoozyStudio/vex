@@ -47,9 +47,10 @@ const nodes = [
 		secure: true
 	},
 	{
-		host: 'https://vex-lavalink-server.lonelydeathvgx.repl.co',
+		host: 'vex-lavalink-server.lonelydeathvgx.repl.co',
 		password: 'vex-lavalink-server',
-		port: 443
+		port: 443,
+		secure: true
 	}
 ];
 
