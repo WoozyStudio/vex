@@ -35,5 +35,8 @@
     "url": "https://github.com/DeathMFX/vex/issues"
   },
   "homepage": "https://github.com/DeathMFX/vex#readme",
+  "devDependencies": {
+    "node": "^18.4.0"
+  },
   "description": ""
 }
