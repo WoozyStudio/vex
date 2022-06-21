@@ -7,11 +7,11 @@ client.on('ready', async () => {
 
         console.log('User ' + client.user.tag + ' connected.');
 
-	await mongoose().then(() => {
+	await mongoose().then((db) => {
 		try {
 			console.log('Database connected.');
 		} finally {
-			mongoose.connection.close();
+			db.connection.close();
 		}
 	});
 	
