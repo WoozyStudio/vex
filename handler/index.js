@@ -25,7 +25,7 @@ module.exports = async (client) => {
                 await client.application.commands.set(commands);
         });
 
-        mongo.connect(process.env['Mongo']).then(() => {
+        mongo.connect(process.env.Mongo).then(() => {
                 console.log('Database connected.');
         });
 };
