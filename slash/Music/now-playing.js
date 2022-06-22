@@ -23,12 +23,9 @@ module.exports = {
                 }
 
                 const song = player.queue.current;
-		const formatted = pretty(song.duration, {
-			compact: true
-		});
 		
                 const embed = {
-                        description: client.lang.__mf({ phrase: 'now-playing.embed', locale: lang }, { title: song.title, uri: song.uri, duration: formatted, requester: song.requester }),
+                        description: client.lang.__mf({ phrase: 'now-playing.embed', locale: lang }, { title: song.title, uri: song.uri, duration: pretty(song.duration), requester: song.requester }),
                         color: config.embedColor
                 }
 

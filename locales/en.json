@@ -70,7 +70,7 @@
 	},
 	"now-playing": {
 		"error": "❌ There is nothing playing now.",
-		"embed": "Now playing: [{title}]({uri}) [{duration}] • {requester}."
+		"embed": "Now playing: [{title}]({uri}) [{duration}] • `{requester}`."
 	},
         "pause": {
 		"error": "❌ You have to be on a voice channel.",
