@@ -84,7 +84,7 @@
 		"error2": "❌ You have to be on the same voice channel.",
 		"error3": "❌ The queue cannot have more than 10 songs.",
 		"embed": "Loading... (This may take a few seconds).",
-		"embed2": "The song was added to the queue: [{title}]({uri}).",
+		"embed2": "The song was added to the queue: [{title}]({uri}) [{duration}] • `{requester}`.",
 		"error4": "❌ An unknown error occurred."
 	},
         "queue": {

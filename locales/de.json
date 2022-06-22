@@ -84,7 +84,7 @@
 		"error2": "❌ Sie müssen sich auf demselben Sprachkanal befinden.",
 		"error3": "❌ Jetzt wird nichts mehr gespielt.",
 		"embed": "Laden... (Dies kann ein paar Sekunden dauern).",
-		"embed2": "Das Lied wurde in die Warteschlange aufgenommen: [{title}]({uri}).",
+		"embed2": "Das Lied wurde in die Warteschlange aufgenommen: [{title}]({uri}) [{duration}] • `{requester}`.",
 		"error4": "❌ Ein unbekannter Fehler ist aufgetreten."
 	},
         "queue": {

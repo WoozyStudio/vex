@@ -84,7 +84,7 @@
 		"error2": "❌ Tienes que estar en el mismo canal de voz.",
 		"error3": "❌ La cola no puede tener más 10 canciones.",
 		"embed": "Cargando... (Esto puede tardar unos segundos).",
-		"embed2": "La canción fue añadida a la cola: [{title}]({uri}).",
+		"embed2": "La canción fue añadida a la cola: [{title}]({uri}) [{duration}] • `{requester}`.",
 		"error4": "❌ Ocurrió un error desconocido."
 	},
         "queue": {

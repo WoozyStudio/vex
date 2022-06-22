@@ -1,3 +1,4 @@
+const pretty = require('pretty-ms');
 const config = require('../../config/config.json');
 
 module.exports = {
@@ -82,7 +83,7 @@ module.exports = {
                                         }
 
                                         const embed = {
-                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
+                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri, duration: pretty(res.tracks[0].duration), requester: res.tracks[0].requester }),
                                                 color: config.embedColor
                                         }
 
@@ -98,7 +99,7 @@ module.exports = {
                                         }
 
                                         const embed2 = {
-                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri }),
+                                                description: client.lang.__mf({ phrase: 'play.embed2', locale: lang }, { title: res.tracks[0].title, uri: res.tracks[0].uri, duration: pretty(res.tracks[0].duration), requester: res.tracks[0].requester }),
                                                 color: config.embedColor
                                         }
 
