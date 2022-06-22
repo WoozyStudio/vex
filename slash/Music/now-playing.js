@@ -1,3 +1,4 @@
+const pretty = require('pretty-ms');
 const config = require('../../config/config.json');
 
 module.exports = {
@@ -22,9 +23,12 @@ module.exports = {
                 }
 
                 const song = player.queue.current;
-
+		const formatted = pretty(song.duration, {
+			compact: true
+		});
+		
                 const embed = {
-                        description: client.lang.__mf({ phrase: 'now-playing.embed', locale: lang }, { title: song.title, uri: song.uri }),
+                        description: client.lang.__mf({ phrase: 'now-playing.embed', locale: lang }, { title: song.title, uri: song.uri, duration: formatted, requester: song.requester }),
                         color: config.embedColor
                 }
 

@@ -70,7 +70,7 @@
 	},
 	"now-playing": {
 		"error": "❌ Jetzt wird nichts mehr gespielt.",
-		"embed": "Wird jetzt gespielt: [{title}]({uri})."
+		"embed": "Wird jetzt gespielt: [{title}]({uri}) [{duration}] • {requester}."
 	},
 	"pause": {
 		"error": "❌ Sie müssen auf einem Sprachkanal sein.",

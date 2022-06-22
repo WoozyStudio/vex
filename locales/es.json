@@ -70,7 +70,7 @@
 	},
 	"now-playing": {
 		"error": "❌ No hay nada reproduciendo ahora.",
-		"embed": "Reproduciendo ahora: [{title}]({uri})."
+		"embed": "Reproduciendo ahora: [{title}]({uri}) [{duration}] • {requester}."
 	},
 	"pause": {
 		"error": "❌ Tienes que estar en un canal de voz.",
