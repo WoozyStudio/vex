@@ -41,7 +41,7 @@
                         "music": "Musik.",
                         "settings": "Anpassungen.",
                         "social": "Soziales.",
-                        "support": "Unterstützung."
+                        "support": "Unterstützung:"
                 }
         },
 	"clear-queue": {
@@ -125,7 +125,7 @@
 	"set-language": {
 		"error": "❌ Sie haben keine Berechtigung. Sie benötigen: `ADMINISTRATOR`.",
                 "embed": "Die Sprache wurde geändert."
-	}
+	},
 	"profile": {
 		"register": {
 			"error": "❌ Sie haben bereits ein Profil erstellt.",
