@@ -66,9 +66,6 @@ client.lang.configure({
         locales: ['en', 'es', 'de'],
         directory: path.join(__dirname, 'locales'),
         defaultLocale: 'en',
-        retryInDefaultLocale: true,
-        objectNotation: true,
-        register: global,
         mustacheConfig: {
                 tags: ['{{', '}}'],
                 disable: false
