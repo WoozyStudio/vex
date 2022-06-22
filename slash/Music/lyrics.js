@@ -61,7 +61,7 @@ module.exports = {
 
 			const current = player.queue.current;
 			
-			await lyrics(current).then((res) => {
+			await lyrics(current.title).then((res) => {
 				const embed = {
 					thumbnail: {
 						url: client.user.avatarURL()
