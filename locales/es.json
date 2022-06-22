@@ -64,6 +64,10 @@
 		"embed": "El bucle de la canción fue deshabilitado.",
 		"embed2": "El bucle de la canción fue habilitado."
 	},
+	"lyrics": {
+		"error": "❌ No hay nada reproduciendo ahora.",
+		"error2": "❌ La canción no fue encontrada.",
+	},
 	"now-playing": {
 		"error": "❌ No hay nada reproduciendo ahora.",
 		"embed": "Reproduciendo ahora: [{title}]({uri})."

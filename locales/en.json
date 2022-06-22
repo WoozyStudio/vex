@@ -64,6 +64,10 @@
 		"embed": "The song loop was disabled.",
 		"embed2": "The song loop was enabled."
 	},
+	"lyrics": {
+		"error": "❌ There is nothing playing now.",
+		"error2": "❌ The song was not found.",
+	},
 	"now-playing": {
 		"error": "❌ There is nothing playing now.",
 		"embed": "Now playing: [{title}]({uri})."

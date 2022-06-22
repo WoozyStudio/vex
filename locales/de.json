@@ -64,6 +64,10 @@
 		"embed": "Die Songschleife wurde deaktiviert.",
 		"embed2": "Die Songschleife war aktiviert."
 	},
+	"lyrics": {
+		"error": "❌ Jetzt wird nichts mehr gespielt.",
+		"error2": "❌ Das Lied wurde nicht gefunden.",
+	},
 	"now-playing": {
 		"error": "❌ Jetzt wird nichts mehr gespielt.",
 		"embed": "Wird jetzt gespielt: [{title}]({uri})."
