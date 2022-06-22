@@ -72,7 +72,7 @@ module.exports = {
                         embeds: [embed]
                 });
 
-                await client.player.search(search, interaction.user).then(async (res) => {
+                await client.player.search(search, interaction.user.tag).then(async (res) => {
                         switch (res.loadType) {
                                 case 'TRACK_LOADED':
                                         await player.queue.add(res.tracks[0]);
