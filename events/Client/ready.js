@@ -3,6 +3,15 @@ const mongoose = require('mongoose');
 const config = require('../../config/config.json');
 
 client.on('ready', async () => {
+	client.user.setPresence({
+		activities: [
+			{
+				name: '🎉 03/07/22 | /help'
+			}
+		],
+		status: 'offline'
+	});
+	
         client.player.init(client.user.id);
 
         console.log('User ' + client.user.tag + ' connected.');
