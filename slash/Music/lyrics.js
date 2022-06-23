@@ -8,7 +8,8 @@ module.exports = {
 		{
 			name: 'song',
 			description: '-',
-			type: 'STRING'
+			type: 'STRING',
+			required: true
 		}
 	],
 	type: 'CHAT_INPUT',
@@ -17,77 +18,36 @@ module.exports = {
 		const lang = interaction.member.guild.lang;
 		var song = interaction.options.getString('song');
 
-		if (song) {
-			await lyrics(song).then((res) => {
-				const embed = {
-					thumbnail: {
-						url: client.user.avatarURL()
-					},
-					author: {
-						name: client.user.tag,
-						icon_url: client.user.avatarURL()
-					},
-					description: res,
-					color: config.embedColor,
-					timestamp: new Date()
-				}
-
-				interaction.followUp({
-					embeds: [embed]
-				});
-			}).catch(() => {
-				const error = {
-					description: client.lang.__({ phrase: 'lyrics.error2', locale: lang }),
-					color: config.embedError
-				}
-
-				return interaction.followUp({
-					embeds: [error]
-				});
-			});
-		} else {
-			const player = client.player.get(interaction.guild.id);
-			
-			if (!player) {
-				const error = {
-					description: client.lang.__({ phrase: 'lyrics.error', locale: lang }),
-					color: config.embedError
-				}
-
-				return interaction.followUp({
-					embeds: [error]
-				});
+		await lyrics(song).then((res) => {
+			const embed = {
+				thumbnail: {
+					url: client.user.avatarURL()
+				},					
+				author: {
+					name: client.user.tag,
+					icon_url: client.user.avatarURL()
+				},
+				description: res,
+				color: config.embedColor,
+				timestamp: new Date()
 			}
 
-			const current = player.queue.current;
-			
-			await lyrics(current.title).then((res) => {
-				const embed = {
-					thumbnail: {
-						url: client.user.avatarURL()
-					},
-					author: {
-						name: client.user.tag,
-						icon_url: client.user.avatarURL()
-					},
-					description: res,
-					color: config.embedColor,
-					timestamp: new Date()
-				}
+			if (embed.description.length > 4000) {
+                                embed.description = embed.description.substr(0, 3997) + '...'
+			}
 
-				interaction.followUp({
-					embeds: [embed]
-				});
-			}).catch(() => {
-				const error = {
-					description: client.lang.__({ phrase: 'lyrics.error2', locale: lang }),
-					color: config.embedError
-				}
-
-				return interaction.followUp({
-					embeds: [error]
-				});
+			interaction.followUp({
+				embeds: [embed]
 			});
-		}
+		}).catch(() => {
+			const error = {
+				description: client.lang.__({ phrase: 'lyrics.error2', locale: lang }),
+				color: config.embedError
+			}
+
+			return interaction.followUp({
+				embeds: [error]
+			});
+		});
 	}
 }

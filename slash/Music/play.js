@@ -40,6 +40,19 @@ module.exports = {
                         });
                 }
 
+		const node = client.player.leastUsedNodes.first();
+
+		if (!node) {
+			const error = {
+				description: client.lang.__({ phrase: 'play.error5', locale: lang }),
+				color: config.embedError
+			}
+
+			return interaction.followUp({
+				embeds: [error]
+			});
+		}
+
                 const player = await client.player.create({
                         guild: interaction.guild.id,
                         voiceChannel: interaction.member.voice.channel.id,

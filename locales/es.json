@@ -82,6 +82,7 @@
 	"play": {
 		"error": "❌ Tienes que estar en un canal de voz.",
 		"error2": "❌ Tienes que estar en el mismo canal de voz.",
+		"error5": "❌ No hay nodos activos.",
 		"error3": "❌ La cola no puede tener más 10 canciones.",
 		"embed": "Cargando... (Esto puede tardar unos segundos).",
 		"embed2": "La canción fue añadida a la cola: [{title}]({uri}) [{duration}] • `{requester}`.",

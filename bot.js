@@ -29,7 +29,13 @@ const dbl = require('dblapi.js');
 const path = require('path');
 
 const nodes = [
-        {
+	{
+		host: 'vex-lavalink-server.lonelydeathvgx.repl.co',
+		password: 'vex-lavalink-server',
+		port: 443,
+		secure: true
+	},
+	{
                 host: 'lava.link',
                 password: 'changeyourpassword',
                 port: 80
@@ -40,12 +46,6 @@ const nodes = [
 		port: 443,
 		secure: true
 	},
-	{
-		host: 'vex-lavalink-server.lonelydeathvgx.repl.co',
-		password: 'vex-lavalink-server',
-		port: 443,
-		secure: true
-	}
 ];
 
 client.slashcommands = new Collection();

@@ -82,6 +82,7 @@
 	"play": {
 		"error": "❌ You have to be on a voice channel.",
 		"error2": "❌ You have to be on the same voice channel.",
+		"error5": "❌ There are no active nodes.",
 		"error3": "❌ The queue cannot have more than 10 songs.",
 		"embed": "Loading... (This may take a few seconds).",
 		"embed2": "The song was added to the queue: [{title}]({uri}) [{duration}] • `{requester}`.",
