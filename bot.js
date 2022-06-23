@@ -30,18 +30,18 @@ const path = require('path');
 
 const nodes = [
 	{
-		host: 'vex-lavalink-server.lonelydeathvgx.repl.co',
+		host: 'vex-lavalink-server.lonelydeathvgx.repl.coa',
 		password: 'vex-lavalink-server',
 		port: 443,
 		secure: true
 	},
 	{
-                host: 'lava.link',
+                host: 'lava.linka',
                 password: 'changeyourpassword',
                 port: 80
         },
 	{
-		host: 'www.exlink.ml',
+		host: 'www.exlink.mla',
 		password: 'exlava',
 		port: 443,
 		secure: true
