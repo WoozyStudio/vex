@@ -16,7 +16,10 @@ module.exports = async (client) => {
 
                 client.slashcommands.set(file.name, file);
 
-                if (['MESSAGE', 'USER'].includes(file.type)) delete file.description;
+                if (['MESSAGE', 'USER'].includes(file.type)) {
+			delete file.description;
+		}
+		
                 commands.push(file);
         });
 

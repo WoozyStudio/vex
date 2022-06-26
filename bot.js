@@ -35,7 +35,7 @@ const nodes = [
 		port: 443,
 		secure: true
 	},
-	{
+	/*{
                 host: 'lava.link',
                 password: 'changeyourpassword',
                 port: 80
@@ -45,7 +45,7 @@ const nodes = [
 		password: 'exlava',
 		port: 443,
 		secure: true
-	},
+	},*/
 ];
 
 client.slashcommands = new Collection();

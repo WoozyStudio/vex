@@ -7,4 +7,4 @@ manager.on('shardCreate', (shard) => {
         console.log('Shard ' + shard.id + ' created.');
 });
 
-manager.spawn();
+manager.spawn('auto');

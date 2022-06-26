@@ -1,5 +1,4 @@
 const client = require('../../bot.js');
-const mongoose = require('mongoose');
 const config = require('../../config/config.json');
 
 client.on('ready', async () => {
