@@ -27,25 +27,27 @@ module.exports = {
                 const amount = interaction.options.getInteger('amount');
 
                 if (user.id === client.user.id || user.bot) {
-                        const error = {
-                                description: client.lang.__({ phrase: 'pay.error', locale: lang }),
-                                color: config.embedError
-                        }
-
-                        return interaction.followUp({
-                                embeds: [error]
+                        interaction.followUp({
+                                content: client.lang.__(
+					{ 
+						phrase: 'pay.error', 
+						locale: lang 
+					}
+				)
                         });
+			return;
                 }
 
                 if (user.id === interaction.user.id) {
-                        const error = {
-                                description: client.lang.__({ phrase: 'pay.error2', locale: lang }),
-                                color: config.embedError
-                        }
-
-                        return interaction.followUp({
-                                embeds: [error]
+                        interaction.followUp({
+                                content: client.lang.__(
+					{
+						phrase: 'pay.error2',
+						locale: lang 
+					}
+				)
                         });
+			return;
                 }
 
                 model.findOne({

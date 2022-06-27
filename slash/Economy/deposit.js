@@ -26,7 +26,7 @@ module.exports = {
 
                         if (data) {
                                 if (amount > data.Wallet) {
-                                        return interaction.followUp({
+                                        interaction.followUp({
 						content: client.lang.__(
 							{ 
 								phrase: 'deposit.error', 
@@ -34,6 +34,7 @@ module.exports = {
 							}
 						)
                                         });
+					return;
                                 }
 
                                 data.Bank += amount;
@@ -52,7 +53,7 @@ module.exports = {
 					)
                                 });
                         } else {
-                                return interaction.followUp({
+                                interaction.followUp({
                                         content: client.lang.__(
 						{ 
 							phrase: 'deposit.error2', 
@@ -60,6 +61,7 @@ module.exports = {
 						}
 					)
                                 });
+				return;
                         }
                 });
         }
