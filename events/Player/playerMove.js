@@ -11,6 +11,7 @@ client.player.on('playerMove', async (player, oldChannel, newChannel) => {
                 return player.destroy();
         } else {
                 player.voiceChannel = newChannel;
+		
                 if (player.paused) {
                         await player.pause(false);
                 }
