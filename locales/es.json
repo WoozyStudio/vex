@@ -31,7 +31,7 @@
                 "embed": "Selecciona una categoría.",
                 "embed2": "<:emoji_1:987398741780750426> `/balance` - Muestra el saldo de un usuario.\n<:emoji_1:987398741780750426> `/deposit` - Deposita dinero en el banco.\n<:emoji_1:987398741780750426> `/pay` - Paga dinero a un usuario.\n<:emoji_1:987398741780750426> `/richest` - Muestra los usuarios más ricos.\n<:emoji_1:987398741780750426> `/with-draw` - Retira dinero del banco.\n<:emoji_1:987398741780750426> `/work` - Trabaja y consigue dinero.",
                 "embed3": "<:emoji_1:987398741780750426> `/help` - Muestra los comandos del bot.",
-                "embed4": "<:emoji_1:987398741780750426> `/clear-queue` - Despeja la cola de canciones.\n<:emoji_1:987398741780750426> `/leave` - Deja el canal de voz.\n<:emoji_1:987398741780750426> `/loop` - Habilita/Deshabilita el bucle de la canción.\n<:emoji_1:987398741780750426> `/now-playing` - Muestra la canción que se está reproduciendo.\n<:emoji_1:987398741780750426> `/pause` - Pausa la canción.\n<:emoji_1:987398741780750426> `/play` - Reproduce una canción.\n<:emoji_1:987398741780750426> `/queue` - Muestra la cola de canciones.\n<:emoji_1:987398741780750426> `/resume` - Reanuda la canción.\n<:emoji_1:987398741780750426> `/skip-to` - Salta la canción hasta la posición indicada.\n<:emoji_1:987398741780750426> `/skip` - Salta la canción.\n<:emoji_1:987398741780750426> `/volume` - Establece el volumen de la canción.",
+                "embed4": "<:emoji_1:987398741780750426> `/clear-queue` - Despeja la cola de canciones.\n<:emoji_1:987398741780750426> `/leave` - Deja el canal de voz.\n<:emoji_1:987398741780750426> `/loop` - Habilita/Deshabilita el bucle de la canción.\n<:emoji_1:987398741780750426> `/lyrics` - Muestra la letra de una canción.\n<:emoji_1:987398741780750426> `/now-playing` - Muestra la canción que se está reproduciendo.\n<:emoji_1:987398741780750426> `/pause` - Pausa la canción.\n<:emoji_1:987398741780750426> `/play` - Reproduce una canción.\n<:emoji_1:987398741780750426> `/queue` - Muestra la cola de canciones.\n<:emoji_1:987398741780750426> `/resume` - Reanuda la canción.\n<:emoji_1:987398741780750426> `/skip-to` - Salta la canción hasta la posición indicada.\n<:emoji_1:987398741780750426> `/skip` - Salta la canción.\n<:emoji_1:987398741780750426> `/volume` - Establece el volumen de la canción.",
                 "embed5": "<:emoji_1:987398741780750426> `/set-language` - Establece el idioma del bot.",
 		"embed6": "<:emoji_1:987398741780750426> `/profile description` - Establece la descripción del perfil.\n<:emoji_1:987398741780750426> `/profile follow` - Sigue a un usuario.\n<:emoji_1:987398741780750426> `/profile register` - Crea un perfil.\n<:emoji_1:987398741780750426> `/profile unfollow` - Deja de seguir a un usuario.\n<:emoji_1:987398741780750426> `/profile view` - Muestra el perfil de un usuario.",
 		"embed7": "<:emoji_1:987398741780750426> `/vote` - Vota el bot.",
@@ -44,6 +44,9 @@
                         "support": "Soporte."
                 }
         },
+	"ping": {
+		"embed": "<:emoji_1:987398741780750426> Latencia del bot: {circle} `{latency}`.\n<:emoji_1:987398741780750426> API: `{api}`."
+	},
 	"clear-queue": {
 		"error": "❌ Tienes que estar en un canal de voz.",
 		"error2": "❌ Tienes que estar en el mismo canal de voz.",
@@ -65,8 +68,7 @@
 		"embed2": "El bucle de la canción fue habilitado."
 	},
 	"lyrics": {
-		"error": "❌ No hay nada reproduciendo ahora.",
-		"error2": "❌ La canción no fue encontrada."
+		"error": "❌ La canción no fue encontrada."
 	},
 	"now-playing": {
 		"error": "❌ No hay nada reproduciendo ahora.",

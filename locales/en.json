@@ -31,7 +31,7 @@
                 "embed": "Select a category.",
                 "embed2": "<:emoji_1:987398741780750426> `/balance` - Displays a user's balance.\n<:emoji_1:987398741780750426> `/deposit` - Deposit money in the bank.\n<:emoji_1:987398741780750426> `/pay` - Pay money to a user.\n<:emoji_1:987398741780750426> `/richest` - Displays the richest users.\n<:emoji_1:987398741780750426> `/with-draw` - Withdraws money from the bank.\n<:emoji_1:987398741780750426> `/work` - Work and get money.",
                 "embed3": "<:emoji_1:987398741780750426> `/help` - Displays the bot commands.",
-                "embed4": "<:emoji_1:987398741780750426> `/clear-queue` - Clears the song queue.\n<:emoji_1:987398741780750426> `/leave` - Leave the voice channel.\n<:emoji_1:987398741780750426> `/loop` - Enables/Disables the song loop.\n<:emoji_1:987398741780750426> `/now-playing` - Displays the currently playing song.\n<:emoji_1:987398741780750426> `/pause` - Pause the song.\n<:emoji_1:987398741780750426> `/play` - Plays a song.\n<:emoji_1:987398741780750426> `/queue` - Displays the song queue.\n<:emoji_1:987398741780750426> `/resume` - Resume the song.\n<:emoji_1:987398741780750426> `/skip-to` - Skips the song to the indicated position.\n<:emoji_1:987398741780750426> `/skip` - Skip the song.\n<:emoji_1:987398741780750426> `/volume` - Sets the volume of the song.",
+                "embed4": "<:emoji_1:987398741780750426> `/clear-queue` - Clears the song queue.\n<:emoji_1:987398741780750426> `/leave` - Leave the voice channel.\n<:emoji_1:987398741780750426> `/loop` - Enables/Disables the song loop.\n<:emoji_1:987398741780750426> `/lyrics` - Displays the lyrics of a song.\n<:emoji_1:987398741780750426> `/now-playing` - Displays the currently playing song.\n<:emoji_1:987398741780750426> `/pause` - Pause the song.\n<:emoji_1:987398741780750426> `/play` - Plays a song.\n<:emoji_1:987398741780750426> `/queue` - Displays the song queue.\n<:emoji_1:987398741780750426> `/resume` - Resume the song.\n<:emoji_1:987398741780750426> `/skip-to` - Skips the song to the indicated position.\n<:emoji_1:987398741780750426> `/skip` - Skip the song.\n<:emoji_1:987398741780750426> `/volume` - Sets the volume of the song.",
                 "embed5": "<:emoji_1:987398741780750426> `/set-language` - Sets the bot language.",
 		"embed6": "<:emoji_1:987398741780750426> `/profile description` - Sets the profile description.\n<:emoji_1:987398741780750426> `/profile follow` - Follow a user.\n<:emoji_1:987398741780750426> `/profile register` - Create a profile.\n<:emoji_1:987398741780750426> `/profile unfollow` - Stop following a user.\n<:emoji_1:987398741780 `/profile view` - Displays a user's profile.",
 		"embed7": "<:emoji_1:987398741780750426> `/vote` - Vote for the bot.",
@@ -44,6 +44,9 @@
                         "support": "Support."
                 }
         },
+	"ping": {
+		"embed": "<:emoji_1:987398741780750426> Bot latency: {circle} `{latency}`.\n<:emoji_1:987398741780750426> API: `{api}`."
+	},
 	"clear-queue": {
 		"error": "❌ You have to be on a voice channel.",
 		"error2": "❌ You have to be on the same voice channel.",
@@ -65,8 +68,7 @@
 		"embed2": "The song loop was enabled."
 	},
 	"lyrics": {
-		"error": "❌ There is nothing playing now.",
-		"error2": "❌ The song was not found."
+		"error": "❌ The song was not found."
 	},
 	"now-playing": {
 		"error": "❌ There is nothing playing now.",

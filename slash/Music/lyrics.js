@@ -41,7 +41,7 @@ module.exports = {
 			});
 		}).catch(() => {
 			const error = {
-				description: client.lang.__({ phrase: 'lyrics.error2', locale: lang }),
+				description: client.lang.__({ phrase: 'lyrics.error', locale: lang }),
 				color: config.embedError
 			}
 
