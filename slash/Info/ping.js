@@ -29,5 +29,9 @@ module.exports = {
 			description: client.lang.__({ phrase: 'ping.embed', locale: lang }, { circle: circle, latency: latency, api: client.ws.ping }),
 			color: config.embedColor
 		}
+
+		interaction.followUp({
+			embeds: [embed]
+		});
 	}
 }
