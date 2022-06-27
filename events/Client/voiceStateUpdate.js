@@ -55,25 +55,12 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
                 (member) => !member.user.bot
         );
 
-	if (stateChange.members.size === 0) {
-                await wait(60000);
-		if (stateChange.members.size > 0) {
-			continue;
-		} else {
-			player.destroy();
-		}
-	}
-	
-        /*switch (stateChange.type) {
+        switch (stateChange.type) {
                 case 'LEAVE':
                         if (stateChange.members.size === 0) {
-                                await wait(60000);
-				if (stateChange.members.size > 0) {
-					continue;
-				} else {
-					player.destroy();
-				}
+                                await wait(100);
+				player.destroy();
                         }
                 break;
-        }*/
+        }
 });
