@@ -2,24 +2,23 @@ const client = require('../../bot.js');
 const wait = require('node:timers/promises').setTimeout;
 
 client.on('voiceStateUpdate', async (oldState, newState) => {
-        let guildId = newState.guild.id;
+        const guild = newState.guild.id;
+        const player = client.player.get(guild);
 
-        const player = client.player.get(guildId);
-
-        if (!player || player.state !== "CONNECTED") return;
+        if (!player || player.state !== 'CONNECTED') return;
 
         const stateChange = {};
 
         if (oldState.channel === null && newState.channel !== null) {
-                stateChange.type = "JOIN";
+                stateChange.type = 'JOIN';
         }
 
         if (oldState.channel !== null && newState.channel === null) {
-                stateChange.type = "LEAVE";
+                stateChange.type = 'LEAVE';
         }
 
         if (oldState.channel !== null && newState.channel !== null) {
-                stateChange.type = "MOVE";
+                stateChange.type = 'MOVE';
         }
 
         if (oldState.channel === null && newState.channel === null) return;
@@ -32,16 +31,23 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
                 return player.pause(false);
         }
 
-        if (stateChange.type === "MOVE") {
-                if (oldState.channel.id === player.voiceChannel) stateChange.type = "LEAVE";
+        if (stateChange.type === 'MOVE') {
+                if (oldState.channel.id === player.voiceChannel) {
+			stateChange.type = 'LEAVE';
+		}
 
-                if (newState.channel.id === player.voiceChannel) stateChange.type = "JOIN";
+                if (newState.channel.id === player.voiceChannel) {
+			stateChange.type = 'JOIN';
+		}
         }
 
+        if (stateChange.type === 'JOIN') {
+		stateChange.channel = newState.channel;
+	}
 
-        if (stateChange.type === "JOIN") stateChange.channel = newState.channel;
-
-        if (stateChange.type === "LEAVE") stateChange.channel = oldState.channel;
+        if (stateChange.type === 'LEAVE') {
+		stateChange.channel = oldState.channel;
+	}
 
         if (!stateChange.channel || stateChange.channel.id !== player.voiceChannel) return;
 
@@ -50,10 +56,14 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
         );
 
         switch (stateChange.type) {
-                case "LEAVE":
+                case 'LEAVE':
                         if (stateChange.members.size === 0) {
-                                await wait(100);
-                                player.destroy();
+                                await wait(60000);
+				if (stateChange.members.size > 0) {
+					continue;
+				} else {
+					player.destroy();
+				}
                         }
                 break;
         }
