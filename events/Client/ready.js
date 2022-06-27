@@ -25,8 +25,7 @@ client.on('ready', async () => {
 	});
 	
         client.channels.cache.get(config.logsChannel).send({
-                content: '<@945029734943821824> - Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.',
-                embeds: [embed]
+                content: '<@945029734943821824> - Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.'
         }).catch(() => { });
 
         setInterval(async () => {
