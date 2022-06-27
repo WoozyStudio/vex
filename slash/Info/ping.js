@@ -26,7 +26,7 @@ module.exports = {
 		}
 
 		const embed = {
-			description: client.lang.__({ phrase: 'ping.embed', locale: lang }, { circle: circle, latency: latency, api: client.ws.ping }),
+			description: client.lang.__mf({ phrase: 'ping.embed', locale: lang }, { circle: circle, latency: latency, api: client.ws.ping }),
 			color: config.embedColor
 		}
 
