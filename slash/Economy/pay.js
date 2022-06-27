@@ -57,14 +57,15 @@ module.exports = {
 
                         if (data) {
                                 if (amount > data.Wallet) {
-                                        const error = {
-                                                description: client.lang.__({ phrase: 'pay.error3', locale: lang }),
-                                                color: config.embedError
-                                        }
-
-                                        return interaction.followUp({
-                                                embeds: [error]
+                                        interaction.followUp({
+                                                content: client.lang.__(
+							{ 
+								phrase: 'pay.error3', 
+								locale: lang 
+							}
+						)
                                         });
+					return;
                                 }
 
                                 data.Wallet -= amount;

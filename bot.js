@@ -34,7 +34,7 @@ const nodes = [
 		password: 'vex-lavalink-server',
 		port: 443,
 		secure: true
-	},
+	}
 	/*{
                 host: 'lava.link',
                 password: 'changeyourpassword',
@@ -63,12 +63,29 @@ client.player = new Manager({
 });
 
 client.lang.configure({
-        locales: ['en', 'es', 'de'],
+        locales: [
+		'en',
+		'es', 
+		'de'
+	],
         directory: path.join(__dirname, 'locales'),
         defaultLocale: 'en',
         retryInDefaultLocale: true,
         objectNotation: true,
         register: global,
+	logWarnFn: function (msg) {
+		console.log(
+			msg
+		);
+	},
+	logErrorFn: function (msg) {
+		console.log(
+			msg
+		);
+	},
+	missingKeyFn: function (locale, value) {
+		return value;
+	},
         mustacheConfig: {
                 tags: [
 			'{{', 

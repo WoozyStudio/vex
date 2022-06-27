@@ -39,11 +39,19 @@ client.on('messageCreate', async (message) => {
                                                         
                                                         const embed = {
                                                                 thumbnail: {
-                                                                        url: message.author.avatarURL({ dynamic: true })
+                                                                        url: message.author.avatarURL(
+										{
+											dynamic: true 
+										}
+									)
                                                                 },
                                                                 author: {
                                                                         name: message.author.tag,
-                                                                        icon_url: message.author.avatarURL({ dynamic: true })
+                                                                        icon_url: message.author.avatarURL(
+										{
+											dynamic: true 
+										}
+									)
                                                                 },
                                                                 description: response,
                                                                 fields: [
@@ -70,13 +78,8 @@ client.on('messageCreate', async (message) => {
                                                         }).catch((err) => { });
                                                 });
                                         } else {
-                                                const error = {
-                                                        description: '❌ You don\'t have a profile.',
-                                                        color: config.embedError
-                                                }
-
                                                 message.channel.send({
-                                                        embeds: [error]
+							content: '❌ You don\'t have a profile.'
                                                 });
                                         }
                                 });

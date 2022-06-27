@@ -14,19 +14,18 @@ client.on('ready', async () => {
 	
         client.player.init(client.user.id);
 
-        console.log('User ' + client.user.tag + ' connected.');
+        console.log(
+		'User ' + client.user.tag + ' connected.'
+	);
 
 	await mongoose.connect(process.env.Mongo).then(() => {
-		console.log('Database connected.');
+		console.log(
+			'Database connected.'
+		);
 	});
 	
-        const embed = {
-                description: 'Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.',
-                color: config.embedColor
-        }
-
-        client.channels.cache.get('979427667898138674').send({
-                content: '<@945029734943821824>.',
+        client.channels.cache.get(config.logsChannel).send({
+                content: '<@945029734943821824> - Restart completed. Servers: `' + client.guilds.cache.size + '`. Users: `' + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) + '`.',
                 embeds: [embed]
         }).catch(() => { });
 
