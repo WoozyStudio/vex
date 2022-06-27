@@ -45,7 +45,7 @@
                 }
         },
 	"ping": {
-		"embed": "<:emoji_1:987398741780750426> Bot-Latenzzeit: {circle} `{latency}`.\n<:emoji_1:987398741780750426> API: `{api}`."
+		"embed": "<:emoji_1:987398741780750426> Bot-Latenzzeit: {circle} `{latency}ms`.\n<:emoji_1:987398741780750426> API: `{api}ms`."
 	},
 	"clear-queue": {
 		"error": "❌ Sie müssen auf einem Sprachkanal sein.",

@@ -70,7 +70,10 @@ client.lang.configure({
         objectNotation: true,
         register: global,
         mustacheConfig: {
-                tags: ['{{', '}}'],
+                tags: [
+			'{{', 
+			'}}'
+		],
                 disable: false
         }
 });

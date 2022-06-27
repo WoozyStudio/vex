@@ -45,7 +45,7 @@
                 }
         },
 	"ping": {
-		"embed": "<:emoji_1:987398741780750426> Latencia del bot: {circle} `{latency}`.\n<:emoji_1:987398741780750426> API: `{api}`."
+		"embed": "<:emoji_1:987398741780750426> Latencia del bot: {circle} `{latency}ms`.\n<:emoji_1:987398741780750426> API: `{api}ms`."
 	},
 	"clear-queue": {
 		"error": "❌ Tienes que estar en un canal de voz.",

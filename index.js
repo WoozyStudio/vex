@@ -4,7 +4,9 @@ const manager = new ShardingManager('./bot.js', {
 });
 
 manager.on('shardCreate', (shard) => {
-        console.log('Shard ' + shard.id + ' created.');
+        console.log(
+		'Shard ' + shard.id + ' created.'
+	);
 });
 
 manager.spawn('auto');

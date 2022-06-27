@@ -26,13 +26,13 @@ module.exports = {
 
                         if (data) {
                                 if (amount > data.Wallet) {
-                                        const error = {
-                                                description: client.lang.__({ phrase: 'deposit.error', locale: lang }),
-                                                color: config.embedError
-                                        }
-
                                         return interaction.followUp({
-                                                embeds: [error]
+						content: client.lang.__(
+							{ 
+								phrase: 'deposit.error', 
+								locale: lang 
+							}
+						)
                                         });
                                 }
 
@@ -40,22 +40,25 @@ module.exports = {
                                 data.Wallet -= amount;
                                 data.save();
 
-                                const embed = {
-                                        description: client.lang.__mf({ phrase: 'deposit.embed', locale: lang }, { amount: amount }),
-                                        color: config.embedColor
-                                }
-
                                 interaction.followUp({
-                                        embeds: [embed]
+                                        content: client.lang.__mf(
+						{ 
+							phrase: 'deposit.embed', 
+							locale: lang 
+						}, 
+						{
+							amount: amount 
+						}
+					)
                                 });
                         } else {
-                                const error = {
-                                        description: client.lang.__({ phrase: 'deposit.error2', locale: lang }),
-                                        color: config.embedError
-                                }
-
                                 return interaction.followUp({
-                                        embeds: [error]
+                                        content: client.lang.__(
+						{ 
+							phrase: 'deposit.error2', 
+							locale: lang 
+						}
+					)
                                 });
                         }
                 });

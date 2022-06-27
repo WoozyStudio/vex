@@ -31,13 +31,30 @@ module.exports = {
 
                         const embed = {
                                 thumbnail: {
-                                        url: user.avatarURL({ dynamic: true })
+                                        url: user.avatarURL(
+						{ 
+							dynamic: true 
+						}
+					)
                                 },
                                 author: {
                                         name: user.tag,
-                                        icon_url: user.avatarURL({ dynamic: true })
+                                        icon_url: user.avatarURL(
+						{
+							dynamic: true 
+						}
+					)
                                 },
-                                description: client.lang.__mf({ phrase: 'balance.embed', locale: lang }, { wallet: wallet, bank: bank }),
+                                description: client.lang.__mf(
+					{ 
+						phrase: 'balance.embed', 
+						locale: lang 
+					}, 
+					{ 
+						wallet: wallet, 
+						bank: bank 
+					}
+				),
                                 color: config.embedColor,
                                 timestamp: new Date()
                         }

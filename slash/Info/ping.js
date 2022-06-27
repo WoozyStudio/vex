@@ -26,8 +26,16 @@ module.exports = {
 		}
 
 		const embed = {
+			thumbnail: {
+				url: client.user.avatarURL()
+			},
+			author: {
+				name: client.user.tag,
+				icon_url: client.user.avatarURL()
+			},
 			description: client.lang.__mf({ phrase: 'ping.embed', locale: lang }, { circle: circle, latency: latency, api: client.ws.ping }),
-			color: config.embedColor
+			color: config.embedColor,
+			timestamp: new Date()
 		}
 
 		interaction.followUp({
