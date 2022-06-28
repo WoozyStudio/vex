@@ -184,7 +184,7 @@ module.exports = {
                                         const row = new MessageActionRow()
                                                 .addComponents(
                                                         new MessageSelectMenu()
-                                                                .setPlaceholder(client.lang.__(
+                                                        .setPlaceholder(client.lang.__(
 									{
 										phrase: 'profile.view.menu',
 										locale: lang

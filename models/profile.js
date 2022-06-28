@@ -10,9 +10,6 @@ const schema = new mongo.Schema({
         Followers: {
                 type: mongo.SchemaTypes.Array
         },
-        Avatar: {
-                type: mongo.SchemaTypes.String
-        },
         Badges: {
                 type: mongo.SchemaTypes.Array
         }
