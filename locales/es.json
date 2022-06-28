@@ -139,7 +139,16 @@
 			"embedFieldValue": "<:emoji_1:987398741780750426> ID del perfil: `{id}`.\n<:emoji_1:987398741780750426> Insignias de Vex: {badges}",
 			"embedField2": "Estadísticas:",
 			"embedFieldValue2": "<:emoji_1:987398741780750426> Número de seguidores: `{followers}`.",
-                        "button": "Reportar el perfil.",
+                        "menu": "Denunciar perfil del usuario.",
+			"options": {
+				"option": "Acoso.",
+				"option2": "Suplantación de identidad.",
+				"option3": "Amenaza violenta.",
+				"option4": "Peligro para los usuarios.",
+				"option5": "Spam y estafas.",
+				"option6": "Perfil con contenido NSFW.",
+				"option7": "Ninguna de las anteriores."
+			},
 			"error": "❌ Este usuario no tiene un perfil."
 		},
 		"follow": {

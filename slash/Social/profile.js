@@ -1,4 +1,4 @@
-const { MessageActionRow, MessageButton } = require('discord.js');
+const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 const model = require('../../models/profile.js');
 const Filter = require('bad-words');
 const filter = new Filter({
@@ -77,35 +77,32 @@ module.exports = {
                 if (subCommand === 'register') {
                         model.findOne({
                                 User: interaction.user.id
-                        }, (err, data) => {
-                                if (err) throw err;
-
+                        }, (data) => {
                                 if (data) {
-                                        const error = {
-                                                description: client.lang.__({ phrase: 'profile.register.error', locale: lang }),
-                                                color: config.embedError
-                                        }
-
-                                        return interaction.followUp({
-                                                embeds: [error]
+                                        interaction.followUp({
+						content: client.lang.__(
+							{
+								phrase: 'profile.register.error', 
+								locale: lang 
+							}
+						)
                                         });
+					return;
                                 } else {
                                         new model({
                                                 User: interaction.user.id,
-                                                Username: interaction.user.tag,
                                                 AboutMe: 'There is no description.',
                                                 Followers: [],
-                                                Badges: [],
-                                                Avatar: interaction.user.avatarURL()
+                                                Badges: []
                                         }).save();
 
-                                        const embed = {
-                                                description: client.lang.__({ phrase: 'profile.register.embed', locale: lang }),
-                                                color: config.embedColor
-                                        }
-
                                         interaction.followUp({
-                                                embeds: [embed]
+						content: client.lang.__(
+							{
+								phrase: 'profile.register.embed', 
+								locale: lang 
+							}
+						)
                                         });
                                 }
                         });
@@ -120,27 +117,60 @@ module.exports = {
                         
                         model.findOne({
                                 User: user.id
-                        }, async (err, data) => {
-                                if (err) throw err;
-
+                        }, async (data) => {
                                 if (data) {
                                         const embed = {
                                                 thumbnail: {
-                                                        url: user.avatarURL({ dynamic: true })
+                                                        url: user.avatarURL(
+								{
+									dynamic: true 
+								}
+							)
                                                 },
                                                 author: {
                                                         name: user.tag,
-                                                        icon_url: user.avatarURL({ dynamic: true })
+                                                        icon_url: user.avatarURL(
+								{
+									dynamic: true 
+								}
+							)
                                                 },
                                                 description: filter.clean(data.AboutMe),
                                                 fields: [
                                                         {
-                                                                name: client.lang.__({ phrase: 'profile.view.embedField', locale: lang }),
-                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue', locale: lang }, { badges: data.Badges, id: data._id })
+                                                                name: client.lang.__(
+									{
+										phrase: 'profile.view.embedField', 
+										locale: lang 
+									}
+								),
+                                                                value: client.lang.__mf(
+									{
+										phrase: 'profile.view.embedFieldValue', 
+										locale: lang 
+									}, 
+									{ 
+										badges: data.Badges, 
+										id: data._id 
+									}
+								)
                                                         },
                                                         {
-                                                                name: client.lang.__({ phrase: 'profile.view.embedField2', locale: lang }),
-                                                                value: client.lang.__mf({ phrase: 'profile.view.embedFieldValue2', locale: lang }, { followers: data.Followers.length })
+                                                                name: client.lang.__(
+									{
+										phrase: 'profile.view.embedField2', 
+										locale: lang 
+									}
+								),
+                                                                value: client.lang.__mf(
+									{
+										phrase: 'profile.view.embedFieldValue2',
+										locale: lang 
+									}, 
+									{ 
+										followers: data.Followers.length 
+									}
+								)
                                                         }
                                                 ],
                                                 color: config.embedColor,
@@ -149,11 +179,26 @@ module.exports = {
 
                                         const row = new MessageActionRow()
                                                 .addComponents(
-                                                        new MessageButton()
-                                                                .setLabel(client.lang.__({ phrase: 'profile.view.button', locale: lang }))
-                                                                .setStyle('DANGER')
-                                                                .setEmoji('⚠️')
-                                                                .setCustomId('profile-view-button')
+                                                        new MessageSelectMenu()
+                                                                .setPlaceholder(client.lang.__(
+									{
+										phrase: 'profile.view.menu',
+										locale: lang
+									}
+								)
+							)
+						        .addOptions([
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option',
+											locale: lang
+										}
+									),
+									value: 'option'
+								}
+							])
+                                                        .setCustomId('profile-view-menu')
                                                 );
 
                                         interaction.followUp({
@@ -161,14 +206,15 @@ module.exports = {
                                                 components: [row]
                                         });
                                 } else {
-                                        const error = {
-                                                description: client.lang.__({ phrase: 'profile.view.error', locale: lang }),
-                                                color: config.embedError
-                                        }
-
-                                        return interaction.followUp({
-                                                embeds: [error]
+                                        interaction.followUp({
+						content: client.lang.__(
+							{
+								phrase: 'profile.view.error', 
+								locale: lang 
+							}
+						)
                                         });
+					return;
                                 }
                         });
                 }

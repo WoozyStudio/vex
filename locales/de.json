@@ -139,7 +139,16 @@
 			"embedFieldValue": "<:emoji_1:987398741780750426> Profil-ID: `{id}`.\n<:emoji_1:987398741780750426> Vex-Abzeichen: {badges}",
 			"embedField2": "Statistik:",
 			"embedFieldValue2": "<:emoji_1:987398741780750426> Anzahl der Follower: `{followers}`.",
-                        "button": "Melden Sie das Profil.",
+                        "menu": "Benutzerprofil melden.",
+			"options": {
+				"option": "Belästigung.",
+				"option2": "Identitätsdiebstahl.",
+				"option3": "Gewalttätige Bedrohung.",
+				"option4": "Gefahr für die Benutzer.",
+				"option5": "Spam und Betrug.",
+				"option6": "Profil mit NSFW-Inhalt.",
+				"option7": "Keine der oben genannten Möglichkeiten."
+			},
 			"error": "❌ Dieser Benutzer hat kein Profil."
 		},
 		"follow": {

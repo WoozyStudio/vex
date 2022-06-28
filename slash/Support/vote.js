@@ -16,7 +16,12 @@ module.exports = {
                                 name: client.user.tag,
                                 icon_url: client.user.avatarURL()
                         },
-                        description: client.lang.__({ phrase: 'vote.embed', locale: lang }),
+                        description: client.lang.__(
+				{
+					phrase: 'vote.embed', 
+					locale: lang 
+				}
+			),
                         color: config.embedColor,
                         timestamp: new Date()
                 }

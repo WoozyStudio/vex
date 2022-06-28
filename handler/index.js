@@ -16,7 +16,12 @@ module.exports = async (client) => {
 
                 client.slashcommands.set(file.name, file);
 
-                if (['MESSAGE', 'USER'].includes(file.type)) {
+		const array = [
+			'MESSAGE',
+			'USER'
+		];
+
+                if (array.includes(file.type)) {
 			delete file.description;
 		}
 		
