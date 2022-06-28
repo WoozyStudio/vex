@@ -77,7 +77,9 @@ module.exports = {
                 if (subCommand === 'register') {
                         model.findOne({
                                 User: interaction.user.id
-                        }, (data) => {
+                        }, (data, err) => {
+				if (err) throw err;
+				
                                 if (data) {
                                         interaction.followUp({
 						content: client.lang.__(
@@ -117,7 +119,9 @@ module.exports = {
                         
                         model.findOne({
                                 User: user.id
-                        }, async (data) => {
+                        }, async (data, err) => {
+				if (err) throw err;
+				
                                 if (data) {
                                         const embed = {
                                                 thumbnail: {
