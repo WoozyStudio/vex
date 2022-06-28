@@ -139,7 +139,7 @@
 			"embedFieldValue": "<:emoji_1:987398741780750426> ID del perfil: `{id}`.\n<:emoji_1:987398741780750426> Insignias de Vex: {badges}",
 			"embedField2": "Estadísticas:",
 			"embedFieldValue2": "<:emoji_1:987398741780750426> Número de seguidores: `{followers}`.",
-                        "menu": "Denunciar perfil del usuario.",
+			"menu": "Denunciar perfil del usuario.",
 			"options": {
 				"option": "Acoso.",
 				"option2": "Suplantación de identidad.",

@@ -19,14 +19,15 @@ module.exports = {
                 const text = interaction.options.getString('text');
 
                 if (interaction.user.id !== '945029734943821824') {
-                        const error = {
-                                description: client.lang.__({ phrase: 'eval.error', locale: lang }),
-                                color: config.embedError
-                        }
-
-                        return interaction.followUp({
-                                embeds: [error]
+                        interaction.followUp({
+				content: client.lang.__(
+					{
+						phrase: 'eval.error', 
+						locale: lang 
+					}
+				)
                         });
+			return
                 }
 
                 try {
@@ -55,7 +56,9 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [embed]
+                                embeds: [
+					embed
+				]
                         });
                 } catch (err) {
                         const error = {
@@ -72,7 +75,9 @@ module.exports = {
 			}
 
                         interaction.followUp({
-                                embeds: [error]
+                                embeds: [
+					error
+				]
                         });
                 }
         }

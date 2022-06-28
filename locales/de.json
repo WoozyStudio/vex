@@ -139,7 +139,7 @@
 			"embedFieldValue": "<:emoji_1:987398741780750426> Profil-ID: `{id}`.\n<:emoji_1:987398741780750426> Vex-Abzeichen: {badges}",
 			"embedField2": "Statistik:",
 			"embedFieldValue2": "<:emoji_1:987398741780750426> Anzahl der Follower: `{followers}`.",
-                        "menu": "Benutzerprofil melden.",
+			"menu": "Benutzerprofil melden.",
 			"options": {
 				"option": "Belästigung.",
 				"option2": "Identitätsdiebstahl.",

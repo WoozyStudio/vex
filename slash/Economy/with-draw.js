@@ -26,37 +26,42 @@ module.exports = {
 
                         if (data) {
                                 if (amount > data.Bank) {
-                                        const error = {
-                                                description: client.lang.__({ phrase: 'with-draw.error', locale: lang }),
-                                                color: config.embedError
-                                        }
-
-                                        return interaction.followUp({
-                                                embeds: [error]
+                                        interaction.followUp({
+                                                content: client.lang.__(
+							{
+								phrase: 'with-draw.error', 
+								locale: lang 
+							}
+						)
                                         });
+					return;
                                 }
 
                                 data.Wallet += amount;
                                 data.Bank -= amount;
                                 data.save();
 
-                                const embed = {
-                                        description: client.lang.__mf({ phrase: 'with-draw.embed', locale: lang }, { amount: amount }),
-                                        color: config.embedColor
-                                }
-
                                 interaction.followUp({
-                                        embeds: [embed]
+					content: client.lang.__mf(
+						{
+							phrase: 'with-draw.embed', 
+							locale: lang 
+						}, 
+						{
+							amount: amount 
+						}
+					)
                                 });
                         } else {
-                                const error = {
-                                        description: client.lang.__({ phrase: 'with-draw.error2', locale: lang }),
-                                        color: config.embedError
-                                }
-
-                                return interaction.followUp({
-                                        embeds: [error]
+                                interaction.followUp({
+					content: client.lang.__(
+						{
+							phrase: 'with-draw.error2',
+							locale: lang 
+						}
+					)
                                 });
+				return;
                         }
                 });
         }

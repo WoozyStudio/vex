@@ -11,14 +11,15 @@ module.exports = {
                 const lang = interaction.member.guild.lang;
 
                 if (cooldown.has(interaction.user.id)) {
-                        const error = {
-                                description: client.lang.__({ phrase: 'work.error', locale: lang }),
-                                color: config.embedError
-                        }
-
-                        return interaction.followUp({
-                                embeds: [error]
+                        interaction.followUp({
+				content: client.lang.__(
+					{
+						phrase: 'work.error', 
+						locale: lang 
+					}
+				)
                         });
+			return;
                 }
 
 		cooldown.add(interaction.user.id);
@@ -41,13 +42,16 @@ module.exports = {
                                 }).save();
                         }
 
-                        const embed = {
-                                description: client.lang.__mf({ phrase: 'work.embed', locale: lang }, { earned: earned }),
-                                color: config.embedColor
-                        }
-
                         interaction.followUp({
-                                embeds: [embed]
+				content: client.lang.__mf(
+					{
+						phrase: 'work.embed',
+						locale: lang 
+					}, 
+					{
+						earned: earned
+					}
+				)
                         });
                 });
 

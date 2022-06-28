@@ -1,4 +1,4 @@
-const { MessageActionRow, MessageSelectMenu } = require('discord.js');
+const { MessageActionRow, MessageButton, MessageSelectMenu } = require('discord.js');
 const model = require('../../models/profile.js');
 const Filter = require('bad-words');
 const filter = new Filter({
@@ -77,34 +77,35 @@ module.exports = {
                 if (subCommand === 'register') {
                         model.findOne({
                                 User: interaction.user.id
-                        }, (data, err) => {
-				if (err) throw err;
-				
+                        }, (err, data) => {
+                                if (err) throw err;
+
                                 if (data) {
-                                        interaction.followUp({
-						content: client.lang.__(
-							{
-								phrase: 'profile.register.error', 
-								locale: lang 
-							}
-						)
+                                        const error = {
+                                                description: client.lang.__({ phrase: 'profile.register.error', locale: lang }),
+                                                color: config.embedError
+                                        }
+
+                                        return interaction.followUp({
+                                                embeds: [error]
                                         });
-					return;
                                 } else {
                                         new model({
                                                 User: interaction.user.id,
+                                                Username: interaction.user.tag,
                                                 AboutMe: 'There is no description.',
                                                 Followers: [],
-                                                Badges: []
+                                                Badges: [],
+                                                Avatar: interaction.user.avatarURL()
                                         }).save();
 
+                                        const embed = {
+                                                description: client.lang.__({ phrase: 'profile.register.embed', locale: lang }),
+                                                color: config.embedColor
+                                        }
+
                                         interaction.followUp({
-						content: client.lang.__(
-							{
-								phrase: 'profile.register.embed', 
-								locale: lang 
-							}
-						)
+                                                embeds: [embed]
                                         });
                                 }
                         });
@@ -119,11 +120,11 @@ module.exports = {
                         
                         model.findOne({
                                 User: user.id
-                        }, async (data, err) => {
-				if (err) throw err;
-				
+                        }, async (err, data) => {
+                                if (err) throw err;
+
                                 if (data) {
-                                        const embed = {
+					const embed = {
                                                 thumbnail: {
                                                         url: user.avatarURL(
 								{
@@ -181,7 +182,7 @@ module.exports = {
                                                 timestamp: new Date()
                                         }
 
-                                        const row = new MessageActionRow()
+					const row = new MessageActionRow()
                                                 .addComponents(
                                                         new MessageSelectMenu()
                                                         .setPlaceholder(client.lang.__(
@@ -199,19 +200,84 @@ module.exports = {
 											locale: lang
 										}
 									),
-									value: 'option'
+									value: 'option',
+									emoji: '⚠️'
+								},
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option2',
+											locale: lang
+										}
+									),
+									value: 'option2',
+									emoji: '⚠️'
+								},
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option3',
+											locale: lang
+										}
+									),
+									value: 'option3',
+									emoji: '⚠️'
+								},
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option4',
+											locale: lang
+										}
+									),
+									value: 'option4',
+									emoji: '⚠️'
+								},
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option5',
+											locale: lang
+										}
+									),
+									value: 'option5',
+									emoji: '⚠️'
+								},
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option6',
+											locale: lang
+										}
+									),
+									value: 'option6',
+									emoji: '⚠️'
+								},
+								{
+									label: client.lang.__(
+										{
+											phrase: 'profile.view.options.option7',
+											locale: lang
+										}
+									),
+									value: 'option7',
+									emoji: '⚠️'
 								}
 							])
-                                                        .setCustomId('profile-view-menu')
+                                                        .setCustomId('profile-view-button')
                                                 );
 
                                         interaction.followUp({
-                                                embeds: [embed],
-                                                components: [row]
+                                                embeds: [
+							embed
+						],
+                                                components: [
+							row
+						]
                                         });
                                 } else {
                                         interaction.followUp({
-						content: client.lang.__(
+                                                content: client.lang.__(
 							{
 								phrase: 'profile.view.error', 
 								locale: lang 

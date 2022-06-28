@@ -60,7 +60,9 @@ module.exports = {
                         }
 
                         interaction.followUp({
-                                embeds: [embed]
+                                embeds: [
+					embed
+				]
                         });
                 });
         }

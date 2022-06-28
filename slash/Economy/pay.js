@@ -87,24 +87,29 @@ module.exports = {
                                                 }).save();
                                         }
 
-                                        const embed = {
-                                                description: client.lang.__mf({ phrase: 'pay.embed', locale: lang }, { amount: amount, user: user.tag }),
-                                                color: config.embedColor
-                                        }
-
                                         interaction.followUp({
-                                                embeds: [embed]
+						content: client.lang.__mf(
+							{
+								phrase: 'pay.embed', 
+								locale: lang 
+							}, 
+							{
+								amount: amount, 
+								user: user.tag 
+							}
+						)
                                         });
                                 });
                         } else {
-                                const error = {
-                                        description: client.lang.__({ phrase: 'pay.error4', locale: lang }),
-                                        color: config.embedError
-                                }
-
-                                return interaction.followUp({
-                                        embeds: [error]
+                                interaction.followUp({
+					content: client.lang.__(
+						{
+							phrase: 'pay.error4', 
+							locale: lang 
+						}
+					)
                                 });
+				return;
                         }
                 });
         }

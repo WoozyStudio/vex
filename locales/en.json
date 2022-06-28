@@ -139,7 +139,7 @@
 			"embedFieldValue": "<:emoji_1:987398741780750426> Profile ID: `{id}`.\n<:emoji_1:987398741780750426> Vex badges: {badges}",
 			"embedField2": "Statistics:",
 			"embedFieldValue2": "<:emoji_1:987398741780750426> Number of followers: `{followers}`.",
-                        "menu": "Report user profile.",
+			"menu": "Report user profile.",
 			"options": {
 				"option": "Harassment.",
 				"option2": "Identity theft.",
